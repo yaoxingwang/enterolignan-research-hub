@@ -1,0 +1,7 @@
+{
+  "estimate_rows": 64,
+  "baseline_reproduced": true,
+  "same_sample_renal": true,
+  "tie_aware_rank_checked": true,
+  "finite_intervals": true
+}

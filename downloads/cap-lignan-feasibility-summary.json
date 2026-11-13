@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "audit_created_utc": "2026-11-13T02:37:15.161876+00:00",
+  "decision": "NO_TOTAL_DIETARY_LIGNAN_CAP_MODEL",
+  "decision_reason": "名称候选仅覆盖少量食品；未测成分保持未知，混合食品、制备状态和部分来源单位仍未解决。",
+  "scope": {
+    "cycle": "NHANES 2017–2018",
+    "nhanes_food_codes_total": 4564,
+    "candidate_food_codes": 18,
+    "candidate_food_code_fraction": 0.003943908851884312,
+    "approved_exposure_mappings": 0,
+    "candidate_compounds": [
+      "Secoisolariciresinol",
+      "Matairesinol",
+      "Pinoresinol",
+      "Lariciresinol"
+    ],
+    "method": "Chromatography after hydrolysis",
+    "units": "mg/100 g fresh weight",
+    "source_database": "Phenol-Explorer version 3.6",
+    "source_release_date": "2016-12-10",
+    "four_compound_candidate_sum_is_total_lignan_intake": false,
+    "participant_level_exposure_written": false,
+    "cap_regression_fitted": false
+  },
+  "recall_coverage": [
+    {
+      "recall_day": 1,
+      "eligible_people_with_food_records": 4149,
+      "food_item_records": 65001,
+      "candidate_mapped_codes": 17,
+      "candidate_mapped_item_fraction_unweighted": 0.025261149828464176,
+      "candidate_mapped_item_fraction_weighted": 0.024447833080983607,
+      "candidate_mapped_grams_fraction_unweighted": 0.012491073403772139,
+      "candidate_mapped_grams_fraction_weighted": 0.011526514819141277,
+      "people_with_any_candidate": 1211,
+      "weighted_people_with_any_candidate_fraction": 0.29121541000385487,
+      "people_with_fully_mapped_day": 0,
+      "weighted_people_with_fully_mapped_day_fraction": 0.0,
+      "weight_variable": "WTDRD1"
+    },
+    {
+      "recall_day": 2,
+      "eligible_people_with_food_records": 3633,
+      "food_item_records": 55001,
+      "candidate_mapped_codes": 18,
+      "candidate_mapped_item_fraction_unweighted": 0.02890856529881275,
+      "candidate_mapped_item_fraction_weighted": 0.029962224578660854,
+      "candidate_mapped_grams_fraction_unweighted": 0.014631297079286648,
+      "candidate_mapped_grams_fraction_weighted": 0.014137801995051583,
+      "people_with_any_candidate": 1182,
+      "weighted_people_with_any_candidate_fraction": 0.33251858473678714,
+      "people_with_fully_mapped_day": 0,
+      "weighted_people_with_fully_mapped_day_fraction": 0.0,
+      "weight_variable": "WTDR2D"
+    }
+  ],
+  "unmapped_priority_foods": {
+    "codes_left_unmapped": 8,
+    "reason": "Food description alone does not establish equivalence of form, recipe, or preparation state.",
+    "note": "Flax, sesame, mixed dishes, and branded foods remain unmapped. Food-code-level records are retained on the server."
+  },
+  "source_unit_qa": {
+    "flagged_candidate_rows": 3,
+    "status": "Milder et al. (PMID 15877880) abstract reports total lignans in Brassica vegetables as 185-2321 ug/100g. Some matched Phenol-Explorer workbook rows labeled mg/100g produce sums above that range; these values are quarantined pending primary-table verification.",
+    "supporting_reference": "Milder et al. 2005, British Journal of Nutrition 93:393–402",
+    "pmid": "15877880",
+    "doi": "10.1079/bjn20051371",
+    "abstract_brassica_range_ug_per_100g": [
+      185,
+      2321
+    ],
+    "primary_table_verified": false,
+    "automatic_rescaling_performed": false
+  },
+  "same_cycle_urinary_enterolignan_cap_linkage": {
+    "available": false,
+    "reason": "Available urinary ENL/END records are from NHANES 2005-2010; CAP here is NHANES 2017-2018 and there is no SEQN overlap."
+  },
+  "sources": [
+    {
+      "name": "Phenol-Explorer downloads and composition archive",
+      "url": "http://phenol-explorer.eu/downloads",
+      "archive_url": "http://phenol-explorer.eu/system/downloads/current/composition-data.xlsx.zip",
+      "archive_sha256": "047d0968094b5399ad60aa7ad6f4447dad079d2c2b98a6768ad93747315ea491",
+      "extracted_workbook_sha256": "a30490942a0e3485b4e6de5eaf609dfa53104c81078d40dbaa242f9f19e8e762"
+    },
+    {
+      "name": "Phenol-Explorer official methods",
+      "url": "http://phenol-explorer.eu/methods_used",
+      "saved_text_sha256": "2eae2836ec338969799f2ac19afd2a9f5d292169ac56a12efdc5fc6e6ed0fa30"
+    },
+    {
+      "name": "Phenol-Explorer citation and usage terms",
+      "url": "http://phenol-explorer.eu/cite_us",
+      "saved_text_sha256": "cd4d803e03d48f516dd73aadae74e359b467175705b3d47b1d259a630db2dfb9"
+    },
+    {
+      "name": "Milder et al. 2005 PubMed record",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15877880/",
+      "xml_sha256": "eec7773293fda099b550e4ba385b2332b8169e95532019bfecd726cbfdcd7f3e"
+    },
+    {
+      "name": "CDC NHANES 2017–2018 CAP and dietary recalls",
+      "cap_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/LUX_J.htm",
+      "day1_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DR1IFF_J.htm",
+      "day2_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DR2IFF_J.htm"
+    },
+    {
+      "name": "NCHS Data User Agreement",
+      "url": "https://www.cdc.gov/nchs/policy/data-user-agreement.html",
+      "note": "Use for statistical analysis and reporting only; no identification attempts or linkage with individually identifiable data."
+    }
+  ],
+  "usage_note": "Publicly available; the official site requires explicit permission for commercial use or redistribution, acknowledgment of Phenol-Explorer and original sources, and citation when significant portions are used. The portal publishes aggregate coverage and provenance, not the composition table or candidate concentrations.",
+  "coverage_note": "Weighted item and gram coverage are ratios of weighted totals; person-any proportions use WTDRD1 or WTDR2D. Descriptive coverage only; no survey confidence intervals were calculated. Gram denominators include beverages such as water and coffee.",
+  "limitations": [
+    "Phenol-Explorer states that missing composition values do not imply the compound is absent.",
+    "A source-unit discrepancy was identified: the Milder et al. abstract reports Brassica total lignans in ug/100g, while some matched workbook entries labeled mg/100g exceed that range; affected candidate values are quarantined.",
+    "The current composition release is dated 2016 and does not cover all US food codes or recipes.",
+    "The four-compound sum is a partial lignan definition, not total dietary lignan intake.",
+    "NHANES flax-seed and sesame-seed descriptions do not exactly match the measured meal/seed preparation states in Phenol-Explorer; they were left unmapped.",
+    "No concentration was imputed for mixed dishes, branded products, or uncoded foods, and no dietary lignan-CAP regression was run.",
+    "Available urinary ENL/END records are from NHANES 2005-2010; CAP here is NHANES 2017-2018 and there is no SEQN overlap."
+  ]
+}

@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肠木脂素 × 肠道菌群 × 代谢/肝脂肪 —— 可发表课题与期刊路线图</title>
+<style>
+  :root{
+    --low:#1f9d55; --low-bg:#e9f7ef; --low-bd:#bfe6cf;
+    --med:#d97706; --med-bg:#fef3e2; --med-bd:#f6d8a8;
+    --high:#dc2626; --high-bg:#fdecec; --high-bd:#f6bcbc;
+    --ink:#1f2933; --muted:#64748b; --line:#e5e9f0; --accent:#2563eb;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:#f4f6f9;color:var(--ink);
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Noto Sans CJK SC",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px 80px}
+  /* hero */
+  header.hero{background:linear-gradient(135deg,#0f2d52 0%,#1d4e89 55%,#2a6fb0 100%);color:#fff;
+    padding:48px 20px 42px;margin-bottom:0}
+  header.hero .in{max-width:1100px;margin:0 auto}
+  .eyebrow{letter-spacing:.18em;font-size:12px;opacity:.8;text-transform:uppercase}
+  header.hero h1{font-size:30px;line-height:1.3;margin:10px 0 8px;font-weight:700}
+  header.hero p{margin:6px 0 0;opacity:.92;font-size:15px;max-width:860px}
+  .hmeta{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px;font-size:12.5px}
+  .hmeta span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
+    padding:4px 11px;border-radius:999px}
+  /* section */
+  section{margin-top:40px}
+  h2.sec{font-size:21px;margin:0 0 4px;display:flex;align-items:center;gap:10px}
+  h2.sec .dot{width:13px;height:13px;border-radius:50%;display:inline-block}
+  .sec-sub{color:var(--muted);margin:0 0 18px;font-size:14px}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px;
+    box-shadow:0 1px 3px rgba(16,24,40,.04)}
+  figure{margin:0}
+  figcaption{color:var(--muted);font-size:12.5px;text-align:center;margin-top:10px}
+  .svgbox{width:100%;overflow-x:auto}
+  svg{display:block;margin:0 auto;max-width:100%;height:auto}
+  /* legend */
+  .legend{display:flex;flex-wrap:wrap;gap:16px;margin:14px 0 0;font-size:13px;color:var(--muted);justify-content:center}
+  .legend b{color:var(--ink)}
+  .chip{display:inline-flex;align-items:center;gap:6px}
+  .sw{width:14px;height:14px;border-radius:4px;display:inline-block}
+  /* cards grid */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}}
+  .card{border-radius:14px;border:1px solid var(--line);background:#fff;overflow:hidden;
+    display:flex;flex-direction:column;box-shadow:0 1px 3px rgba(16,24,40,.05)}
+  .card .top{padding:14px 16px 12px;border-bottom:1px solid var(--line)}
+  .card .id{font-weight:800;font-size:12px;letter-spacing:.06em;padding:2px 8px;border-radius:6px;color:#fff}
+  .card h3{font-size:15.5px;margin:9px 0 0;line-height:1.45}
+  .card .body{padding:13px 16px 16px;font-size:13.5px;flex:1}
+  .row{margin:0 0 9px;display:flex;gap:8px}
+  .row .k{flex:0 0 72px;color:var(--muted);font-size:12.5px;padding-top:1px}
+  .row .v{flex:1}
+  .row:last-child{margin-bottom:0}
+  .star{font-size:13px}
+  .tag-low{background:var(--low)} .tag-med{background:var(--med)} .tag-high{background:var(--high)}
+  .card.low{border-top:3px solid var(--low)} .card.med{border-top:3px solid var(--med)} .card.high{border-top:3px solid var(--high)}
+  .ribbon{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;color:#fff;margin-left:6px}
+  /* meter */
+  .meter{display:inline-flex;gap:3px;vertical-align:middle}
+  .seg{width:20px;height:7px;border-radius:2px;background:#e2e8f0}
+  .seg.g{background:var(--low)} .seg.a{background:var(--med)} .seg.r{background:var(--high)}
+  .mlabel{font-size:11.5px;color:var(--muted);margin-left:7px}
+  /* journal badges */
+  .jb{display:inline-block;font-size:12px;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;
+    padding:1px 6px;margin:2px 3px 0 0;white-space:nowrap}
+  .p1,.p2,.p3,.pw{font-size:10.5px;font-weight:700;border-radius:4px;padding:0 5px;margin-left:3px;color:#fff;vertical-align:1px}
+  .p1{background:#4338ca} .p2{background:#0d9488} .p3{background:#6b7280} .pw{background:#b45309}
+  /* table */
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:4px}
+  th,td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+  th{background:#f8fafc;font-size:12.5px;color:var(--muted);font-weight:600}
+  tr.grp td{background:#eef2f7;font-weight:700;color:#334155;font-size:12.5px}
+  td.jn{font-weight:600;white-space:nowrap}
+  /* callout */
+  .note{border-left:4px solid var(--high);background:#fff7f6;border-radius:0 10px 10px 0;
+    padding:14px 18px;font-size:13.5px;margin-top:6px}
+  .note b{color:var(--high)}
+  .tip{border-left:4px solid var(--accent);background:#f3f7ff;border-radius:0 10px 10px 0;padding:14px 18px;font-size:13.5px}
+  ul.tight{margin:6px 0 0;padding-left:20px} ul.tight li{margin:4px 0}
+  footer{margin-top:46px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:18px}
+  footer a{color:var(--accent);text-decoration:none}
+  .refs{font-size:11.5px;color:var(--muted);line-height:1.6}
+  .kpill{display:inline-block;background:#eef2f7;border-radius:6px;padding:1px 7px;font-size:12px;margin:1px}
+  /* data-section additions */
+  .code{background:#0f172a;color:#e2e8f0;border-radius:10px;padding:12px 14px;font-size:12px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;line-height:1.6;overflow-x:auto;white-space:pre;margin:10px 0 0}
+  .steps{counter-reset:st;list-style:none;margin:0;padding:0}
+  .steps li{position:relative;padding:2px 0 12px 34px;margin:0;font-size:13.5px}
+  .steps li:before{counter-increment:st;content:counter(st);position:absolute;left:0;top:0;
+    width:23px;height:23px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:700;
+    display:flex;align-items:center;justify-content:center}
+  .src{font-size:11.5px;color:var(--accent);word-break:break-all;text-decoration:none}
+  .freebadge{font-size:10.5px;font-weight:700;border-radius:4px;padding:0 6px;color:#fff;white-space:nowrap}
+  .f-free{background:#1f9d55} .f-reg{background:#d97706} .f-app{background:#b91c1c}
+  .ds-head{font-size:16px;margin:0 0 2px} .ds-sub{color:var(--muted);font-size:12px;margin:0 0 6px}
+</style>
+<link rel="stylesheet" href="../assets/reader.css"></head>
+<body><nav class="med-hub-reader" aria-label="专题归档导航"><a href="../index.html">← 专题总览</a><a href="../roadmap.html">返回原始思路</a><span>既有报告</span></nav>
+<header class="hero">
+  <div class="in">
+    <div class="eyebrow">Research Roadmap · 肠木脂素 / 肠道菌群 / 代谢-肝脂肪</div>
+    <h1>公开数据与临床样本能做什么？——18 条可发表课题 + 期刊候选（按成本分层）</h1>
+    <p>基于你的一作论文《Urinary enterolignans and enterolignan-predicting microbial species are favourably associated with liver fat and other obesity markers》(Food &amp; Function, 2024) 延伸。目标：帮入职医院后仍需发表<b>中科院一区 / 二区</b>的你，找到性价比最高的方向。</p>
+    <div class="hmeta">
+      <span>🟢 低成本 = 纯公开数据 / 文献，零湿实验</span>
+      <span>🟠 中成本 = 数据申请费 / 库存样本轻量检测</span>
+      <span>🔴 高成本 = 前瞻队列 / 多组学 / 干预 / 机制</span>
+      <span>更新日期 2026-10-30</span>
+      <span>＋ 公开数据清单 &amp; 上手步骤</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- ===================== 成本-回报矩阵 ===================== -->
+<section>
+  <h2 class="sec"><span class="dot" style="background:var(--accent)"></span>一图总览：成本 × 命中一区/二区概率</h2>
+  <p class="sec-sub">气泡越靠右成本越高，越靠上越容易冲 1/2 区；★ 为同成本档里最推荐的方向。编号对应下方课题卡。</p>
+  <div class="panel">
+    <div class="svgbox">
+    <svg viewBox="0 0 900 400" role="img" aria-label="成本与命中分区概率的气泡矩阵">
+      <!-- axes -->
+      <line x1="80" y1="330" x2="820" y2="330" stroke="#cbd5e1" stroke-width="1.5"/>
+      <line x1="80" y1="50" x2="80" y2="330" stroke="#cbd5e1" stroke-width="1.5"/>
+      <!-- band separators -->
+      <line x1="340" y1="55" x2="340" y2="330" stroke="#eef2f7" stroke-width="1" stroke-dasharray="4 4"/>
+      <line x1="580" y1="55" x2="580" y2="330" stroke="#eef2f7" stroke-width="1" stroke-dasharray="4 4"/>
+      <!-- axis labels -->
+      <text x="450" y="362" text-anchor="middle" font-size="13" fill="#64748b">投入成本 →</text>
+      <text x="210" y="348" text-anchor="middle" font-size="12" fill="#1f9d55">低（公开数据）</text>
+      <text x="460" y="348" text-anchor="middle" font-size="12" fill="#d97706">中（申请/轻检测）</text>
+      <text x="700" y="348" text-anchor="middle" font-size="12" fill="#dc2626">高（队列/机制）</text>
+      <text x="40" y="190" text-anchor="middle" font-size="13" fill="#64748b" transform="rotate(-90 40 190)">命中 1/2 区概率 →</text>
+      <!-- bubbles: low -->
+      <g font-size="11" font-weight="700" fill="#fff" text-anchor="middle">
+        <circle cx="150" cy="250" r="15" fill="#1f9d55" opacity=".85"/><text x="150" y="254">L6</text>
+        <circle cx="250" cy="272" r="15" fill="#1f9d55" opacity=".85"/><text x="250" y="276">L1</text>
+        <circle cx="305" cy="222" r="14" fill="#1f9d55" opacity=".85"/><text x="305" y="226">L7</text>
+        <circle cx="322" cy="190" r="14" fill="#1f9d55" opacity=".85"/><text x="322" y="194">L4</text>
+        <circle cx="160" cy="150" r="16" fill="#1f9d55" opacity=".85"/><text x="160" y="154">L5</text>
+        <circle cx="230" cy="112" r="15" fill="#1f9d55" opacity=".85"/><text x="230" y="116">L3</text>
+        <circle cx="255" cy="72" r="21" fill="#1f9d55"/><text x="255" y="70">L2</text><text x="255" y="84" font-size="10">★</text>
+        <!-- med -->
+        <circle cx="420" cy="215" r="15" fill="#d97706" opacity=".85"/><text x="420" y="219">M2</text>
+        <circle cx="500" cy="178" r="14" fill="#d97706" opacity=".85"/><text x="500" y="182">M3</text>
+        <circle cx="545" cy="205" r="14" fill="#d97706" opacity=".85"/><text x="545" y="209">M5</text>
+        <circle cx="468" cy="145" r="14" fill="#d97706" opacity=".85"/><text x="468" y="149">M4</text>
+        <circle cx="470" cy="92" r="21" fill="#d97706"/><text x="470" y="90">M1</text><text x="470" y="104" font-size="10">★</text>
+        <!-- high -->
+        <circle cx="648" cy="205" r="14" fill="#dc2626" opacity=".85"/><text x="648" y="209">H4</text>
+        <circle cx="660" cy="150" r="15" fill="#dc2626" opacity=".85"/><text x="660" y="154">H5</text>
+        <circle cx="730" cy="108" r="16" fill="#dc2626" opacity=".85"/><text x="730" y="112">H2</text>
+        <circle cx="772" cy="128" r="15" fill="#dc2626" opacity=".85"/><text x="772" y="132">H3</text>
+        <circle cx="700" cy="80" r="15" fill="#dc2626" opacity=".85"/><text x="700" y="84">H6</text>
+        <circle cx="775" cy="66" r="22" fill="#dc2626"/><text x="775" y="64">H1</text><text x="775" y="78" font-size="10">★</text>
+      </g>
+    </svg>
+    </div>
+    <div class="legend">
+      <span class="chip"><span class="sw" style="background:var(--low)"></span><b>低成本</b> L1–L7</span>
+      <span class="chip"><span class="sw" style="background:var(--med)"></span><b>中成本</b> M1–M5</span>
+      <span class="chip"><span class="sw" style="background:var(--high)"></span><b>高成本</b> H1–H6</span>
+      <span class="chip">★ = 该档最推荐</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 机制轴线 ===================== -->
+<section>
+  <h2 class="sec"><span class="dot" style="background:var(--accent)"></span>你研究的"主轴"与各环节可发力点</h2>
+  <p class="sec-sub">整条"膳食木脂素 → 产肠木脂素菌 → 肠木脂素(ENL/END) → 肝脂肪/肥胖"链路上，公开数据只能覆盖局部，临床样本才能打通全链。</p>
+  <div class="panel">
+    <div class="svgbox">
+    <svg viewBox="0 0 900 240" role="img" aria-label="膳食-菌群-代谢物-肝脂肪机制轴线">
+      <defs>
+        <marker id="arw" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L7,3 L0,6 Z" fill="#94a3b8"/>
+        </marker>
+      </defs>
+      <!-- boxes -->
+      <g font-size="13" text-anchor="middle">
+        <rect x="20" y="70" width="180" height="78" rx="12" fill="#eef5ff" stroke="#c7ddff"/>
+        <text x="110" y="100" font-weight="700" fill="#1e3a8a">① 膳食木脂素</text>
+        <text x="110" y="120" font-size="11.5" fill="#475569">亚麻籽 / 全谷 / 芝麻</text>
+        <text x="110" y="136" font-size="11.5" fill="#475569">前体 SDG</text>
+
+        <rect x="245" y="70" width="180" height="78" rx="12" fill="#e9f7ef" stroke="#bfe6cf"/>
+        <text x="335" y="98" font-weight="700" fill="#137a45">② 产肠木脂素菌</text>
+        <text x="335" y="117" font-size="11" fill="#475569">Blautia · Eggerthella</text>
+        <text x="335" y="133" font-size="11" fill="#475569">Lactonifactor · Ruminococcus</text>
+
+        <rect x="470" y="70" width="180" height="78" rx="12" fill="#fef3e2" stroke="#f6d8a8"/>
+        <text x="560" y="98" font-weight="700" fill="#b45309">③ 肠木脂素</text>
+        <text x="560" y="117" font-size="11.5" fill="#475569">Enterolactone (ENL)</text>
+        <text x="560" y="133" font-size="11.5" fill="#475569">Enterodiol (END)</text>
+
+        <rect x="695" y="70" width="185" height="78" rx="12" fill="#fdecec" stroke="#f6bcbc"/>
+        <text x="787" y="98" font-weight="700" fill="#b91c1c">④ 肝脂肪 ↓ / 肥胖 ↓</text>
+        <text x="787" y="117" font-size="11.5" fill="#475569">MASLD · 代谢综合征</text>
+        <text x="787" y="133" font-size="11.5" fill="#475569">炎症 / 胰岛素抵抗</text>
+      </g>
+      <!-- arrows -->
+      <line x1="200" y1="109" x2="243" y2="109" stroke="#94a3b8" stroke-width="2" marker-end="url(#arw)"/>
+      <line x1="425" y1="109" x2="468" y2="109" stroke="#94a3b8" stroke-width="2" marker-end="url(#arw)"/>
+      <line x1="650" y1="109" x2="693" y2="109" stroke="#94a3b8" stroke-width="2" marker-end="url(#arw)"/>
+      <text x="222" y="100" font-size="10" fill="#94a3b8" text-anchor="middle">转化</text>
+      <text x="447" y="100" font-size="10" fill="#94a3b8" text-anchor="middle">代谢</text>
+      <text x="672" y="100" font-size="10" fill="#94a3b8" text-anchor="middle">保护</text>
+      <!-- coverage bars -->
+      <g font-size="11">
+        <rect x="245" y="175" width="405" height="20" rx="6" fill="#1f9d55" opacity=".16"/>
+        <text x="447" y="189" text-anchor="middle" fill="#137a45">低成本公开数据主要覆盖 ②③ 环（NHANES / 公开宏基因组）</text>
+        <rect x="20" y="202" width="860" height="20" rx="6" fill="#dc2626" opacity=".12"/>
+        <text x="450" y="216" text-anchor="middle" fill="#b91c1c">只有医院临床样本能"同体同测"打通 ①→④ 全链（高成本，最可能上 1 区）</text>
+      </g>
+    </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 低成本 ===================== -->
+<section>
+  <h2 class="sec"><span class="dot" style="background:var(--low)"></span>低成本路线：纯公开数据 / 文献（零湿实验）</h2>
+  <p class="sec-sub">优点：免费、快、可立刻启动。缺点：横断面证据弱、NHANES 单因素已近红海——必须靠"方法升级/多队列/功能视角"做出新意，否则易落 3 区或被拒。</p>
+  <div class="grid">
+
+    <!-- L2 first (recommended) -->
+    <div class="card low">
+      <div class="top">
+        <span class="id tag-low">L2</span><span class="ribbon tag-low">★ 最推荐</span>
+        <h3>肠木脂素"预测物种"签名的多队列可重复性验证</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 思路</span><span class="v">把你原文识别的"预测 enterolignan 的物种签名"，拿到多个独立公开宏基因组队列里验证：是否可重复？是否稳健地与肥胖/MASLD 相关？</span></div>
+        <div class="row"><span class="k">📊 素材</span><span class="v"><span class="kpill">curatedMetagenomicData</span><span class="kpill">GMrepo</span><span class="kpill">MGnify / HMP2</span> 上万例 shotgun + 整理好的 BMI/疾病元数据</span></div>
+        <div class="row"><span class="k">🔬 方法</span><span class="v">CLR 组成数据 · MaAsLin2 · 跨队列随机效应 meta · signature score + ROC</span></div>
+        <div class="row"><span class="k">🎯 卖点</span><span class="v">从"单队列关联"升级为"多队列可重复签名"，正是审稿人最买账的稳健性</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">Gut Microbes<span class="p1">1区</span></span><span class="jb">iMeta<span class="p1">1区</span></span><span class="jb">mSystems<span class="p2">2区</span></span><span class="jb">npj Biofilms Microbiomes<span class="p2">2区</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg g"></i><i class="seg g"></i><i class="seg g"></i><i class="seg g"></i></span><span class="mlabel">很高</span></span></div>
+        <div class="row"><span class="k">⚠️ 难点</span><span class="v">公开队列多无同测尿肠木脂素，暂只能"物种↔表型"；代谢物环留给医院数据补</span></div>
+      </div>
+    </div>
+
+    <!-- L1 -->
+    <div class="card low">
+      <div class="top">
+        <span class="id tag-low">L1</span>
+        <h3>NHANES 植物雌激素"混合暴露" × 新结局</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 思路</span><span class="v">别再做单一 enterolactone × 常见结局（已发烂）。把 ENL+END+异黄酮当"植物雌激素混合物"，打还没人做的结局。</span></div>
+        <div class="row"><span class="k">📊 素材</span><span class="v">NHANES 1999–2010 尿植物雌激素（URXENL/URXETD…）+ 对应结局，全部公开免费</span></div>
+        <div class="row"><span class="k">🔬 方法</span><span class="v">WQS / qgcomp / BKMR 混合效应 + RCS 剂量反应 + 中介(CRP/HOMA-IR/BMI)</span></div>
+        <div class="row"><span class="k">🎯 卖点</span><span class="v">选未被做的：肌少症(DXA)、骨密度、生物学衰老(Phenotypic Age)、抑郁(PHQ-9)、CKD、睡眠</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">Nutrients<span class="p2">2区</span><span class="pw">MDPI</span></span><span class="jb">Ecotox Environ Saf<span class="p2">2区</span></span><span class="jb">Front Nutr<span class="p3">3区</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg g"></i><i class="seg g"></i><i class="seg"></i><i class="seg"></i></span><span class="mlabel">中（多为2区末-3区）</span></span></div>
+        <div class="row"><span class="k">⚠️ 难点</span><span class="v">横断面因果弱；肝脂肪(FibroScan 2017-18)与肠木脂素周期<b>不重叠</b>，肝只能用 FLI/HSI 指数替代</span></div>
+      </div>
+    </div>
+
+    <!-- L3 -->
+    <div class="card low">
+      <div class="top">
+        <span class="id tag-low">L3</span>
+        <h3>从"物种"升到"功能基因 / 通路"</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 思路</span><span class="v">在公开宏基因组里挖木脂素转化相关的细菌基因/酶与通路，看功能潜能与宿主代谢表型关系——比物种层更贴近机制。</span></div>
+        <div class="row"><span class="k">📊 素材</span><span class="v">curatedMetagenomicData 的 gene family / pathway（HUMAnN 输出），或从 SRA 重跑</span></div>
+        <div class="row"><span class="k">🔬 方法</span><span class="v">HUMAnN3 通路丰度 · 功能基因 CLR · 与表型回归 · ML 特征重要性</span></div>
+        <div class="row"><span class="k">🎯 卖点</span><span class="v">功能视角稀缺、差异化强，不与一堆"物种关联"撞车</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">Microbiome<span class="p1">1区</span></span><span class="jb">mSystems<span class="p2">2区</span></span><span class="jb">iMeta<span class="p1">1区</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg g"></i><i class="seg g"></i><i class="seg g"></i><i class="seg"></i></span><span class="mlabel">较高</span></span></div>
+        <div class="row"><span class="k">⚠️ 难点</span><span class="v">需生信能力(HUMAnN/MetaPhlAn)；木脂素代谢酶注释尚不完善</span></div>
+      </div>
+    </div>
+
+    <!-- L4 -->
+    <div class="card low">
+      <div class="top">
+        <span class="id tag-low">L4</span>
+        <h3>肠木脂素"产生者 metabotype"分型与效应修饰</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 思路</span><span class="v">按 ENL 高/低把人群分成"高/低产生者"metabotype，检验它是否修饰"膳食(纤维/全谷)→代谢病"的关系——解释"同样吃木脂素为何有人获益"。</span></div>
+        <div class="row"><span class="k">📊 素材</span><span class="v">NHANES（尿 ENL + 膳食 + 结局），或公开队列 / 院内数据</span></div>
+        <div class="row"><span class="k">🔬 方法</span><span class="v">数据驱动阈值 / latent class 分型 + 交互项/分层 + 中介</span></div>
+        <div class="row"><span class="k">🎯 卖点</span><span class="v">metabotype 概念新颖，精准营养叙事好讲</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">Mol Nutr Food Res<span class="p1">1区</span></span><span class="jb">Food &amp; Function<span class="p2">2区</span></span><span class="jb">Eur J Nutr<span class="p3">2/3区</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg g"></i><i class="seg g"></i><i class="seg g"></i><i class="seg"></i></span><span class="mlabel">较高</span></span></div>
+        <div class="row"><span class="k">⚠️ 难点</span><span class="v">分型阈值需稳健性检验，避免"切出来就显著"的质疑</span></div>
+      </div>
+    </div>
+
+    <!-- L5 -->
+    <div class="card low">
+      <div class="top">
+        <span class="id tag-low">L5</span>
+        <h3>系统综述 + 剂量反应 Meta 分析</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 思路</span><span class="v">系统汇总"木脂素/肠木脂素 ↔ MASLD/肥胖/代谢综合征"的流行病学证据，做剂量反应 meta。你是该领域一作，写综述有身份加成。</span></div>
+        <div class="row"><span class="k">📊 素材</span><span class="v">PubMed / Embase / WoS 题录，PRISMA 流程；零实验</span></div>
+        <div class="row"><span class="k">🔬 方法</span><span class="v">随机效应 meta · dose-response(RCS) · 异质性/发表偏倚 · GRADE 证据分级</span></div>
+        <div class="row"><span class="k">🎯 卖点</span><span class="v">综述类期刊影响因子高、易冲 1 区</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">Crit Rev Food Sci Nutr<span class="p1">1区</span></span><span class="jb">Advances in Nutrition<span class="p1">1区</span></span><span class="jb">Nutrients<span class="p2">2区</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg g"></i><i class="seg g"></i><i class="seg g"></i><i class="seg"></i></span><span class="mlabel">较高（视原始研究量）</span></span></div>
+        <div class="row"><span class="k">⚠️ 难点</span><span class="v">需足够原始研究；要与已有综述明显差异化（如聚焦"菌-代谢物"维度）</span></div>
+      </div>
+    </div>
+
+    <!-- L6 -->
+    <div class="card low">
+      <div class="top">
+        <span class="id tag-low">L6</span>
+        <h3>领域文献计量（Bibliometric）</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 思路</span><span class="v">用 CiteSpace/VOSviewer/bibliometrix 刻画"肠木脂素-肠道菌群-代谢"领域的发文、热点、合作与趋势。</span></div>
+        <div class="row"><span class="k">📊 素材</span><span class="v">Web of Science / Scopus 导出题录；零成本</span></div>
+        <div class="row"><span class="k">🔬 方法</span><span class="v">共被引 · 关键词突现 · 国家/机构合作网络</span></div>
+        <div class="row"><span class="k">🎯 卖点</span><span class="v">最省力、周期短、易中——适合先刷一篇维持产出</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">部分 2 区综合刊</span><span class="jb">Front 系列<span class="p3">2/3区</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg g"></i><i class="seg"></i><i class="seg"></i><i class="seg"></i></span><span class="mlabel">低（难上1/2区）</span></span></div>
+        <div class="row"><span class="k">⚠️ 难点</span><span class="v">学术含金量受部分单位质疑、多家期刊已不收纯文献计量——别当主力成果</span></div>
+      </div>
+    </div>
+
+    <!-- L7 -->
+    <div class="card low">
+      <div class="top">
+        <span class="id tag-low">L7</span>
+        <h3>NHANES"膳食木脂素摄入"（换暴露来源）× 结局</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 思路</span><span class="v">不用尿代谢物，而用 FNDDS + 木脂素食物成分库估算<b>膳食木脂素摄入</b>，避开已发的"尿代谢物"组合，并可覆盖更多(含 FibroScan)周期。</span></div>
+        <div class="row"><span class="k">📊 素材</span><span class="v">NHANES 24h 膳食回顾 + 食物木脂素含量数据库</span></div>
+        <div class="row"><span class="k">🔬 方法</span><span class="v">摄入量分位/连续 + RCS + 多因素校正 + 中介</span></div>
+        <div class="row"><span class="k">🎯 卖点</span><span class="v">暴露测量差异化；可接上 2017-18 FibroScan 肝脂肪定量</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">Eur J Nutr<span class="p3">2/3区</span></span><span class="jb">Nutr J<span class="p3">2/3区</span></span><span class="jb">Front Nutr<span class="p3">3区</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg g"></i><i class="seg g"></i><i class="seg"></i><i class="seg"></i></span><span class="mlabel">中</span></span></div>
+        <div class="row"><span class="k">⚠️ 难点</span><span class="v">食物成分库匹配误差；仍是横断面</span></div>
+      </div>
+    </div>
+
+    <!-- MR warning -->
+    <div class="card" style="border-top:3px solid #6b7280">
+      <div class="top">
+        <span class="id" style="background:#6b7280">L8</span><span class="ribbon" style="background:#6b7280">⚠ 不建议主攻</span>
+        <h3>孟德尔随机化（MR）—— 已严重灌水</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 现状</span><span class="v">"肠道菌群 → 肝病"两样本 MR 近两年被灌爆（NAFLD/NASH、肝硬化、肝癌乃至 meta 都有），多家期刊已明确不欢迎，掉区/预警风险高。</span></div>
+        <div class="row"><span class="k">🧭 若要做</span><span class="v">走差异化：膳食木脂素/循环 ENL 的遗传工具变量 → 结局；但 ENL 强工具变量稀缺，可行性一般</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">多落 Front 系列<span class="p3">2/3区</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg"></i><i class="seg"></i><i class="seg"></i><i class="seg"></i></span><span class="mlabel">低且不稳定</span></span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== 中成本 ===================== -->
+<section>
+  <h2 class="sec"><span class="dot" style="background:var(--med)"></span>中成本路线：数据申请费 / 库存样本轻量检测</h2>
+  <p class="sec-sub">比纯公开数据多了"自有数据/影像金标准"的分量，1/2 区概率明显抬升，而投入仍可控。</p>
+  <div class="grid">
+
+    <div class="card med">
+      <div class="top">
+        <span class="id tag-med">M1</span><span class="ribbon tag-med">★ 最推荐</span>
+        <h3>UK Biobank：膳食木脂素 → 肝脏 MRI-PDFF / MASLD</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 思路</span><span class="v">用 UKB 的肝脏 MRI-PDFF（肝脂肪<b>金标准</b>，数万例）+ 膳食估算木脂素，做剂量反应与 MASLD 风险。</span></div>
+        <div class="row"><span class="k">📊 素材</span><span class="v">UK Biobank（需课题申请 + 付费约数千英镑；挂靠有账号的 PI 更快）</span></div>
+        <div class="row"><span class="k">🔬 方法</span><span class="v">线性/逻辑回归 + RCS + 多重校正；可加 NMR 代谢组做中介</span></div>
+        <div class="row"><span class="k">🎯 卖点</span><span class="v">大样本 + 影像金标准，1/2 区概率显著高于 NHANES</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">Clinical Nutrition<span class="p1">1区</span></span><span class="jb">Mol Nutr Food Res<span class="p1">1区</span></span><span class="jb">Liver International<span class="p2">2区</span></span><span class="jb">BMC Medicine<span class="p1">1区</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg a"></i><i class="seg a"></i><i class="seg a"></i><i class="seg a"></i></span><span class="mlabel">很高</span></span></div>
+        <div class="row"><span class="k">⚠️ 难点</span><span class="v">申请周期与费用；UKB 无尿肠木脂素直测，暴露是"膳食木脂素"</span></div>
+      </div>
+    </div>
+
+    <div class="card med">
+      <div class="top">
+        <span class="id tag-med">M2</span>
+        <h3>医院回顾队列 + 库存样本 ELISA 补测 enterolactone</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 思路</span><span class="v">用医院已有临床数据 + 生物样本库，用商品化 ELISA 低成本补测尿/血 enterolactone，关联 MASLD/代谢指标。</span></div>
+        <div class="row"><span class="k">📊 素材</span><span class="v">院内回顾数据 + 库存尿/血；伦理批件；ELISA 试剂盒 + 肌酐校正</span></div>
+        <div class="row"><span class="k">🔬 方法</span><span class="v">ELISA 定量 + 多因素回归 + 分层 + 中介</span></div>
+        <div class="row"><span class="k">🎯 卖点</span><span class="v">真实临床人群 + 自有数据，比纯公开数据更有分量</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">Food &amp; Function<span class="p2">2区</span></span><span class="jb">Eur J Nutr<span class="p3">2/3区</span></span><span class="jb">Nutr &amp; Metabolism<span class="p3">2/3区</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg a"></i><i class="seg a"></i><i class="seg a"></i><i class="seg"></i></span><span class="mlabel">较高</span></span></div>
+        <div class="row"><span class="k">⚠️ 难点</span><span class="v">ELISA 精度不及 LC-MS/MS；回顾数据混杂需谨慎校正</span></div>
+      </div>
+    </div>
+
+    <div class="card med">
+      <div class="top">
+        <span class="id tag-med">M3</span>
+        <h3>库存样本 16S + 尿 ELISA：低配版"菌-代谢物-肝脂肪"三角</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 思路</span><span class="v">对库存粪便做 16S(属级)、尿做 ELISA，配合超声/FibroScan，搭一个低成本的三角证据链。</span></div>
+        <div class="row"><span class="k">📊 素材</span><span class="v">库存粪便/尿 + 临床影像；16S V3–V4 测序服务</span></div>
+        <div class="row"><span class="k">🔬 方法</span><span class="v">16S 属级关联 + 中介(菌→ENL→肝脂肪)</span></div>
+        <div class="row"><span class="k">🎯 卖点</span><span class="v">比公开数据多了"同体同测"的代谢物环</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">npj Biofilms Microbiomes<span class="p2">2区</span></span><span class="jb">Food &amp; Function<span class="p2">2区</span></span><span class="jb">Front Cell Infect Microbiol<span class="p3">2/3区</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg a"></i><i class="seg a"></i><i class="seg a"></i><i class="seg"></i></span><span class="mlabel">较高</span></span></div>
+        <div class="row"><span class="k">⚠️ 难点</span><span class="v">16S 仅属级，<b>接不到</b>你原文的"species"；要对标 species 得上 shotgun(属高成本 H1)</span></div>
+      </div>
+    </div>
+
+    <div class="card med">
+      <div class="top">
+        <span class="id tag-med">M4</span>
+        <h3>公开多组学发现 + 小样本靶向验证</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 思路</span><span class="v">先在公开多组学里发现候选(物种/代谢物/通路)，再在少量院内样本靶向验证关键环节。</span></div>
+        <div class="row"><span class="k">📊 素材</span><span class="v">公开多组学 + 小批量院内验证检测</span></div>
+        <div class="row"><span class="k">🔬 方法</span><span class="v">发现-验证两阶段设计</span></div>
+        <div class="row"><span class="k">🎯 卖点</span><span class="v">"发现+验证"结构审稿友好，抗"纯关联"质疑</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">J Transl Med<span class="p2">2区</span></span><span class="jb">iScience<span class="p3">2/3区</span></span><span class="jb">Food &amp; Function<span class="p2">2区</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg a"></i><i class="seg a"></i><i class="seg a"></i><i class="seg"></i></span><span class="mlabel">较高</span></span></div>
+        <div class="row"><span class="k">⚠️ 难点</span><span class="v">需协调两类数据口径与批次</span></div>
+      </div>
+    </div>
+
+    <div class="card med">
+      <div class="top">
+        <span class="id tag-med">M5</span>
+        <h3>女性健康赛道：PCOS / 围绝经队列 × 植物雌激素</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 思路</span><span class="v">肠木脂素是植物雌激素，天然契合女性内分泌。做院内 PCOS 或围绝经人群的肠木脂素 × 代谢/激素/肝脂肪，竞争小、临床意义明确。</span></div>
+        <div class="row"><span class="k">📊 素材</span><span class="v">院内 PCOS/绝经人群 + 尿 ELISA/LC-MS；妇科合作</span></div>
+        <div class="row"><span class="k">🔬 方法</span><span class="v">病例对照/横断面 + 激素分层 + 中介</span></div>
+        <div class="row"><span class="k">🎯 卖点</span><span class="v">换赛道避开代谢红海，贴合你医院场景</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">J Clin Endocrinol Metab<span class="p1">1区</span></span><span class="jb">Front Endocrinol<span class="p3">2/3区</span></span><span class="jb">Nutrients<span class="p2">2区</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg a"></i><i class="seg a"></i><i class="seg a"></i><i class="seg"></i></span><span class="mlabel">较高</span></span></div>
+        <div class="row"><span class="k">⚠️ 难点</span><span class="v">需妇科合作与足够病例量</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== 高成本 ===================== -->
+<section>
+  <h2 class="sec"><span class="dot" style="background:var(--high)"></span>高成本路线：前瞻队列 / 多组学 / 干预 / 机制</h2>
+  <p class="sec-sub">投入大、周期长，但这是把"人群关联"升级为"因果+机制"、稳进 1 区的正道，也是你作为医院研究者独有的护城河。</p>
+  <div class="grid">
+
+    <div class="card high">
+      <div class="top">
+        <span class="id tag-high">H1</span><span class="ribbon tag-high">★ 最推荐</span>
+        <h3>前瞻临床队列：shotgun + LC-MS/MS + MRI-PDFF（对标并超越原文）</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 思路</span><span class="v">在临床人群完整测"膳食木脂素—产肠木脂素菌(物种/功能)—尿/血肠木脂素—肝脂肪(MRI-PDFF)"全链，做因果链 + 中介——公开数据做不出的三联证据。</span></div>
+        <div class="row"><span class="k">🧪 素材</span><span class="v">伦理+注册 · 晨尿/粪便/空腹血 · <b>LC-MS/MS</b> 测 ENL/END · <b>shotgun 宏基因组</b> · <b>MRI-PDFF / FibroScan CAP</b> · FFQ · 完整临床协变量</span></div>
+        <div class="row"><span class="k">🔬 方法</span><span class="v">组成数据 · MaAsLin2 · 中介(菌→代谢物→肝脂肪) · 纵向混合模型</span></div>
+        <div class="row"><span class="k">🎯 卖点</span><span class="v">该领域最完整的人群证据链，1 区可冲</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">Gut Microbes<span class="p1">1区</span></span><span class="jb">Clinical Nutrition<span class="p1">1区</span></span><span class="jb">iMeta<span class="p1">1区</span></span><span class="jb">Hepatology Int<span class="p2">2区</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg r"></i><i class="seg r"></i><i class="seg r"></i><i class="seg r"></i></span><span class="mlabel">很高</span></span></div>
+        <div class="row"><span class="k">⚠️ 难点</span><span class="v">经费(宏基因组+MRI 较贵)、随访周期与质量</span></div>
+      </div>
+    </div>
+
+    <div class="card high">
+      <div class="top">
+        <span class="id tag-high">H2</span>
+        <h3>膳食干预 RCT：亚麻籽 / SDG 补充</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 思路</span><span class="v">随机对照给予亚麻籽/SDG(木脂素前体) vs 对照，测肝脂肪、菌群、肠木脂素的动态变化。</span></div>
+        <div class="row"><span class="k">🧪 素材</span><span class="v">RCT 伦理注册 · 干预品 · 依从监测 · 系列采样+检测+影像</span></div>
+        <div class="row"><span class="k">🔬 方法</span><span class="v">ITT · 混合模型 · 菌群/代谢物动态 · responder 分析</span></div>
+        <div class="row"><span class="k">🎯 卖点</span><span class="v">干预=更强因果，临床转化价值高</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">Am J Clin Nutr<span class="p1">1区</span></span><span class="jb">Clinical Nutrition<span class="p1">1区</span></span><span class="jb">Diabetes Care<span class="p1">1区</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg r"></i><i class="seg r"></i><i class="seg r"></i><i class="seg r"></i></span><span class="mlabel">很高</span></span></div>
+        <div class="row"><span class="k">⚠️ 难点</span><span class="v">RCT 投入大、依从与盲法、样本量估算</span></div>
+      </div>
+    </div>
+
+    <div class="card high">
+      <div class="top">
+        <span class="id tag-high">H3</span>
+        <h3>Gnotobiotic / FMT 动物实验验因果</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 思路</span><span class="v">把产肠木脂素菌(或患者菌群)定植到(无菌)MASLD 模型小鼠，看肝脂肪与代谢表型改变，验证因果与机制。</span></div>
+        <div class="row"><span class="k">🧪 素材</span><span class="v">动物伦理 · 无菌/SPF 设施 · 菌株 · MASLD 模型(高脂/MCD 饮食) · 组学</span></div>
+        <div class="row"><span class="k">🔬 方法</span><span class="v">FMT/单菌定植 · 肝脏病理与脂质 · 宿主-菌群组学</span></div>
+        <div class="row"><span class="k">🎯 卖点</span><span class="v">把人群关联升级成因果机制，显著提档</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">Gut Microbes<span class="p1">1区</span></span><span class="jb">Microbiome<span class="p1">1区</span></span><span class="jb">Gut<span class="p1">1区</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg r"></i><i class="seg r"></i><i class="seg r"></i><i class="seg r"></i></span><span class="mlabel">很高</span></span></div>
+        <div class="row"><span class="k">⚠️ 难点</span><span class="v">动物设施与成本、周期长、需微生物学协作</span></div>
+      </div>
+    </div>
+
+    <div class="card high">
+      <div class="top">
+        <span class="id tag-high">H4</span>
+        <h3>培养组学：分离新型产 enterolactone 菌株</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 思路</span><span class="v">从患者粪便厌氧培养分离能产 enterolactone 的新菌株，做基因组/功能鉴定。</span></div>
+        <div class="row"><span class="k">🧪 素材</span><span class="v">厌氧培养平台 · 底物(SDG) · LC-MS 验证产物 · 全基因组测序</span></div>
+        <div class="row"><span class="k">🔬 方法</span><span class="v">culturomics + 产物验证 + 比较基因组</span></div>
+        <div class="row"><span class="k">🎯 卖点</span><span class="v">发现层面的原创(新菌株/新酶)，微生物学正刊认可</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">Microbiome<span class="p1">1区</span></span><span class="jb">mSystems<span class="p2">2区</span></span><span class="jb">Microbiol Spectrum<span class="p3">2/3区</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg r"></i><i class="seg r"></i><i class="seg r"></i><i class="seg"></i></span><span class="mlabel">较高</span></span></div>
+        <div class="row"><span class="k">⚠️ 难点</span><span class="v">厌氧培养与分离技术门槛高</span></div>
+      </div>
+    </div>
+
+    <div class="card high">
+      <div class="top">
+        <span class="id tag-high">H5</span>
+        <h3>机制：enterolactone 对肝细胞 / 类器官脂代谢</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 思路</span><span class="v">体外用 enterolactone 处理肝细胞/类器官/脂肪变模型，验证对脂代谢通路(AMPK / SREBP-1c / PPARα / 炎症)的作用。</span></div>
+        <div class="row"><span class="k">🧪 素材</span><span class="v">细胞/类器官 · enterolactone 标准品 · WB/qPCR/脂质染色 · 转录组</span></div>
+        <div class="row"><span class="k">🔬 方法</span><span class="v">剂量梯度 · 通路干预 · 转录组</span></div>
+        <div class="row"><span class="k">🎯 卖点</span><span class="v">给人群关联补机制，常作为队列论文的加强模块</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">Mol Nutr Food Res<span class="p1">1区</span></span><span class="jb">J Nutr Biochem<span class="p2">2区</span></span><span class="jb">Food &amp; Function<span class="p2">2区</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg r"></i><i class="seg r"></i><i class="seg r"></i><i class="seg"></i></span><span class="mlabel">较高</span></span></div>
+        <div class="row"><span class="k">⚠️ 难点</span><span class="v">体外→体内外推受限，单独成文说服力有限</span></div>
+      </div>
+    </div>
+
+    <div class="card high">
+      <div class="top">
+        <span class="id tag-high">H6</span>
+        <h3>多组学整合：宏基因组 + 代谢组 + 宿主转录组</h3>
+      </div>
+      <div class="body">
+        <div class="row"><span class="k">💡 思路</span><span class="v">在队列里整合宏基因组、代谢组、宿主转录组，系统刻画"木脂素-菌-肝"轴。</span></div>
+        <div class="row"><span class="k">🧪 素材</span><span class="v">多平台组学 + 生信整合能力</span></div>
+        <div class="row"><span class="k">🔬 方法</span><span class="v">多组学整合(MOFA/网络) · 中介 · 因果图</span></div>
+        <div class="row"><span class="k">🎯 卖点</span><span class="v">系统生物学高度，冲顶刊</span></div>
+        <div class="row"><span class="k">📕 期刊</span><span class="v"><span class="jb">Microbiome<span class="p1">1区</span></span><span class="jb">Gut Microbes<span class="p1">1区</span></span><span class="jb">Cell Host &amp; Microbe<span class="p1">顶刊</span></span></span></div>
+        <div class="row"><span class="k">📈 命中</span><span class="v"><span class="meter"><i class="seg r"></i><i class="seg r"></i><i class="seg r"></i><i class="seg r"></i></span><span class="mlabel">很高（门槛也最高）</span></span></div>
+        <div class="row"><span class="k">⚠️ 难点</span><span class="v">成本与整合分析门槛最高，需团队支撑</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== 公开数据清单 ===================== -->
+<section>
+  <h2 class="sec"><span class="dot" style="background:var(--low)"></span>只用公开数据：现成数据库推荐（按获取难度）</h2>
+  <p class="sec-sub">一个决定性判断：<b>你的"暴露"用什么，就决定了能用哪些数据</b>。想继续用"尿肠木脂素实测值"，免费数据几乎只有 NHANES；愿意换成"膳食木脂素摄入"或"微生物组"，可用的免费数据就多很多。</p>
+
+  <div class="panel">
+    <div class="svgbox">
+    <svg viewBox="0 0 900 340" role="img" aria-label="按暴露选择公开数据库的决策图">
+      <!-- connectors -->
+      <g stroke="#cbd5e1" stroke-width="2" fill="none">
+        <line x1="176" y1="162" x2="212" y2="55"/>
+        <line x1="176" y1="162" x2="212" y2="161"/>
+        <line x1="176" y1="162" x2="212" y2="267"/>
+        <line x1="388" y1="55" x2="430" y2="55"/>
+        <line x1="388" y1="161" x2="430" y2="161"/>
+        <line x1="388" y1="267" x2="430" y2="267"/>
+      </g>
+      <!-- root -->
+      <rect x="24" y="132" width="152" height="60" rx="12" fill="#eef5ff" stroke="#c7ddff"/>
+      <text x="100" y="157" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">你的暴露</text>
+      <text x="100" y="179" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">用什么？</text>
+      <!-- options -->
+      <g>
+        <rect x="212" y="23" width="176" height="64" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+        <text x="300" y="50" text-anchor="middle" font-size="13" font-weight="700" fill="#334155">① 尿肠木脂素</text>
+        <text x="300" y="70" text-anchor="middle" font-size="11" fill="#64748b">(enterolactone 实测)</text>
+        <rect x="212" y="129" width="176" height="64" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+        <text x="300" y="156" text-anchor="middle" font-size="13" font-weight="700" fill="#334155">② 膳食木脂素摄入</text>
+        <text x="300" y="176" text-anchor="middle" font-size="11" fill="#64748b">(换一个暴露来源)</text>
+        <rect x="212" y="235" width="176" height="64" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+        <text x="300" y="262" text-anchor="middle" font-size="13" font-weight="700" fill="#334155">③ 微生物组</text>
+        <text x="300" y="282" text-anchor="middle" font-size="11" fill="#64748b">(预测物种 / 功能基因)</text>
+      </g>
+      <!-- datasets -->
+      <g>
+        <rect x="430" y="23" width="448" height="64" rx="10" fill="#fef3e2" stroke="#f6d8a8"/>
+        <text x="452" y="48" font-size="12.5" font-weight="700" fill="#b45309">NHANES 1999–2010 · Metabolomics Workbench</text>
+        <text x="452" y="68" font-size="11" fill="#92714a">⚠ 免费可得的『实测肠木脂素』数据很稀缺</text>
+        <rect x="430" y="129" width="448" height="64" rx="10" fill="#eef5ff" stroke="#c7ddff"/>
+        <text x="452" y="154" font-size="12.5" font-weight="700" fill="#1e3a8a">NHANES 膳食 + Phenol-Explorer / 荷兰木脂素库</text>
+        <text x="452" y="174" font-size="11" fill="#475569">进阶：UK Biobank 肝脏 MRI（需申请）</text>
+        <rect x="430" y="235" width="448" height="64" rx="10" fill="#e9f7ef" stroke="#bfe6cf"/>
+        <text x="452" y="260" font-size="12.5" font-weight="700" fill="#137a45">curatedMetagenomicData · GMrepo · SRA/ENA · iHMP</text>
+        <text x="452" y="280" font-size="11" fill="#475569">★ 你『预测物种 / 功能』特长的主场</text>
+      </g>
+    </svg>
+    </div>
+    <div class="legend">
+      <span class="chip"><span class="freebadge f-free">免费</span> 免申请直接下载</span>
+      <span class="chip"><span class="freebadge f-reg">注册</span> 免费但需注册/自助分析</span>
+      <span class="chip"><span class="freebadge f-app">申请</span> 需课题申请/付费</span>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:18px;padding:8px 10px">
+    <table>
+      <thead><tr><th style="width:22%">数据库</th><th style="width:40%">关键内容 / 你要的变量</th><th style="width:14%">对应思路</th><th>访问</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="4">① 完全免费、免申请（直接下载，建议首选）</td></tr>
+        <tr><td class="jn">NHANES（美国）</td><td>⭐唯一直接测了<b>尿 enterolactone/enterodiol</b>（1999–2010）的大型公开数据；配套膳食(FNDDS)、体测、肝酶、血脂血糖、CRP、DXA(肌肉/骨)、抑郁(PHQ-9)、肾功能、<b>死亡随访</b></td><td>L1 · L4 · L7</td><td><span class="freebadge f-free">免费</span><br><a class="src" href="https://wwwn.cdc.gov/nchs/nhanes/">wwwn.cdc.gov/nchs/nhanes</a></td></tr>
+        <tr><td class="jn">curatedMetagenomicData</td><td>上万例 <b>shotgun 宏基因组</b> + 人工整理元数据(BMI/疾病)；物种级丰度 + 通路 + 基因家族（R 包直接拉取）</td><td>L2 · L3</td><td><span class="freebadge f-free">免费</span><br><a class="src" href="http://bioconductor.org/packages/curatedMetagenomicData/">bioconductor.org</a></td></tr>
+        <tr><td class="jn">GMrepo v3</td><td>按<b>疾病表型可检索</b>的策展肠道宏基因组/16S 库，内置跨数据集 biomarker 分析（2025 更新）</td><td>L2 · L3</td><td><span class="freebadge f-free">免费</span><br><a class="src" href="https://gmrepo.humangut.info">gmrepo.humangut.info</a></td></tr>
+        <tr><td class="jn">Metabolomics Workbench / MetaboLights</td><td>3800+ 公开代谢组研究，<b>可按代谢物检索</b>到测过 enterolactone/enterodiol 并带表型的数据 → 少数能"现成拿到肠木脂素测量值"的免费途径</td><td>找现成"肠木脂素+表型"</td><td><span class="freebadge f-free">免费</span><br><a class="src" href="https://www.metabolomicsworkbench.org/">metabolomicsworkbench.org</a></td></tr>
+        <tr><td class="jn">SRA / ENA / GEO</td><td>现成的 <b>NAFLD/MASLD 粪便宏基因组</b>原始数据可下载重跑(MetaPhlAn/HUMAnN)</td><td>L2 · L3（自建队列）</td><td><span class="freebadge f-free">免费</span><br><a class="src" href="https://www.ncbi.nlm.nih.gov/sra">ncbi.nlm.nih.gov/sra</a></td></tr>
+        <tr><td class="jn">iHMP / HMP2</td><td>T2D(iPOP)、IBD 的<b>多组学</b>(微生物组+代谢组+宿主)，可探索"代谢物环"</td><td>L2 · L3（进阶）</td><td><span class="freebadge f-free">免费</span><br><a class="src" href="https://www.hmpdacc.org/">hmpdacc.org</a></td></tr>
+        <tr><td class="jn">American Gut / Qiita</td><td>大样本 <b>16S</b> + 膳食/生活方式元数据</td><td>L4（属级）</td><td><span class="freebadge f-free">免费</span><br><a class="src" href="https://qiita.ucsd.edu/">qiita.ucsd.edu</a></td></tr>
+        <tr><td class="jn">Phenol-Explorer + 荷兰木脂素库</td><td>食物<b>木脂素含量</b>(SECO/MAT/LARI/PINO)，把膳食换算成"摄入了多少木脂素"</td><td>L7（暴露估算工具）</td><td><span class="freebadge f-free">免费</span><br><a class="src" href="http://phenol-explorer.eu/">phenol-explorer.eu</a></td></tr>
+
+        <tr class="grp"><td colspan="4">② 免费，但需注册 / 偏自助分析</td></tr>
+        <tr><td class="jn">MGnify（EBI）</td><td>超大宏基因组资源，适合自己跑分析流程</td><td>L3</td><td><span class="freebadge f-reg">注册</span><br><a class="src" href="https://www.ebi.ac.uk/metagenomics">ebi.ac.uk/metagenomics</a></td></tr>
+        <tr><td class="jn">GWAS 汇总数据<br><small>(MiBioGen / DMP / 肝脂肪 / OpenGWAS)</small></td><td>两样本 MR 的工具变量来源——<b>仅在坚持做 MR 时用</b>（L8 已提醒：此方向已灌水、慎做）</td><td>L8（不建议主攻）</td><td><span class="freebadge f-reg">注册</span><br><a class="src" href="https://gwas.mrcieu.ac.uk/">OpenGWAS (IEU)</a></td></tr>
+
+        <tr class="grp"><td colspan="4">③ 公开可及，但需课题申请 / 付费</td></tr>
+        <tr><td class="jn">UK Biobank</td><td>肝脏 <b>MRI-PDFF（肝脂肪金标准）</b> + 膳食(可估木脂素) + NMR 代谢组 + 基因；暴露为"膳食木脂素"</td><td>M1（1/2区概率最高）</td><td><span class="freebadge f-app">申请</span><br><a class="src" href="https://www.ukbiobank.ac.uk/">ukbiobank.ac.uk</a></td></tr>
+        <tr><td class="jn">China Kadoorie Biobank (CKB)</td><td>大型<b>中国人群</b>队列，膳食 + 代谢 + 随访</td><td>中国人群角度</td><td><span class="freebadge f-app">申请</span><br><a class="src" href="https://www.ckbiobank.org/">ckbiobank.org</a></td></tr>
+        <tr><td class="jn">dbGaP / BioLINCC<br><small>(MESA · ARIC · Framingham)</small></td><td>部分队列测过 enterolactone，含膳食与心代谢结局</td><td>队列二次分析</td><td><span class="freebadge f-app">申请</span><br><a class="src" href="https://www.ncbi.nlm.nih.gov/gap/">dbGaP</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tip" style="margin-top:16px">
+    <b>起步组合建议：</b>① 走微生物组 → <b>curatedMetagenomicData + GMrepo</b>（做 L2/L3，发挥你"预测物种"特长）；② 走人群流行病学 → <b>NHANES 1999–2010</b>（做 L1/L4/L7）；③ 想要"现成的肠木脂素实测值 + 结局" → 去 <b>Metabolomics Workbench</b> 按 <span class="kpill">enterolactone</span> 检索公开研究做二次分析。<b>硬提醒：</b>NHANES 里"单一尿 enterolactone × NAFLD/肝酶/肥胖/死亡"都已发表过，别重复——要做必须上混合暴露/中介/新结局，或改走微生物组线。
+  </div>
+</section>
+
+<!-- ===================== 上手操作步骤 ===================== -->
+<section>
+  <h2 class="sec"><span class="dot" style="background:var(--low)"></span>拿到数据后第一步怎么做（两条零成本主线）</h2>
+  <p class="sec-sub">给你最推荐的两个免费数据库各一份"开箱即用"的起步流程与最小代码骨架（变量名/参数需按实际周期与版本微调）。</p>
+  <div class="grid">
+
+    <div class="panel">
+      <h3 class="ds-head">A. NHANES 上手</h3>
+      <p class="ds-sub">适用：L1 混合暴露 · L4 metabotype · L7 膳食木脂素</p>
+      <ol class="steps">
+        <li><b>锁定周期与变量：</b>尿植物雌激素仅 1999–2010；核心变量 <span class="kpill">URXENL</span>(enterolactone)、<span class="kpill">URXETD</span>(enterodiol)、尿肌酐 <span class="kpill">URXUCR</span>。</li>
+        <li><b>下载模块(XPT)：</b>人口学 DEMO、尿植物雌激素(PHYTO)、膳食 DR1TOT、体测 BMX、生化/血脂/CRP、DXA、问卷(如抑郁 DPQ)，以及对应<b>亚样本权重</b>。</li>
+        <li><b>跨周期合并：</b>按主键 SEQN 合并、逐周期 append；多周期合并须按 NHANES 规则<b>重算权重</b>。</li>
+        <li><b>处理变量：</b>暴露做肌酐校正(或把尿肌酐作协变量)；定义<b>新结局</b>与混杂因素。</li>
+        <li><b>加权建模：</b>survey 加权 + WQS/qgcomp/BKMR(混合暴露) + RCS(非线性) + 中介分析。</li>
+        <li><b>工具：</b>R(<code>survey</code>, <code>qgcomp</code>, <code>bkmr</code>, <code>mediation</code>, <code>gtsummary</code>) 或 Stata <code>svy</code>。</li>
+      </ol>
+      <div class="code"># R: 读取并合并 NHANES（haven + survey）
+library(haven); library(survey)
+demo &lt;- read_xpt("DEMO_F.xpt")      # 人口学
+phy  &lt;- read_xpt("PHYTO_F.xpt")     # 尿植物雌激素 URXENL/URXETD
+df   &lt;- merge(demo, phy, by = "SEQN")
+df$ENLcr &lt;- df$URXENL / df$URXUCR   # 肌酐校正
+dsn &lt;- svydesign(id = ~SDMVPSU, strata = ~SDMVSTRA,
+                 weights = ~WTSB2YR, nest = TRUE, data = df)
+# 周期后缀(_F 等)与权重随周期不同；多周期合并需重算权重</div>
+    </div>
+
+    <div class="panel">
+      <h3 class="ds-head">B. curatedMetagenomicData 上手</h3>
+      <p class="ds-sub">适用：L2 预测物种签名多队列验证 · L3 功能基因/通路</p>
+      <ol class="steps">
+        <li><b>安装：</b><code>BiocManager::install("curatedMetagenomicData")</code>。</li>
+        <li><b>查元数据：</b>在 <code>sampleMetadata</code> 中按 <code>body_site=="stool"</code>、<code>study_condition</code>/疾病筛目标队列。</li>
+        <li><b>取丰度：</b><code>returnSamples()</code> 拿 <code>relative_abundance</code>(物种) 或 <code>pathway_abundance</code>(通路)。</li>
+        <li><b>导入签名：</b>把你原文的"预测物种"列表映射到 MetaPhlAn 物种名(<code>s__...</code>)。</li>
+        <li><b>预处理：</b>过滤低流行物种 + <b>CLR 变换</b>；按 study 分层。</li>
+        <li><b>分析：</b><code>Maaslin2</code> 逐队列关联 → <code>metafor</code> 跨队列随机效应 meta；signature score + ROC/AUC。</li>
+      </ol>
+      <div class="code"># R: curatedMetagenomicData 多队列
+library(curatedMetagenomicData); library(Maaslin2)
+meta &lt;- sampleMetadata
+meta &lt;- subset(meta, body_site == "stool" &amp; !is.na(BMI))
+se &lt;- returnSamples(meta, "relative_abundance", rownames = "short")
+# 对 CLR 变换后的物种做 Maaslin2(物种 ~ BMI/疾病 + 协变量)
+# 再用 metafor 跨 study 做随机效应 meta，验证你的“预测物种”签名</div>
+    </div>
+
+  </div>
+  <div class="note" style="border-left-color:var(--low);background:#f2fbf6;margin-top:16px">
+    <b style="color:var(--low)">提示：</b>两条线都可在一周内跑出初步结果。L2(微生物组)最能发挥你独有特长、也最容易上 2 区，建议优先；NHANES 线注意避开"已发表的单暴露-单结局组合"，务必用混合暴露/中介/新结局做出区分度。
+  </div>
+</section>
+
+<!-- ===================== 期刊总表 ===================== -->
+<section>
+  <h2 class="sec"><span class="dot" style="background:var(--accent)"></span>期刊候选总表（按方向分组）</h2>
+  <p class="sec-sub">分区为中科院"升级版"大致归类，<b>仅供参考</b>——务必以投稿当年 LetPub / 官方分区表为准（见文末声明）。</p>
+  <div class="panel" style="padding:8px 10px">
+    <table>
+      <thead><tr><th style="width:24%">期刊</th><th style="width:12%">分区(约)</th><th style="width:30%">方向</th><th>适配课题</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="4">肠道菌群 / 微生物组</td></tr>
+        <tr><td class="jn">Gut Microbes</td><td><span class="p1">1区</span> IF≈12</td><td>肠道菌群与宿主</td><td>L2 · H1 · H3 · H6</td></tr>
+        <tr><td class="jn">Microbiome</td><td><span class="p1">1区</span> 顶</td><td>微生物组(难)</td><td>L3 · H3 · H4 · H6</td></tr>
+        <tr><td class="jn">iMeta</td><td><span class="p1">1区</span></td><td>微生物组方法(华人主导,友好)</td><td>L2 · L3 · H1</td></tr>
+        <tr><td class="jn">mSystems</td><td><span class="p2">2区</span></td><td>微生物组系统生物学</td><td>L2 · L3 · H4</td></tr>
+        <tr><td class="jn">npj Biofilms and Microbiomes</td><td><span class="p2">2区</span></td><td>微生物组</td><td>L2 · M3 · H4</td></tr>
+        <tr><td class="jn">Front Cell Infect Microbiol</td><td><span class="p3">2/3区</span></td><td>微生物组(发文快)</td><td>M3</td></tr>
+
+        <tr class="grp"><td colspan="4">营养 / 食品</td></tr>
+        <tr><td class="jn">American J Clinical Nutrition</td><td><span class="p1">1区</span></td><td>营养流行病学/干预</td><td>H2 · M1</td></tr>
+        <tr><td class="jn">Clinical Nutrition</td><td><span class="p1">1区</span></td><td>临床营养</td><td>M1 · H1 · H2</td></tr>
+        <tr><td class="jn">Molecular Nutrition &amp; Food Research</td><td><span class="p1">1区</span></td><td>营养分子机制</td><td>L4 · M1 · H5</td></tr>
+        <tr><td class="jn">Critical Reviews in Food Sci Nutr</td><td><span class="p1">1区</span></td><td>综述</td><td>L5</td></tr>
+        <tr><td class="jn">Advances in Nutrition</td><td><span class="p1">1区</span></td><td>综述</td><td>L5</td></tr>
+        <tr><td class="jn">Food &amp; Function <small>(你的老刊)</small></td><td><span class="p2">2区</span></td><td>食品功能</td><td>L4 · M2 · M3 · M4 · H5</td></tr>
+        <tr><td class="jn">European Journal of Nutrition</td><td><span class="p3">2/3区</span></td><td>营养流行病学</td><td>L4 · L7 · M2</td></tr>
+        <tr><td class="jn">Nutrients</td><td><span class="p2">2区</span> <span class="pw">MDPI</span></td><td>营养(发文快)</td><td>L1 · L5 · M5</td></tr>
+        <tr><td class="jn">Journal of Nutritional Biochemistry</td><td><span class="p2">2区</span></td><td>营养生化/机制</td><td>H5</td></tr>
+
+        <tr class="grp"><td colspan="4">肝病 / 代谢 / 内分泌 / 转化</td></tr>
+        <tr><td class="jn">Journal of Clinical Endocrinol Metab</td><td><span class="p1">1区</span></td><td>内分泌(女性健康)</td><td>M5</td></tr>
+        <tr><td class="jn">BMC Medicine</td><td><span class="p1">1区</span></td><td>综合医学</td><td>M1</td></tr>
+        <tr><td class="jn">Liver International</td><td><span class="p2">2区</span></td><td>肝病临床</td><td>M1 · H1</td></tr>
+        <tr><td class="jn">Hepatology International</td><td><span class="p2">2区</span></td><td>肝病</td><td>H1</td></tr>
+        <tr><td class="jn">Journal of Translational Medicine</td><td><span class="p2">2区</span></td><td>转化/多组学</td><td>M4</td></tr>
+        <tr><td class="jn">Nutrition &amp; Metabolism</td><td><span class="p3">2/3区</span></td><td>代谢</td><td>M2</td></tr>
+        <tr><td class="jn">Frontiers in Endocrinology / Nutrition</td><td><span class="p3">2/3区</span></td><td>内分泌/营养(快)</td><td>L1 · L7 · M5</td></tr>
+        <tr><td class="jn">Lipids in Health and Disease</td><td><span class="p3">3区</span></td><td>血脂代谢(保底)</td><td>L1 · M2</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===================== 路线时间轴 ===================== -->
+<section>
+  <h2 class="sec"><span class="dot" style="background:var(--accent)"></span>建议推进顺序（并行推进，滚动产出）</h2>
+  <div class="panel">
+    <div class="svgbox">
+    <svg viewBox="0 0 900 230" role="img" aria-label="18个月推进时间轴">
+      <line x1="60" y1="40" x2="860" y2="40" stroke="#cbd5e1" stroke-width="2"/>
+      <g font-size="12" fill="#334155" text-anchor="middle">
+        <circle cx="130" cy="40" r="6" fill="#1f9d55"/><text x="130" y="25" font-weight="700">0–3 月</text>
+        <circle cx="360" cy="40" r="6" fill="#1f9d55"/><text x="360" y="25" font-weight="700">3–6 月</text>
+        <circle cx="590" cy="40" r="6" fill="#d97706"/><text x="590" y="25" font-weight="700">6–12 月</text>
+        <circle cx="810" cy="40" r="6" fill="#dc2626"/><text x="810" y="25" font-weight="700">12–18 月+</text>
+      </g>
+      <g font-size="11.5" fill="#475569">
+        <rect x="55" y="58" width="150" height="70" rx="8" fill="#e9f7ef" stroke="#bfe6cf"/>
+        <text x="130" y="78" text-anchor="middle" font-weight="700" fill="#137a45">立刻启动(免费)</text>
+        <text x="130" y="97" text-anchor="middle">L2 多队列签名跑通</text>
+        <text x="130" y="114" text-anchor="middle">L5/L6 综述起草</text>
+
+        <rect x="285" y="58" width="150" height="70" rx="8" fill="#e9f7ef" stroke="#bfe6cf"/>
+        <text x="360" y="78" text-anchor="middle" font-weight="700" fill="#137a45">投稿 + 补数据</text>
+        <text x="360" y="97" text-anchor="middle">L2 投稿</text>
+        <text x="360" y="114" text-anchor="middle">M2/M3 库存样本补测</text>
+
+        <rect x="515" y="58" width="150" height="70" rx="8" fill="#fef3e2" stroke="#f6d8a8"/>
+        <text x="590" y="78" text-anchor="middle" font-weight="700" fill="#b45309">中成本成文</text>
+        <text x="590" y="97" text-anchor="middle">M1/M2 成稿投稿</text>
+        <text x="590" y="114" text-anchor="middle">H1 前瞻队列入组</text>
+
+        <rect x="735" y="58" width="150" height="70" rx="8" fill="#fdecec" stroke="#f6bcbc"/>
+        <text x="810" y="78" text-anchor="middle" font-weight="700" fill="#b91c1c">冲 1 区</text>
+        <text x="810" y="97" text-anchor="middle">H1 完成</text>
+        <text x="810" y="114" text-anchor="middle">+H3/H5 机制加强</text>
+      </g>
+      <g font-size="11.5" fill="#64748b" text-anchor="middle">
+        <text x="460" y="165" font-weight="700" fill="#334155">贯穿全程：第 0 月起同步启动医院伦理审批 + 盘点生物样本库 / UKB 账号 / 测序条件</text>
+        <rect x="55" y="178" width="830" height="26" rx="6" fill="#eef2f7"/>
+        <text x="470" y="195">"先用零成本 L2 立住产出与立项依据 → 并行办医院流程 → 滚动升级到 M/H 冲高区"</text>
+      </g>
+    </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 声明 ===================== -->
+<section>
+  <h2 class="sec"><span class="dot" style="background:var(--high)"></span>投稿前必读（对医院考核很关键）</h2>
+  <div class="note">
+    <ul class="tight">
+      <li><b>分区会变：</b>中科院分区每年 3–4 月更新，常有升降；本页分区仅为大致参考，<b>以投稿当年 LetPub / 官方表为准</b>，并确认你单位用的是"基础版"还是"升级版"。</li>
+      <li><b>预警名单：</b>先查目标期刊是否在"中科院国际期刊预警名单"及你医院内部黑/警示名单中，避免发了不算数。</li>
+      <li><b>MDPI / Frontiers：</b>Nutrients、Frontiers 系列审稿快，但不少医院对高发文量期刊折算或不计入高级别成果——<b>投前务必和科研处确认认定口径</b>。</li>
+      <li><b>"NHANES 流水线"退潮：</b>单暴露-单结局的 NHANES 横断面声誉下降、部分期刊已不欢迎，必须有方法创新(混合暴露/中介/新结局)才有价值。</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="tip">
+    <b>给你的一句话建议：</b>先用 <b>L2（零成本、发挥你"预测物种"特长）</b> 立住一篇 2 区并作为立项依据；同时把 <b>H1（医院前瞻三联队列）</b> 的伦理和样本盘点启动起来——这是你唯一能做出"物种+肠木脂素+肝脂肪"三联、最可能上 1 区的护城河。<b>MR(L8) 原则上不碰。</b>
+  </div>
+</section>
+
+<!-- ===================== L2 深度方案 ===================== -->
+<section id="l2-plan">
+  <div style="border-top:2px dashed var(--line);margin:8px 0 26px"></div>
+  <h2 class="sec"><span class="dot" style="background:var(--low)"></span>附：L2 完整研究方案（深度展开）</h2>
+  <p class="sec-sub">对应上文 ★ 最推荐的 L2；零成本、最发挥你"预测物种"特长。同内容另存为 <code>L2_multicohort_signature_plan.md</code>。<br>标题：<b>肠木脂素"预测物种"签名的多队列可重复性验证</b> · Cross-cohort reproducibility of an enterolignan-predicting gut microbial signature.</p>
+
+  <!-- 0 速览 -->
+  <div class="panel">
+    <h3 style="margin:0 0 10px;font-size:16px">0 · 方案速览（一页版）</h3>
+    <table>
+      <tbody>
+        <tr><td class="jn" style="width:22%">科学问题</td><td>你单队列识别的"预测肠木脂素的物种签名"，能否在<b>多个独立公开人群</b>中重复？是否稳健关联<b>肥胖/脂肪肝</b>？</td></tr>
+        <tr><td class="jn">设计</td><td>二次分析 + 发现-验证框架：原文队列为"发现集"，多个公开 shotgun 队列为"外部验证集"</td></tr>
+        <tr><td class="jn">数据</td><td>curatedMetagenomicData（主）+ GMrepo v3（交叉核对）+（可选）SRA/ENA 的 MASLD 宏基因组</td></tr>
+        <tr><td class="jn">暴露</td><td>原文"预测物种"列表 → 签名评分（signature score）</td></tr>
+        <tr><td class="jn">主要结局</td><td>肥胖度（BMI 连续 / obesity 二分 / WC 如有）</td></tr>
+        <tr><td class="jn">次要结局</td><td>MASLD/NAFLD（如有）、代谢综合征组分、T2D</td></tr>
+        <tr><td class="jn">核心方法</td><td>逐队列 MaAsLin2 → 跨队列随机效应 meta（MMUPHin / metafor）+ 签名评分 leave-one-cohort-out 判别</td></tr>
+        <tr><td class="jn">目标期刊</td><td>iMeta / mSystems / npj Biofilms and Microbiomes（2 区，现实）；Gut Microbes（1 区，冲刺）</td></tr>
+        <tr><td class="jn">周期 / 成本</td><td>8–12 周；<b>零实验经费</b>，仅需算力 + R</td></tr>
+        <tr><td class="jn">关键风险</td><td>签名若不可重复 → 转为"人群/膳食依赖性"的诚实发现（仍可发）；MASLD 样本偏少 → 主结局用肥胖度</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 1 背景 -->
+  <div class="panel" style="margin-top:18px">
+    <h3 style="margin:0 0 8px;font-size:16px">1 · 背景与科学缺口</h3>
+    <p style="margin:0 0 8px"><b>一句话定位：把你博士/原文的单队列发现，升级为"可重复、可泛化"的多人群证据。</b></p>
+    <p style="margin:0 0 8px">植物木脂素需肠道菌转化为肠木脂素（enterolactone、enterodiol）才具活性，个体转化能力差异大、由特定菌决定。你在 Food &amp; Function (2024) 用重复测量识别了"预测肠木脂素水平"的物种，并发现与肥胖相关。</p>
+    <p style="margin:0 0 4px"><b>现有缺口（即卖点）：</b></p>
+    <ul class="tight">
+      <li><b>单队列、无外部验证</b>——是否只是单一人群的偶然关联，尚无独立验证。</li>
+      <li><b>泛化性未知</b>——跨国家、跨膳食模式（西方化程度）是否仍成立？</li>
+      <li><b>与脂肪肝关系未系统检验</b>——原文聚焦肥胖，MASLD 这条线尚未在多人群落实。</li>
+    </ul>
+  </div>
+
+  <!-- 2 目标与假设 -->
+  <section style="margin-top:18px">
+    <h3 style="margin:0 0 12px;font-size:16px">2 · 研究目标与假设</h3>
+    <div class="grid">
+      <div class="card low"><div class="top"><span class="id tag-low">Aim 1</span><h3>物种级可重复性</h3></div>
+        <div class="body">
+          <div class="row"><span class="k">目标</span><span class="v">在多个独立队列逐一检验原文"预测物种"与肥胖度的关联方向与强度是否一致。</span></div>
+          <div class="row"><span class="k">H1</span><span class="v">多数签名物种在独立队列保持<b>方向一致</b>的关联。</span></div>
+        </div>
+      </div>
+      <div class="card low"><div class="top"><span class="id tag-low">Aim 2</span><h3>签名评分的判别与关联</h3></div>
+        <div class="body">
+          <div class="row"><span class="k">目标</span><span class="v">构建签名评分，检验与 BMI/肥胖的关联，并用留一队列交叉验证评估跨人群判别力。</span></div>
+          <div class="row"><span class="k">H2</span><span class="v">评分与肥胖度稳健相关，且在未见过的队列保持判别力（LOCO-AUC 显著 &gt; 0.5）。</span></div>
+        </div>
+      </div>
+      <div class="card low"><div class="top"><span class="id tag-low">Aim 3</span><h3>功能延伸（可选，衔接 L3）</h3></div>
+        <div class="body">
+          <div class="row"><span class="k">目标</span><span class="v">检验木脂素代谢/相关通路功能基因在多队列的一致性，为机制提供线索。</span></div>
+          <div class="row"><span class="k">H3</span><span class="v">签名相关功能通路在多队列 meta 呈一致方向。</span></div>
+        </div>
+      </div>
+      <div class="card low"><div class="top"><span class="id tag-low">次要</span><h3>脂肪肝探索</h3></div>
+        <div class="body">
+          <div class="row"><span class="k">目标</span><span class="v">在有 MASLD/NAFLD 标签的样本中，检验签名评分与脂肪肝的关联（样本有限，定位探索性）。</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 设计总览 -->
+  <div class="panel" style="margin-top:18px">
+    <h3 style="margin:0 0 10px;font-size:16px">3 · 研究设计总览（发现-验证）</h3>
+    <div class="svgbox">
+    <svg viewBox="0 0 900 260" role="img" aria-label="L2 发现-验证设计图">
+      <defs>
+        <marker id="arw2" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L7,3 L0,6 Z" fill="#94a3b8"/>
+        </marker>
+      </defs>
+      <rect x="298" y="14" width="304" height="52" rx="10" fill="#eef5ff" stroke="#c7ddff"/>
+      <text x="450" y="38" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">发现集：你的原文队列（Food &amp; Function 2024）</text>
+      <text x="450" y="56" text-anchor="middle" font-size="11" fill="#475569">提取"预测物种"列表 + 效应方向</text>
+      <line x1="450" y1="66" x2="450" y2="92" stroke="#94a3b8" stroke-width="2" marker-end="url(#arw2)"/>
+      <rect x="250" y="94" width="400" height="52" rx="10" fill="#e9f7ef" stroke="#bfe6cf"/>
+      <text x="450" y="118" text-anchor="middle" font-size="13" font-weight="700" fill="#137a45">外部验证集：多个独立公开 shotgun 宏基因组队列</text>
+      <text x="450" y="136" text-anchor="middle" font-size="11" fill="#475569">curatedMetagenomicData · GMrepo · SRA/ENA</text>
+      <line x1="450" y1="146" x2="185" y2="190" stroke="#94a3b8" stroke-width="2" marker-end="url(#arw2)"/>
+      <line x1="450" y1="146" x2="450" y2="190" stroke="#94a3b8" stroke-width="2" marker-end="url(#arw2)"/>
+      <line x1="450" y1="146" x2="715" y2="190" stroke="#94a3b8" stroke-width="2" marker-end="url(#arw2)"/>
+      <rect x="60" y="192" width="250" height="54" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="185" y="214" text-anchor="middle" font-size="12.5" font-weight="700" fill="#334155">Aim 1 · 物种级可重复性</text>
+      <text x="185" y="232" text-anchor="middle" font-size="11" fill="#64748b">逐队列 + 随机效应 meta</text>
+      <rect x="325" y="192" width="250" height="54" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="450" y="214" text-anchor="middle" font-size="12.5" font-weight="700" fill="#334155">Aim 2 · 签名评分判别</text>
+      <text x="450" y="232" text-anchor="middle" font-size="11" fill="#64748b">LOCO 交叉验证 + meta</text>
+      <rect x="590" y="192" width="250" height="54" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="715" y="214" text-anchor="middle" font-size="12.5" font-weight="700" fill="#334155">Aim 3 · 功能通路（可选）</text>
+      <text x="715" y="232" text-anchor="middle" font-size="11" fill="#64748b">多队列一致性</text>
+    </svg>
+    </div>
+    <p style="margin:8px 0 0;color:var(--muted);font-size:12.5px">要点：发现与验证<b>严格分离</b>；以"研究/队列"为批次做随机效应合并，避免简单合池的 Simpson/批次偏倚。</p>
+  </div>
+
+  <!-- 4 数据 -->
+  <div class="panel" style="margin-top:18px">
+    <h3 style="margin:0 0 8px;font-size:16px">4 · 数据来源与队列</h3>
+    <p style="margin:0 0 6px"><b>4.1 主数据 curatedMetagenomicData：</b>标准化 MetaPhlAn（物种）+ HUMAnN（通路/基因）谱 + 人工整理 <code>sampleMetadata</code>（age/sex/BMI/country/study_condition/number_reads 等），免费可脚本化。</p>
+    <p style="margin:0 0 6px"><b>4.2 交叉核对 GMrepo v3：</b>按疾病表型核对各物种在肥胖/健康间的流行度与方向，作 Aim1 旁证。</p>
+    <p style="margin:0 0 6px"><b>4.3 可选补充 SRA/ENA：</b>若 MASLD 标签不足，用统一流程（KneadData→MetaPhlAn4→HUMAnN3）重跑 2–4 个公开 NAFLD/MASLD 队列。</p>
+    <p style="margin:0 0 6px"><b>4.4 纳入：</b>成人（≥18）、粪便、WMS、有 BMI/代谢表型、测序质量达标（去宿主 reads ≥5×10⁶）。<b>排除：</b>近期抗生素、纵向重复（每人一次）、妊娠、非目标重大混杂病。</p>
+    <p style="margin:0 0 0"><b>4.5 预期规模（示意）：</b>具 BMI 的粪便宏基因组数千–上万例、覆盖十数国；明确 MASLD 标签者较少 → 主结局用肥胖度。</p>
+    <div class="note" style="border-left-color:var(--med);background:#fff8ef;margin-top:10px"><b style="color:var(--med)">诚实边界：</b>具体可用队列与样本量<b>必须以你运行 <code>sampleMetadata</code> 查询当日结果为准</b>，本方案不预设固定数字。</div>
+  </div>
+
+  <!-- 5 变量 -->
+  <div class="panel" style="margin-top:18px">
+    <h3 style="margin:0 0 8px;font-size:16px">5 · 变量定义</h3>
+    <p style="margin:0 0 6px"><b>暴露（签名评分）：</b>① 从原文提取"预测物种"及方向；② 映射到 MetaPhlAn4 命名（<code>s__</code>/SGB），对不齐者回退属级作敏感性；③ 三种评分并行互证：<b>非加权</b>（正向−负向 CLR 之和）、<b>加权</b>（原文/重估系数）、<b>机器学习</b>（elastic net / RF，仅签名物种，作判别上限）。</p>
+    <p style="margin:0 0 6px"><b>结局：</b>主要 = BMI（连续）、肥胖（BMI≥30）、WC（如有）；次要 = MASLD/NAFLD、代谢综合征组分、T2D。</p>
+    <p style="margin:0 0 0"><b>协变量：</b>年龄、性别、国家/队列、测序平台与深度、西方化/膳食代理、抗生素使用。</p>
+    <p style="margin:8px 0 0;color:var(--muted);font-size:12.5px">示例候选物种（<b>仅示意，以原文为准</b>）：<i>Blautia</i>、<i>Eggerthella</i>/<i>Adlercreutzia</i>、<i>Lactonifactor</i>、<i>Ruminococcus</i>、<i>Bacteroides</i> 属下物种。</p>
+  </div>
+
+  <!-- 6 统计 -->
+  <section style="margin-top:18px">
+    <h3 style="margin:0 0 6px;font-size:16px">6 · 统计分析计划（核心）</h3>
+    <p class="sec-sub" style="margin:0 0 12px">总原则：组成数据用 CLR；以"研究"为批次随机效应合并（非直接合池）；全程 BH-FDR；预先登记主/次分析避免 p-hacking。</p>
+    <div class="grid">
+      <div class="card low"><div class="top"><span class="id tag-low">6.1 Aim1</span><h3>物种级可重复性</h3></div>
+        <div class="body">
+          <div class="row"><span class="k">逐队列</span><span class="v">MaAsLin2（CLR，固定效应含结局+年龄+性别）估计每个签名物种 β/SE。</span></div>
+          <div class="row"><span class="k">合并</span><span class="v">主：MMUPHin <code>lm_meta</code>；旁证：<code>metafor::rma</code> 随机效应 + 森林图。</span></div>
+          <div class="row"><span class="k">指标</span><span class="v">合并效应、I² 异质性、<b>方向一致率</b>、sign test。</span></div>
+          <div class="row"><span class="k">判定</span><span class="v">FDR&lt;0.05 且方向与发现集一致 = "可重复"；报告可重复物种比例。</span></div>
+        </div>
+      </div>
+      <div class="card low"><div class="top"><span class="id tag-low">6.2 Aim2</span><h3>签名评分判别</h3></div>
+        <div class="body">
+          <div class="row"><span class="k">批次校正</span><span class="v">MMUPHin <code>adjust_batch</code> 后再算评分。</span></div>
+          <div class="row"><span class="k">关联</span><span class="v">评分 ~ 肥胖度，逐队列 + meta；连续/分类分别建模。</span></div>
+          <div class="row"><span class="k">判别</span><span class="v"><b>留一队列交叉验证（LOCO）</b>：k−1 训练、留出队列测试，报告 LOCO-AUC 分布 —— 泛化性硬证据。</span></div>
+        </div>
+      </div>
+      <div class="card low"><div class="top"><span class="id tag-low">6.3 Aim3</span><h3>功能延伸（可选）</h3></div>
+        <div class="body">
+          <div class="row"><span class="k">数据</span><span class="v">HUMAnN 通路/基因家族。</span></div>
+          <div class="row"><span class="k">聚焦</span><span class="v">木脂素代谢相关（如 β-glucuronidase、去甲基化/脱羟基）。</span></div>
+          <div class="row"><span class="k">方法</span><span class="v">复用 6.1 的 meta 框架。</span></div>
+        </div>
+      </div>
+      <div class="card low"><div class="top"><span class="id tag-low">6.4/6.5</span><h3>敏感性 & 把握度</h3></div>
+        <div class="body">
+          <div class="row"><span class="k">敏感性</span><span class="v">流行度阈值(5/10/20%)；CLR 伪计数；剔除抗生素；<b>西方化 vs 非西方化分层</b>；LOCO；阴性对照物种；三种评分一致性。</span></div>
+          <div class="row"><span class="k">把握度</span><span class="v">以 LOCO-AUC 为主做事后可行性评估与模拟（二次分析，不追求固定招募量）。</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 偏倚 -->
+  <div class="panel" style="margin-top:18px">
+    <h3 style="margin:0 0 6px;font-size:16px">7 · 偏倚与混杂控制</h3>
+    <table>
+      <thead><tr><th style="width:40%">偏倚来源</th><th>控制手段</th></tr></thead>
+      <tbody>
+        <tr><td>研究间批次/技术差异（平台、深度、建库）</td><td>MMUPHin 批次校正；随机效应 meta；平台/深度入协变量</td></tr>
+        <tr><td>人群/膳食异质性（国家、西方化）</td><td>分层分析；以研究为随机效应；报告 I²</td></tr>
+        <tr><td>组成性（compositionality）</td><td>CLR 变换；组成感知方法</td></tr>
+        <tr><td>反向因果</td><td>明确横断面不推因果，用"关联/可重复性"措辞</td></tr>
+        <tr><td>选择偏倚（纵向重复、抗生素）</td><td>每人一次；敏感性剔除抗生素</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 8+9 图表 & 工具 -->
+  <div class="panel" style="margin-top:18px">
+    <div class="grid">
+      <div>
+        <h3 style="margin:0 0 6px;font-size:16px">8 · 预期图表清单</h3>
+        <ul class="tight">
+          <li><b>Fig1</b> 设计/纳排流程图</li>
+          <li><b>Fig2</b> 队列特征（世界地图/气泡 + BMI 分布）</li>
+          <li><b>Fig3</b> <b>森林图</b>：各签名物种跨队列合并效应 + I²（Aim1 主图）</li>
+          <li><b>Fig4</b> 评分 vs 肥胖度 + <b>LOCO-AUC</b> 箱线（Aim2 主图）</li>
+          <li><b>Fig5</b>（可选）功能通路 meta</li>
+          <li><b>Table1</b> 纳入队列描述；<b>Table2</b> 签名物种 meta 结果</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="margin:0 0 6px;font-size:16px">9 · 工具与可重复性</h3>
+        <ul class="tight">
+          <li>R ≥ 4.3 + Bioconductor；<code>renv</code> 锁版本、<code>set.seed()</code>、报告 <code>sessionInfo()</code></li>
+          <li>核心包：<code>curatedMetagenomicData</code>、<code>mia</code>、<code>Maaslin2</code>、<code>MMUPHin</code>、<code>metafor</code>、<code>vegan</code>、<code>pROC</code>、<code>glmnet</code>、<code>ggplot2</code></li>
+          <li>代码上传 GitHub，可一键复现；建议 OSF <b>预注册</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10 时间轴 -->
+  <div class="panel" style="margin-top:18px">
+    <h3 style="margin:0 0 6px;font-size:16px">10 · 里程碑与时间轴（8–12 周）</h3>
+    <table>
+      <thead><tr><th style="width:14%">周</th><th>任务</th><th style="width:26%">产出</th></tr></thead>
+      <tbody>
+        <tr><td>1–2</td><td>拉取数据 + QC + 队列清单；对齐签名物种命名</td><td>数据集 + Table1 雏形</td></tr>
+        <tr><td>3–4</td><td>Aim1 逐队列 + meta；GMrepo 核对</td><td>森林图 Fig3</td></tr>
+        <tr><td>5–6</td><td>Aim2 签名评分 + MMUPHin + LOCO-AUC</td><td>Fig4</td></tr>
+        <tr><td>7</td><td>敏感性（分层/阈值/阴性对照）</td><td>补充图表</td></tr>
+        <tr><td>8</td><td>Aim3 功能通路（可选）+ MASLD 次要分析</td><td>Fig5</td></tr>
+        <tr><td>9–10</td><td>写作（Methods/Results 优先）+ 图表精修</td><td>初稿</td></tr>
+        <tr><td>11–12</td><td>自评审 + 共同作者修改 + 投稿</td><td>投稿</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 11 期刊 -->
+  <div class="panel" style="margin-top:18px">
+    <h3 style="margin:0 0 8px;font-size:16px">11 · 目标期刊与投稿策略</h3>
+    <p style="margin:0 0 6px"><b>主投（2 区，现实）：</b><span class="jb">iMeta<span class="p1">1区</span></span><span class="jb">mSystems<span class="p2">2区</span></span><span class="jb">npj Biofilms Microbiomes<span class="p2">2区</span></span>　<b>冲刺（1 区）：</b><span class="jb">Gut Microbes<span class="p1">1区</span></span></p>
+    <p style="margin:0 0 0">叙事主线：不是"又一个微生物组关联"，而是"<b>一个此前单队列发现的肠木脂素菌群签名，在多国独立人群中的可重复性与边界条件</b>"——强调方法稳健（meta + 批次校正 + LOCO）与诚实边界。⚠️ 分区每年更新，投前查 LetPub 并确认你医院是否认该刊。</p>
+  </div>
+
+  <!-- 12 风险 -->
+  <div class="panel" style="margin-top:18px">
+    <h3 style="margin:0 0 6px;font-size:16px">12 · 风险与应对（预案）</h3>
+    <table>
+      <thead><tr><th style="width:34%">风险</th><th>应对</th></tr></thead>
+      <tbody>
+        <tr><td><b>签名不可重复</b></td><td>转为诚实的"<b>人群/膳食依赖性</b>"故事：报告哪些物种稳健、哪些受地域/西方化调制——本身即有价值的条件性发现</td></tr>
+        <tr><td>MASLD 宏基因组样本太少</td><td>主结局锁肥胖度；MASLD 用专门 SRA 队列补充或降为探索；必要时找肝病科合作（转 M/H 路线）</td></tr>
+        <tr><td>分类名对不齐（SGB vs 旧命名）</td><td>回退属级映射；报告物种级与属级两套结果</td></tr>
+        <tr><td>西方化强混杂</td><td>预设西方化分层为主分析之一，而非事后</td></tr>
+        <tr><td>被质疑"纯关联"</td><td>明确横断面定位 + 功能通路(Aim3)机制线索 + 预注册</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 13 伦理 -->
+  <div class="note" style="border-left-color:var(--accent);background:#f3f7ff;margin-top:18px">
+    <b style="color:var(--accent)">13 · 伦理与数据合规：</b>公开、去标识数据的二次分析，通常无需新伦理审批；但须在文中援引每个原始队列的伦理与数据来源、对受控数据签 DUA、遵守各库引用条款。投稿前向医院科研/伦理办确认本地备案要求。
+  </div>
+
+  <!-- 14 附录A -->
+  <div class="panel" style="margin-top:18px">
+    <h3 style="margin:0 0 8px;font-size:16px">附录 A · 候选队列筛选（操作说明）</h3>
+    <p style="margin:0">不预设固定名单（避免过时），用即时查询枚举：在 <code>sampleMetadata</code> 筛 <code>body_site=="stool"</code>、<code>age&gt;=18</code>、<code>!is.na(BMI)</code>，按 <code>study_name</code> 汇总样本量与 BMI 分布；标注含肥胖/T2D/代谢综合征/NAFLD 的队列；按国家/西方化标注以保证地域多样；产出 Table1 雏形后冻结清单。</p>
+  </div>
+
+  <!-- 15 附录B 代码 -->
+  <div class="panel" style="margin-top:18px">
+    <h3 style="margin:0 0 4px;font-size:16px">附录 B · 端到端代码骨架（R，示意）</h3>
+    <p style="margin:0 0 2px;color:var(--muted);font-size:12.5px">变量名/参数需按实际周期与包版本核对；此为结构骨架，非即用脚本。</p>
+    <div class="code"># ============================================================
+# L2: 肠木脂素“预测物种”签名的多队列可重复性验证 — R 骨架
+# ============================================================
+library(curatedMetagenomicData); library(dplyr); library(stringr)
+library(mia); library(TreeSummarizedExperiment)
+library(Maaslin2); library(MMUPHin); library(metafor)
+library(vegan); library(pROC); library(glmnet); library(ggplot2)
+set.seed(42)
+
+# 1) 元数据筛选：成人 + 粪便 + 有 BMI + 质量达标；每人仅一次
+md &lt;- sampleMetadata |>
+  filter(body_site == "stool", age >= 18, !is.na(BMI),
+         (is.na(number_reads) | number_reads >= 5e6)) |>
+  group_by(subject_id) |>
+  slice_min(days_from_first_collection, with_ties = FALSE) |>
+  ungroup()
+
+# 2) 取物种相对丰度（MetaPhlAn4）
+tse &lt;- returnSamples(md, "relative_abundance", rownames = "short")
+
+# 3) 流行度过滤（≥10% 检出）+ CLR
+keep &lt;- rowMeans(assay(tse, "relative_abundance") > 0) >= 0.10
+tse  &lt;- tse[keep, ]
+tse  &lt;- transformAssay(tse, assay.type = "relative_abundance",
+                       method = "clr", pseudocount = 1e-6, name = "clr")
+
+# 4) 导入原文“预测物种”并对齐命名（需核对 s__ 名）
+sig_up   &lt;- intersect(sig_positive, rownames(tse))   # 正向物种
+sig_down &lt;- intersect(sig_negative, rownames(tse))   # 负向物种
+
+# 5) Aim1：跨队列 meta（主：MMUPHin::lm_meta；旁证：metafor）
+meta_res &lt;- lm_meta(
+  feature_abd = assay(tse, "relative_abundance"),
+  batch = "study_name", exposure = "BMI",
+  covariates = c("age", "gender"),
+  data = as.data.frame(colData(tse))
+)$meta_fits
+# → 取 signature 物种合并 beta/SE/I²，算方向一致率；metafor::rma() 画森林图
+
+# 6) Aim2：批次校正 → 签名评分 → LOCO-AUC
+adj &lt;- adjust_batch(
+  feature_abd = assay(tse, "relative_abundance"),
+  batch = "study_name", covariates = c("age", "gender"),
+  data = as.data.frame(colData(tse))
+)$feature_abd_adj
+clr_adj &lt;- vegan::decostand(t(adj), method = "clr", pseudocount = 1e-6)
+score   &lt;- rowSums(clr_adj[, sig_up, drop = FALSE]) -
+           rowSums(clr_adj[, sig_down, drop = FALSE])
+
+studies  &lt;- unique(colData(tse)$study_name)
+auc_loco &lt;- sapply(studies, function(s){
+  tr  &lt;- colData(tse)$study_name != s
+  fit &lt;- cv.glmnet(clr_adj[tr, c(sig_up, sig_down)],
+                   colData(tse)$obesity[tr], family = "binomial")
+  pr  &lt;- predict(fit, clr_adj[!tr, c(sig_up, sig_down)],
+                 s = "lambda.min", type = "response")
+  as.numeric(pROC::auc(colData(tse)$obesity[!tr], as.numeric(pr)))
+})
+
+# 7) 产图：森林图 / score~BMI / LOCO-AUC 箱线 / 队列地图（ggplot2）</div>
+  </div>
+
+  <!-- 16 附录C -->
+  <div class="panel" style="margin-top:18px">
+    <h3 style="margin:0 0 6px;font-size:16px">附录 C · 预注册要点（OSF，建议）</h3>
+    <p style="margin:0">登记：研究问题与假设、数据来源与纳排、暴露/结局/协变量定义、主要与次要分析、多重检验策略、可重复性判定阈值、敏感性清单、停止规则——锁定分析、提升可信度。</p>
+  </div>
+
+  <!-- 17 自检 -->
+  <div class="tip" style="margin-top:18px">
+    <b>17 · 方案自检（五维）：</b>可行性 ✅（免费数据、方法成熟、8–12 周）｜新颖性 ✅（首次多国独立验证 + 泛化性，前提先查新）｜严谨性 ✅（CLR + 随机效应 meta + 批次校正 + LOCO + 预注册）｜可重复性 ✅（renv + 公开代码 + 固定种子）｜可发表性：2 区现实、1 区可冲。<br>
+    <b>Claim–Evidence：</b>①签名可重复 ← Aim1 方向一致率+FDR（待数据）；②跨人群判别 ← Aim2 LOCO-AUC（待数据）；③与脂肪肝相关 ← 次要分析（需补 MASLD 队列或降为探索）。
+  </div>
+
+  <!-- 18 需要你提供 -->
+  <div class="note" style="margin-top:18px">
+    <b>18 · 开工前需你提供/确认的 3 件事：</b>
+    <ul class="tight">
+      <li><b>原文"预测物种"完整列表 + 效应方向</b>（Food &amp; Function 2024 正文/附录）——全案输入。</li>
+      <li>你的<b>发现队列名称</b>（确保验证集与其独立、避免数据泄漏）。</li>
+      <li>医院对 iMeta/mSystems/npj 的<b>认定口径</b>（是否计入 1/2 区）。</li>
+    </ul>
+    给齐后即可把附录 B 骨架细化为可运行的分项脚本，并按真实物种列表搭好 Table2 模板。
+  </div>
+</section>
+
+<footer>
+  <p>本页由研究方向咨询生成，供个人科研规划参考，不构成对任何期刊录用结果的保证。内容基于对公开文献与数据库的检索与改写（已按许可要求改写）。</p>
+  <p class="refs">
+    关键参考：原文 Food &amp; Function 2024 (RSC, d3fo05632e)；NHANES 植物雌激素-NAFLD (PMID 35399831)、-肝酶 (PMID 25990984)、-死亡 (Front Endocrinol 2024, PMID 39319255)、-肥胖 (PMID 23756386)；curatedMetagenomicData (Bioconductor)；UK Biobank 肝脏 MRI；中科院分区表以 LetPub 当年版本为准。
+  </p>
+</footer>
+
+</div>
+</body>
+</html>

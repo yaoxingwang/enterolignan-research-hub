@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="霍山研究的公开数据延伸、数据清洗与分析结果。">
+<title>权重筛选 · 肠木脂素研究专题</title>
+<link rel="stylesheet" href="assets/style.css"><script src="assets/site.js" defer></script></head>
+<body><a class="skip" href="#content">跳到正文</a>
+<header class="header"><div class="wrap head-inner">
+<a class="brand" href="index.html">肠木脂素研究专题</a><nav class="nav" aria-label="专题导航"><a href="index.html">总览</a><a href="roadmap.html">原始思路</a><a href="data.html">数据与变量</a><a href="results.html">分析结果</a><a href="methods.html">清洗流程</a><a href="weights.html" aria-current="page">权重筛选</a><a href="literature.html">文献与投稿</a><a href="next.html">下一步</a></nav>
+</div></header>
+<main class="wrap" id="content"><div class="page-head"><p class="eyebrow">NHANES 抽样设计</p><h1>选权重、合并周期和限定人群</h1><p class="lead">先判断变量按哪个调查组件采集，再看合并了多少年。成年人、非孕和完整病例各有独立的纳入条件。</p></div>
+<div class="split">
+<section class="panel"><h2>用两份教程核查一次</h2>
+<ol class="steps">
+<li><strong>X 轴选组件。</strong> 先看变量的采集方案。完整访谈、MEC、实验室子样本、膳食回顾各有适用权重。</li>
+<li><strong>Y 轴合并周期。</strong> 选定同类组件后，按调查时长合并。含 1999–2000 且合并后续周期时，从 1999–2002 年的专用四年权重起算。</li>
+<li><strong>Domain 定义研究人群。</strong> 年龄、妊娠和完整病例规则决定谁进入估计。方差计算保留原抽样分层与 PSU 结构。</li></ol>
+<p>权重还校正组件无应答和人口校准。教程中的 <code>PROC FREQ</code> 演示加权百分比，报告标准误和区间要用带分层与 PSU 的调查方法。</p>
+<p><a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/weighting.aspx">CDC 权重教程</a> · <a href="https://wwwn.cdc.gov/nchs/nhanes/tutorials/varianceestimation.aspx">CDC 方差与 Domain 教程</a></p></section>
+<section class="panel weight-demo"><h2>用两条记录看权重</h2>
+<p>示例中两人的腰围是 60 cm 和 100 cm。第一人的权重固定为 100。</p>
+<label for="example-weight">调节第二人的权重 <output id="example-weight-value" for="example-weight">300</output></label>
+<input id="example-weight" type="range" min="0" max="500" step="25" value="300">
+<div class="values"><div>普通均值 <strong>80 cm</strong></div><div>加权均值 <output id="weighted-mean" for="example-weight" aria-live="polite">90.0</output> cm</div></div>
+<p>这是演示值。第二人的权重为零时，加权均值只由第一人的记录贡献。</p></section></div>
+<section class="section"><h2>我们实际筛掉了多少人</h2>
+<p>2005–2010 尿检原表与人口表配对后，先限定 ≥20 岁并排除记录为怀孕的人。这一步之后还有 5,359 人。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="各周期权重筛选人数"><table><thead><tr><th>周期</th><th>权重字段</th><th>筛选前</th><th>零权重</th><th>正权重</th></tr></thead><tbody>
+<tr><td>2005–2006</td><td><code>WTSB2YR</code></td><td>1,428</td><td>23</td><td>1,405</td></tr>
+<tr><td>2007–2008</td><td><code>WTSB2YR</code></td><td>1,880</td><td>29</td><td>1,851</td></tr>
+<tr><td>2009–2010</td><td><code>WTSA2YR</code></td><td>2,051</td><td>11</td><td>2,040</td></tr>
+<tr><td><strong>合计</strong></td><td>尿检子样本权重</td><td><strong>5,359</strong></td><td><strong>63</strong></td><td><strong>5,296</strong></td></tr>
+</tbody></table></div>
+<p class="note">这一阶段无缺失权重。5,296 人中有 4,991 人的 ENL、END 和肌酐可用，ENL–腰围完整病例最终是 4,419 人。<a href="https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2005/DataFiles/PHYTO_D.htm">2005–2006 尿检字典</a> · <a href="https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2009/DataFiles/PHYTO_F.htm">2009–2010 尿检字典</a></p></section>
+<section class="section"><h2>不同分析用的权重</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="模型权重表"><table><thead><tr><th>分析</th><th>使用的权重</th><th>口径</th></tr></thead><tbody>
+<tr><td>2003–2006 成人 DXA × 尿 ENL/END</td><td>两期各用 <code>WTSB2YR × 2/4</code></td><td>尿检组件决定权重。20–69 岁、排除记录为怀孕和完整病例属于研究域。五套 DXA 数据沿用个人权重。</td></tr>
+<tr><td>四期成人 DXA × 尿 ENL/END</td><td>1999–2002 年 <code>WTSPH4YR × 4/8</code>，2003–2006 两期各 <code>WTSB2YR × 2/8</code></td><td>早期四年块单独估计时直接使用 <code>WTSPH4YR</code>。</td></tr>
+<tr><td>腰围 × 尿 ENL/END</td><td>前两期 <code>WTSB2YR</code>，末期 <code>WTSA2YR</code>，各乘 2/6</td><td>2005–2010 三期。腰围取自 MEC，尿检子样本覆盖共同分析所需变量。</td></tr>
+<tr><td>SAS 附件的尿木脂素 × 死亡</td><td>1999–2002 年 <code>WTSPH4YR × 4/12</code>，后四期的尿检权重各乘 2/12</td><td>权重对应基线的 12 个调查年份。死亡随访月数用于 Cox 时间轴。</td></tr>
+<tr><td>首日膳食 × CAP 或认知</td><td><code>WTDRD1</code></td><td>首日回顾可靠并且权重为正。使用两天回顾对应 <code>WTDR2D</code>。2003–2004 年 FFQ 另用 <code>WTS_FFQ</code>。</td></tr>
+<tr><td>首日膳食 × 尿代谢物，或为 DXA 模型加膳食</td><td>尿检子样本权重</td><td>MEC 首日回顾覆盖更广。检查尿检样本的回顾无应答。膳食是主要暴露时，还要检查回顾星期分布及相应权重调整。</td></tr>
+<tr><td>尿 ENL × 空腹血糖或空腹甘油三酯</td><td>核对尿检与空腹子样本的交集</td><td>两个采样组件交叉时，先确认是否有重叠和共同权重。必要时按交集设计重新计算，不能仅按有效样本人数挑权重。</td></tr>
+<tr><td>Kim、Sinha</td><td>两队列各自分析</td><td>它们没有使用 NHANES 的抽样权重。</td></tr>
+</tbody></table></div>
+<p><a href="https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DR1TOT_C.htm">首日与两日回顾字典</a> · <a href="https://wwwn.cdc.gov/nchs/nhanes/Search/variablelist.aspx?Component=Dietary">FFQ 权重字段</a> · <a href="https://wwwn.cdc.gov/nchs/data/nhanes/analyticguidelines/99-10-analytic-guidelines.pdf">1999–2010 年抽样分析指南</a> · <a href="https://www.cdc.gov/nchs/data/series/sr_02/sr02-184-508.pdf">NCHS 的回顾与子样本权重说明</a></p></section>
+<section class="section panel"><h2>实际核查 Domain 和完整病例</h2>
+<p>成人 DXA 在限制年龄及协变量前保存正权重尿检样本的分层和 PSU。拟合用符合条件的人，计算方差时按原设计汇总各 PSU 的贡献，缺少分析成员的 PSU 贡献记零。2003–2006 年各期的主模型和生活方式模型均覆盖 15 个分层、30 个 PSU。</p>
+<p>收入缺失会缩小分析样本。Domain 处理保留设计结构，缺失对代表性的影响通过单独的敏感性分析评估。附件 SAS 在建总库时先删去未满 18 岁和死亡状态缺失者，代码复用时应检查分析域与 PSU 覆盖。</p>
+<p><a href="library/dxa-sensitivity-zh.html">成人 DXA 的收入缺失检查</a> · <a href="library/sas-mortality-code-review-zh.html">SAS 代码逐步拆解</a></p></section></main>
+<footer><div class="wrap"><span>霍山研究的公开数据延伸 · 更新于 <time datetime="2026-11-12">2026 年 11 月 12 日</time></span><a href="index.html">回专题总览</a></div></footer>
+</body></html>

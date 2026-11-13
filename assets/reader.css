@@ -1,0 +1,14 @@
+body > .med-hub-reader {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem 1.15rem;
+  padding: .62rem max(1rem, calc((100vw - 1130px) / 2));
+  background: #103c35;
+  color: #fff;
+  font: .82rem/1.5 "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+}
+.med-hub-reader a, .med-hub-reader a:visited { color: #e6f2bc; text-decoration: underline; text-underline-offset: 3px; }
+.med-hub-reader a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="霍山研究的公开数据延伸、数据清洗与分析结果。">
+<title>分析结果 · 肠木脂素研究专题</title>
+<link rel="stylesheet" href="assets/style.css"><script src="assets/site.js" defer></script></head>
+<body><a class="skip" href="#content">跳到正文</a>
+<header class="header"><div class="wrap head-inner">
+<a class="brand" href="index.html">肠木脂素研究专题</a><nav class="nav" aria-label="专题导航"><a href="index.html">总览</a><a href="roadmap.html">原始思路</a><a href="data.html">数据与变量</a><a href="results.html" aria-current="page">分析结果</a><a href="methods.html">清洗流程</a><a href="weights.html">权重筛选</a><a href="literature.html">文献与投稿</a><a href="next.html">下一步</a></nav>
+</div></header>
+<main class="wrap" id="content"><div class="page-head"><p class="eyebrow">已完成的分析</p><h1>统计结果与模型</h1><p class="lead">查看成人 DXA 主结果、跨周期复核和其他结局。表格可下载核对。</p></div>
+<nav class="result-jumps" aria-label="结果页目录">
+  <a href="#main-analysis">四期主结果</a><a href="#robustness">最新稳健性分析</a><a href="#dietary-cap">膳食木脂素 CAP 可行性</a><a href="#experiments">补充实验</a>
+  <a href="#other-results">其他结局</a><a href="#downloads">下载数据表</a>
+</nav>
+<div class="split" id="main-analysis"><section class="panel"><h2>成人 DXA 四周期复核</h2>
+<p>1999–2006 年合并 4,228 人。尿 ENL 每翻倍，调整 BMI 后躯干脂肪占比平均低 <strong>0.249 个百分点</strong>（95% CI −0.343 至 −0.156）。</p>
+<p>早期两期和原两期的估计均为负。单列肌酐和仅保留 DXA 未插补者时结果相近。</p><a href="library/dxa-cycle-validation-zh.html">看跨周期、区域脂肪与腰围比较</a></section>
+<figure class="panel"><img src="assets/dxa-cycles.png" alt="成人 DXA 四个调查周期与合并估计。四个周期的点估计均为负。"><figcaption>按调查周期报告估计与 95% CI。</figcaption></figure></div>
+<section class="section panel"><h2>四期生活方式敏感性分析</h2><p>在同一批 4,088 人中，同时加入膳食和活动后，躯干脂肪占比差由 −0.259 变为 <strong>−0.239 个百分点</strong>（95% CI −0.330 至 −0.148）。</p><a href="library/dxa-cycle-lifestyle-zh.html">看四期调整结果、森林图和变量映射</a></section>
+<section class="section experiment-section" id="robustness" aria-labelledby="robustness-title">
+  <header class="experiment-heading">
+    <div><p class="eyebrow">最新完成 · NHANES 1999–2006</p><h2 id="robustness-title">肾功能、周期内百分位与周期剔除</h2></div>
+    <a class="btn" href="library/dxa-robustness-zh.html">完整报告与方法</a>
+  </header>
+  <div class="experiment-grid">
+    <figure class="panel experiment-chart">
+      <h3>同样本肾功能调整与周期剔除</h3>
+      <a href="assets/dxa-robustness-forest.png" aria-label="打开肾功能和周期剔除森林图原图"><img src="assets/dxa-robustness-forest.png" loading="lazy" alt="肾功能同样本模型与三种周期剔除中，ENL 每翻倍的躯干脂肪占比估计和 95% CI 均位于零以下。"></a>
+      <figcaption>上图使用同一批 3,904 人；下图按剩余调查年数重算权重。效应单位均为 ENL 每翻倍。</figcaption>
+    </figure>
+    <dl class="experiment-findings">
+      <div><dt>肾功能完整样本 · 3,904 人</dt><dd><strong>−0.241 <small>个百分点</small></strong><p>加入 eGFR、平方项和 UACR 后的估计。95% CI −0.331 至 −0.150；同样本调整前为 −0.248。</p></dd></div>
+      <div><dt>周期内加权百分位 · 4,088 人</dt><dd><strong>−0.505 <small>个百分点</small></strong><p>周期内每升高 25 个百分位的估计。95% CI −0.716 至 −0.294。此单位与每翻倍不同。</p></dd></div>
+      <div><dt>三种周期剔除</dt><dd><strong>−0.262 至 −0.209</strong><p>分别剔除 2003–2004、2005–2006 和 1999–2002 四年块。三种方案的 95% CI 均位于零以下，单位为百分点／ENL 每翻倍。</p></dd></div>
+    </dl>
+  </div>
+  <div class="experiment-grid experiment-followup">
+    <figure class="panel experiment-chart">
+      <h3>周期内加权百分位复核</h3>
+      <a href="assets/dxa-percentile-forest.png" aria-label="打开周期内加权百分位森林图原图"><img src="assets/dxa-percentile-forest.png" loading="lazy" alt="ENL 每升高 25 个百分位的合并估计为负。四个单周期点估计均为负，其中两个周期的 95% CI 跨零。"></a>
+      <figcaption>排序使用各期两年尿检权重。四期点估计均为负，1999–2000 和 2003–2004 的区间跨零。</figcaption>
+    </figure>
+    <aside class="panel experiment-resources" aria-labelledby="robustness-files">
+      <h3 id="robustness-files">化验口径与可复核文件</h3>
+      <p>血清肌酐按官方字典校准。用原始 ENL/END 单列尿肌酐，再调 eGFR 和尿白蛋白时，估计为 <strong>−0.234</strong>（95% CI −0.325 至 −0.144）。</p>
+      <p>4,088 人中有 184 人缺少血清肌酐；尿白蛋白和尿肌酐均可配对。结果继续按横断面关联解释。</p>
+      <ul class="link-list">
+        <li><a download href="downloads/dxa-robustness-estimates.csv">64 条估计 CSV</a></li>
+        <li><a download href="downloads/dxa-renal-audit.csv">化验配对审计 CSV</a></li>
+        <li><a download href="downloads/dxa-robustness-forest.pdf">肾功能与周期剔除 PDF</a></li>
+        <li><a download href="downloads/dxa-percentile-forest.pdf">百分位森林图 PDF</a></li>
+      </ul>
+      <a href="next.html#dxa-next">查看已完成事项与后续工作 →</a>
+    </aside>
+  </div>
+</section>
+<section class="section panel" id="dietary-cap" aria-labelledby="dietary-cap-title"><h2 id="dietary-cap-title">膳食木脂素与实测 CAP：当前资料不足以建模</h2><p>严格名称候选为 18/4,564 个食物代码。加权食品克数覆盖首日 1.153%、次日 1.414%；两个回顾日均无完整映射。所有候选仍未完成暴露计算所需的审核。</p><p>未匹配食物保持未知。3 个候选记录存在待核对的来源单位疑点；现有尿 ENL/END 与 CAP 周期不同，不能逐人联结。</p><p><a href="library/cap-lignan-feasibility-zh.html">查看方法、限制和来源审计</a></p><ul class="link-list"><li><a download href="downloads/cap-lignan-coverage.csv">两日覆盖率汇总 CSV</a></li><li><a download href="downloads/cap-lignan-feasibility-summary.json">聚合可行性与来源 JSON</a></li></ul></section>
+<section class="section experiment-section" id="experiments" aria-labelledby="experiments-title">
+  <header class="experiment-heading">
+    <div><p class="eyebrow">NHANES 1999–2006 · 4,088 人</p><h2 id="experiments-title">成人 DXA 补充实验</h2></div>
+    <a class="btn" href="library/dxa-experiments-zh.html">完整报告与方法</a>
+  </header>
+  <div class="experiment-grid">
+    <figure class="panel experiment-chart">
+      <h3>尿 ENL 的剂量–反应曲线</h3>
+      <a href="assets/dxa-dose-response.png" aria-label="打开剂量–反应曲线原图"><img src="assets/dxa-dose-response.png" loading="lazy" alt="样条曲线和线性模型都呈负向，样条的逐点 95% 置信区间以阴影显示。"></a>
+      <figcaption>以加权中位数 326.2 μg/g 肌酐为参照。阴影为样条逐点 95% CI。</figcaption>
+    </figure>
+    <dl class="experiment-findings">
+      <div><dt>剂量–反应</dt><dd><strong>P=0.092</strong><p>非线性证据有限，主模型继续用 ENL 每翻倍的线性估计。</p></dd></div>
+      <div><dt>性别交互</dt><dd><strong>P=0.263</strong><p>男性和女性的躯干脂肪占比估计均为负，交互区间跨零。</p></dd></div>
+      <div><dt>调整 BMI 与全身脂肪量</dt><dd><strong>−0.240 <small>个百分点</small></strong><p>尿 ENL 每翻倍的躯干脂肪占比差。95% CI −0.330 至 −0.149。</p></dd></div>
+    </dl>
+  </div>
+  <div class="experiment-grid experiment-followup">
+    <figure class="panel experiment-chart">
+      <h3>性别与脂肪总量调整对照</h3>
+      <a href="assets/dxa-experiments-forest.png" aria-label="打开性别与脂肪总量调整森林图原图"><img src="assets/dxa-experiments-forest.png" loading="lazy" alt="森林图显示男女的估计均为负，三种体型或脂肪总量调整方案的估计接近。"></a>
+      <figcaption>上图是性别交互模型中的分组估计。下图使用同一批人比较三种调整方案。</figcaption>
+    </figure>
+    <aside class="panel experiment-resources" aria-labelledby="experiment-files">
+      <h3 id="experiment-files">支持结果与下载</h3>
+      <p>同时控制 BMI 和全身脂肪量时，躯干与双腿脂肪量之比低 <strong>1.18%</strong>（95% CI −1.63% 至 −0.73%）。结果按横断面关联解读。</p>
+      <ul class="link-list">
+        <li><a download href="downloads/dxa-experiment-estimates.csv">补充实验估计 CSV</a></li>
+        <li><a download href="downloads/dxa-dose-response.csv">曲线坐标 CSV</a></li>
+      </ul>
+      <a href="#robustness">看已完成的肾功能与周期稳健性分析 →</a>
+    </aside>
+  </div>
+</section>
+<section class="section panel"><h2>2003–2006 年生活方式敏感性分析</h2><p>在同一批 2,050 人中，尿 ENL 每翻倍的估计由 −0.267 变为 <strong>−0.245 个百分点</strong>（95% CI −0.380 至 −0.109）。</p><p><a href="library/dxa-sensitivity-zh.html">查看同样本对照和收入缺失</a> · <a href="assets/dxa-trunk-fat.png">原两期森林图</a></p></section>
+<section class="section panel"><h2>用腰围复核成人 DXA</h2><p>同样本加入 BMI 后，腰围点估计由 −1.027 cm 变为 −0.161 cm。再调生活方式后，腰围区间跨零，躯干脂肪占比的估计仍为负。</p><a href="library/dxa-waist-comparison-zh.html">查看 2,078 人的比较与森林图</a></section>
+<section class="section" id="other-results"><h2>其余结果</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="其他模型结果"><table><thead><tr><th>模块</th><th>读数</th><th>解读</th></tr></thead><tbody>
+<tr><td>腰围</td><td>ENL 每翻倍，平均低 0.96 cm</td><td>单暴露筛查。三个周期方向一致。</td></tr>
+<tr><td>肥胖分类</td><td>2009–2010 验证集 AUC 0.626 → 0.653</td><td>逻辑回归加入 ENL/END 后的增量。基线为人口学特征和吸烟。</td></tr>
+<tr><td>纤维与 CAP</td><td>每 5 g/千 kcal 对应 −8.35 dB/m，块内 Q=0.046</td><td>重叠 NHANES 周期已有相同方向的论文。</td></tr>
+<tr><td>既往复合 CVD 与认知</td><td>复合 CVD 的 ENL 区间跨 1；认知模型未过块内校正</td><td>按各自的数据和结局口径解读。</td></tr>
+<tr><td>粪便菌群与 ENL</td><td>双向 Spearman ρ 为 0.10 和 0.17</td><td>两方向加入菌属的增量区间均跨零。</td></tr>
+</tbody></table></div></section>
+<section class="section"><h2>完整分析报告</h2><div class="docs"><article class="doc"><h3>NHANES 机器学习试跑</h3><p>六张图展示腰围、肥胖、HSI 和 CVD 的模型结果。</p><a href="library/nhanes-enterolignan-pilot-results-zh.html">打开详细报告 <span aria-hidden="true">↗</span></a></article><article class="doc"><h3>成人 DXA 与菌群双向验证</h3><p>分周期 DXA 效应及 Kim、Sinha 交叉验证。</p><a href="library/dxa-fecal-enl-validation-zh.html">打开详细报告 <span aria-hidden="true">↗</span></a></article><article class="doc"><h3>712 个暴露–结局模型</h3><p>九个数据模块的关联筛查，另有 54 个分周期模型。</p><a href="library/available-exposure-outcome-screen-zh.html">打开详细报告 <span aria-hidden="true">↗</span></a></article></div></section>
+<section class="section" id="downloads"><h2>下载结果表</h2>
+<div class="actions"><a class="btn primary" download href="downloads/nhanes-microbiome-all-models-zh.csv">712 个模型 · 中文 CSV</a>
+<a class="btn" download href="downloads/nhanes-urine-cycles-zh.csv">54 个分周期模型 · 中文 CSV</a>
+<a class="btn" download href="downloads/dxa-sensitivity-estimates.csv">成人 DXA 敏感性分析 · CSV</a>
+<a class="btn" download href="downloads/dxa-waist-estimates.csv">DXA 和腰围模型 · CSV</a>
+<a class="btn" download href="downloads/dxa-cycle-estimates.csv">DXA 四周期模型 · CSV</a>
+<a class="btn" download href="downloads/dxa-cycle-audit.csv">DXA 四周期样本 · CSV</a>
+<a class="btn" download href="downloads/dxa-cycle-contrast.csv">两个时期的估计差 · CSV</a>
+<a class="btn" download href="downloads/dxa-cycle-lifestyle-estimates.csv">四期生活方式模型 · CSV</a>
+<a class="btn" download href="downloads/dxa-cycle-lifestyle-audit.csv">四期生活方式样本 · CSV</a>
+<a class="btn" download href="downloads/dxa-experiment-estimates.csv">补充实验估计 · CSV</a>
+<a class="btn" download href="downloads/dxa-dose-response.csv">剂量–反应曲线 · CSV</a>
+<a class="btn" download href="downloads/dxa-dose-quantiles.csv">尿 ENL 加权分位数 · CSV</a>
+<a class="btn" download href="downloads/urine-mortality-audit.csv">死亡随访核查 · CSV</a>
+<a class="btn" download href="downloads/dxa-robustness-estimates.csv">最新稳健性分析 · 64 条估计 CSV</a>
+<a class="btn" download href="downloads/dxa-renal-audit.csv">肾功能配对审计 · CSV</a>
+<a class="btn" download href="downloads/dxa-percentile-audit.csv">周期内百分位审计 · CSV</a>
+<a class="btn" download href="downloads/dxa-deletion-audit.csv">周期剔除权重审计 · CSV</a>
+<a class="btn" download href="downloads/dxa-robustness-verification.json">模型复现核查 · JSON</a>
+<a class="btn" download href="downloads/dxa-robustness-forest.pdf">肾功能与周期剔除图 · PDF</a>
+<a class="btn" download href="downloads/dxa-percentile-forest.pdf">周期内百分位图 · PDF</a></div></section></main>
+<footer><div class="wrap"><span>霍山研究的公开数据延伸 · 更新于 <time datetime="2026-11-12">2026 年 11 月 12 日</time></span><a href="index.html">回专题总览</a></div></footer>
+</body></html>

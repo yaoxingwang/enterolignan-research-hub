@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 import re
 from shutil import copyfile
-from zipfile import ZipFile, ZIP_DEFLATED
+from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
 ROOT = Path(__file__).resolve().parent
 DOWNLOADS = ROOT / "downloads"
@@ -207,7 +207,10 @@ CSV/JSON 均为统计汇总；PDF 为图表。没有原始授权 ZIP、个人记
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     with ZipFile(DOWNLOADS / 'nutrition-aggregate-results.zip', 'w', ZIP_DEFLATED) as bundle:
         for path in sorted(published) + [manifest_path]:
-            bundle.write(path, path.name)
+            entry = ZipInfo(path.name, date_time=(2026, 11, 14, 0, 0, 0))
+            entry.compress_type = ZIP_DEFLATED
+            entry.external_attr = 0o100644 << 16
+            bundle.writestr(entry, path.read_bytes())
     links = ''.join(f'<li><a download href="{p.name}">{p.name}</a> <small>({p.stat().st_size:,} bytes)</small></li>' for p in sorted(published))
     catalog = f'<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>营养健康聚合附件目录</title><link rel="stylesheet" href="../assets/style.css"><main class="wrap"><a href="../nutrition.html#reports">← 返回营养健康支线</a><h1>聚合附件目录</h1><p>全部 {len(published)} 个表格、图表及说明文件。仅统计汇总。</p><ul class="link-list">{links}</ul></main></html>'
     (DOWNLOADS / 'nutrition-downloads.html').write_text(catalog, encoding='utf-8')

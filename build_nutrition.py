@@ -114,6 +114,7 @@ def nutrition_page():
 
 
 def sanitize_report(source, target, prefix, link_map, notice):
+    source = source.resolve()
     text = source.read_text(encoding="utf-8")
     # Both rendered image metadata and embedded source Markdown carry local paths.
     text = text.replace(str(source.parent) + '/', f'../assets/{prefix}-')
@@ -122,6 +123,9 @@ def sanitize_report(source, target, prefix, link_map, notice):
         text = text.replace(f']({old})', f']({new})')
     if prefix == 'charls':
         text = text.replace('research_directions.html', 'charls-function-oral-report.html')
+        if source.name == 'report.html':
+            text = text.replace('加入吸烟、五项心代谢病史和其他食物条目后，同一批人的 PR 为',
+                                '另在原主分析的 11,932 人中加入吸烟、五项心代谢病史和其他食物条目后，PR 为')
     if source.name == 'research_directions.html':
         text = text.replace('1.29（1.10–1.50）', '1.28（1.10–1.50）')
     nav = ('<nav class="med-hub-reader" aria-label="专题归档导航"><a href="../index.html">← 专题总览</a>'

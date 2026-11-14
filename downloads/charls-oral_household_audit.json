@@ -1,0 +1,42 @@
+[
+  {
+    "sample": "all_oral_complete",
+    "people": 12913,
+    "food_variety_below_two": 1998,
+    "county_clusters": 150,
+    "survey_weighted_mean_age": 67.25724676043171,
+    "survey_weighted_percent_food_variety_below_two": 14.523705970651113,
+    "survey_weighted_percent_chewing_difficulty": 24.96046425939657,
+    "survey_weighted_percent_food_task_difficulty": 10.049387082756446
+  },
+  {
+    "sample": "two_eligible_household_year_members",
+    "people": 9004,
+    "food_variety_below_two": 1214,
+    "county_clusters": 150,
+    "survey_weighted_mean_age": 66.38867000597679,
+    "survey_weighted_percent_food_variety_below_two": 12.240618009845198,
+    "survey_weighted_percent_chewing_difficulty": 23.464712578315233,
+    "survey_weighted_percent_food_task_difficulty": 8.92440561944898,
+    "eligible_two_person_household_years": 4502,
+    "outcome_discordant_pairs": 790,
+    "discordant_pair_counties": 138,
+    "pairs_discordant_in_chewing": 267,
+    "pairs_discordant_in_food_tasks": 149
+  },
+  {
+    "sample": "both_report_married_living_with_spouse",
+    "people": 8496,
+    "food_variety_below_two": 1114,
+    "county_clusters": 150,
+    "survey_weighted_mean_age": 66.55753089780887,
+    "survey_weighted_percent_food_variety_below_two": 11.90841584422932,
+    "survey_weighted_percent_chewing_difficulty": 23.379331315404063,
+    "survey_weighted_percent_food_task_difficulty": 9.04301607454857,
+    "eligible_two_person_household_years": 4248,
+    "outcome_discordant_pairs": 726,
+    "discordant_pair_counties": 137,
+    "pairs_discordant_in_chewing": 244,
+    "pairs_discordant_in_food_tasks": 142
+  }
+]

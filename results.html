@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="霍山研究的公开数据延伸、数据清洗与分析结果。">
+<meta name="description" content="霍山研究的公开数据延伸：NHANES 肠木脂素与 DXA、CAP 审计，以及 CHARLS／SHARE 营养心理与功能研究。">
 <title>分析结果 · 肠木脂素研究专题</title>
 <link rel="stylesheet" href="assets/style.css"><script src="assets/site.js" defer></script></head>
 <body><a class="skip" href="#content">跳到正文</a>
 <header class="header"><div class="wrap head-inner">
-<a class="brand" href="index.html">肠木脂素研究专题</a><nav class="nav" aria-label="专题导航"><a href="index.html">总览</a><a href="roadmap.html">原始思路</a><a href="data.html">数据与变量</a><a href="results.html" aria-current="page">分析结果</a><a href="methods.html">清洗流程</a><a href="weights.html">权重筛选</a><a href="literature.html">文献与投稿</a><a href="next.html">下一步</a></nav>
+<a class="brand" href="index.html">肠木脂素研究专题</a><nav class="nav" aria-label="专题导航"><a href="index.html">总览</a><a href="roadmap.html">原始思路</a><a href="data.html">数据与变量</a><a href="results.html" aria-current="page">分析结果</a><a href="nutrition.html">营养健康支线</a><a href="methods.html">清洗流程</a><a href="weights.html">权重筛选</a><a href="literature.html">文献与投稿</a><a href="next.html">下一步</a></nav>
 </div></header>
 <main class="wrap" id="content"><div class="page-head"><p class="eyebrow">已完成的分析</p><h1>统计结果与模型</h1><p class="lead">查看成人 DXA 主结果、跨周期复核和其他结局。表格可下载核对。</p></div>
 <nav class="result-jumps" aria-label="结果页目录">
-  <a href="#main-analysis">四期主结果</a><a href="#robustness">最新稳健性分析</a><a href="#dietary-cap">膳食木脂素 CAP 可行性</a><a href="#experiments">补充实验</a>
+  <a href="#main-analysis">四期主结果</a><a href="#robustness">DXA 稳健性</a><a href="nutrition.html">CHARLS／SHARE 更新</a><a href="#dietary-cap">膳食木脂素 CAP 可行性</a><a href="#experiments">补充实验</a>
   <a href="#other-results">其他结局</a><a href="#downloads">下载数据表</a>
 </nav>
-<div class="split" id="main-analysis"><section class="panel"><h2>成人 DXA 四周期复核</h2>
+<section class="section panel" id="nutrition-update"><p class="eyebrow">新增 · CHARLS 与 SHARE</p><h2>营养、心理与功能健康支线</h2><p>CHARLS 已完成饮食–抑郁症状及功能／口腔分析。SHARE 已完成首轮 17 个模型、官方 W8→W9 纵向权重的五个比较模型，以及 W6 饮食–DBS 可行性审计。</p><p>CHARLS 的症状关联经逐步调整减弱；SHARE 的扩展纵向估计接近 1。两者测量不同的饮食条目，均不能替代 ENL/END 或菌群机制验证。</p><a class="btn primary" href="nutrition.html">看结果、图表、报告与聚合下载</a></section><div class="split" id="main-analysis"><section class="panel"><h2>成人 DXA 四周期复核</h2>
 <p>1999–2006 年合并 4,228 人。尿 ENL 每翻倍，调整 BMI 后躯干脂肪占比平均低 <strong>0.249 个百分点</strong>（95% CI −0.343 至 −0.156）。</p>
 <p>早期两期和原两期的估计均为负。单列肌酐和仅保留 DXA 未插补者时结果相近。</p><a href="library/dxa-cycle-validation-zh.html">看跨周期、区域脂肪与腰围比较</a></section>
 <figure class="panel"><img src="assets/dxa-cycles.png" alt="成人 DXA 四个调查周期与合并估计。四个周期的点估计均为负。"><figcaption>按调查周期报告估计与 95% CI。</figcaption></figure></div>
@@ -122,5 +122,5 @@
 <a class="btn" download href="downloads/dxa-robustness-verification.json">模型复现核查 · JSON</a>
 <a class="btn" download href="downloads/dxa-robustness-forest.pdf">肾功能与周期剔除图 · PDF</a>
 <a class="btn" download href="downloads/dxa-percentile-forest.pdf">周期内百分位图 · PDF</a></div></section></main>
-<footer><div class="wrap"><span>霍山研究的公开数据延伸 · 更新于 <time datetime="2026-11-12">2026 年 11 月 12 日</time></span><a href="index.html">回专题总览</a></div></footer>
+<footer><div class="wrap"><span>霍山研究的公开数据延伸 · 更新于 <time datetime="2026-11-14">2026 年 11 月 14 日</time></span><a href="index.html">回专题总览</a></div></footer>
 </body></html>

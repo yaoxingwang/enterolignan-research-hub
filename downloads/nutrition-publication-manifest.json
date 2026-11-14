@@ -1,0 +1,456 @@
+{
+  "updated": "2026-11-14",
+  "scope": "Aggregate tables and figures only; no participant records or licensed source archives.",
+  "files": [
+    {
+      "file": "charls-analysis_summary.json",
+      "bytes": 41422,
+      "sha256": "6c47174677c5e3d5b4218fe14fee853fd7bbb7ef4ed65bc0e599e5de0b176f7d"
+    },
+    {
+      "file": "charls-cesd_item_completion.csv",
+      "bytes": 484,
+      "sha256": "936f0109d82a06448972ca36fc3055d94d710e2028a7f24faee78f3944bc2995"
+    },
+    {
+      "file": "charls-cesd_mnar_heatmap.pdf",
+      "bytes": 15903,
+      "sha256": "4714ce64e3cdf6100dccef77a685f4682d048183ebef58abcf648e1eca321f7b"
+    },
+    {
+      "file": "charls-cesd_mnar_scenarios.csv",
+      "bytes": 1229,
+      "sha256": "d5aeee94455bf1f563719a7447444ec1bdb35ec316ca88acce01a7717fa8cb59"
+    },
+    {
+      "file": "charls-cesd_partial_recovery_model.csv",
+      "bytes": 406,
+      "sha256": "0f6edafd969e6a628cdb626a137c3e7f49908bc7e1ae51b4b85b0af30e5f102e"
+    },
+    {
+      "file": "charls-confounder_coding_audit.csv",
+      "bytes": 607,
+      "sha256": "d8672694b2fadb78921fbe211a0eabaa2ab9462b7d3987d115ac487abc0c09a6"
+    },
+    {
+      "file": "charls-confounder_forest.pdf",
+      "bytes": 18458,
+      "sha256": "e09b99abbd71ad1e72eb198c4f383279ab46a56c77ff68f5215fe737e8077bfd"
+    },
+    {
+      "file": "charls-confounder_sensitivity.csv",
+      "bytes": 1776,
+      "sha256": "d91b39124cb818ee6bfc0a545c4e536c25a88b18991ea9f3b03abcee8cd15ede"
+    },
+    {
+      "file": "charls-county_clustering_sensitivity.csv",
+      "bytes": 303,
+      "sha256": "eb371828a8e24d60a4607000357852f6ba6abd98778222fc52a9291f48499fdd"
+    },
+    {
+      "file": "charls-fieldwork_descriptives.csv",
+      "bytes": 231,
+      "sha256": "2ec52a984719ba5425d00a6b0ce694dcebea05cd8f2af9831632f76a109549d5"
+    },
+    {
+      "file": "charls-food_descriptives.csv",
+      "bytes": 1321,
+      "sha256": "7301a5d628966d117a673776831cd46eb9f8c00ee95e92bd91a377ad05b1ab7f"
+    },
+    {
+      "file": "charls-food_function_by_exposure.csv",
+      "bytes": 746,
+      "sha256": "99169e5dd71260c77ddbb1aca1e5d0296415f769fcd685bb7d095a1800d8f4e6"
+    },
+    {
+      "file": "charls-food_function_feasibility.json",
+      "bytes": 6005,
+      "sha256": "dc5ed42b523ae52ae0ba028833920f87b1bb07f488d62d084a76103bbce798eb"
+    },
+    {
+      "file": "charls-food_function_groups.csv",
+      "bytes": 1698,
+      "sha256": "b85c82ca545c7a419d7ae78f1fac636c8375bd553fd6573459f2e43072e87603"
+    },
+    {
+      "file": "charls-food_function_helper_routing.csv",
+      "bytes": 324,
+      "sha256": "3a8cdb2311b77424e3cf5d7edf3b1593ee502ee602295cbcf5482e53d81eb61c"
+    },
+    {
+      "file": "charls-food_function_household_audit.json",
+      "bytes": 209,
+      "sha256": "a12bd6af5f100c5b3c50ceaa2cf62d315390a0cf0ff1a12d016d69fc569ee26b"
+    },
+    {
+      "file": "charls-food_function_household_eligible_pr.csv",
+      "bytes": 295,
+      "sha256": "ef5c3596cbd8b9bbb7e82858a0d0415154c1aaf416509e5f1130d3e891bdcdbe"
+    },
+    {
+      "file": "charls-food_function_household_or.csv",
+      "bytes": 463,
+      "sha256": "3383fab87c1af23f18f17140857e27ba9a84d0f4231e64000b79ec9e76176dd5"
+    },
+    {
+      "file": "charls-food_function_joint_groups.csv",
+      "bytes": 391,
+      "sha256": "91212e1425c83f90b88578299a368a28816979c5defd7d8546109a6d9444e035"
+    },
+    {
+      "file": "charls-food_function_joint_groups.pdf",
+      "bytes": 20452,
+      "sha256": "ceb4363bc44c7f9dcf5ce6b4fb2ed3d95e6322612c0ab9cdeb9ad049bc2895a2"
+    },
+    {
+      "file": "charls-food_function_pr.csv",
+      "bytes": 492,
+      "sha256": "a417d125ea5c510423393ca7b878f8d985071a4013c73c4bf68a02d1d9f8f978"
+    },
+    {
+      "file": "charls-food_function_resource_sensitivity.csv",
+      "bytes": 507,
+      "sha256": "fe5a07d80f35db0849781d227ee065a0feb539a49162b20838f39a522241c39d"
+    },
+    {
+      "file": "charls-food_function_standardized.pdf",
+      "bytes": 16946,
+      "sha256": "1e529b9193832b86b0c8b71c97813c89cea694d7e9fe03bdc02dd44ff4249359"
+    },
+    {
+      "file": "charls-food_function_task_sensitivity.csv",
+      "bytes": 1047,
+      "sha256": "a6070abf017236968ea33be928fb0ce00725404abe992cb2fbdc830649a9021e"
+    },
+    {
+      "file": "charls-food_items_summary.pdf",
+      "bytes": 20911,
+      "sha256": "395961c719a0f97279b8e3cecabc0256727a7840a381a159cf5a3505b6bc6fc3"
+    },
+    {
+      "file": "charls-missingness.csv",
+      "bytes": 503,
+      "sha256": "acc3cff6970852bd1c52e8a8415e5881b9d8c37dc338d7598083f31a8e234233"
+    },
+    {
+      "file": "charls-missingness_ipw_balance.csv",
+      "bytes": 5522,
+      "sha256": "33d84087522bcaabd70b7dae732a648232d8a84e862356b985a541ac51ef12ce"
+    },
+    {
+      "file": "charls-missingness_ipw_models.csv",
+      "bytes": 761,
+      "sha256": "2d66dae51bef0655fb257f6724f3047bcb3f4be7ef72ed2e05700244e2296dd0"
+    },
+    {
+      "file": "charls-missingness_ipw_response_by_group.csv",
+      "bytes": 1696,
+      "sha256": "e5540eedf75d2ad3d086223a049435e294a767087f4a9430308ee2c64970c418"
+    },
+    {
+      "file": "charls-missingness_ipw_weights.csv",
+      "bytes": 892,
+      "sha256": "df376669d0ee0857e6bc80e04e78997eee1d8300a18efdfa6883bb4f61b316af"
+    },
+    {
+      "file": "charls-model_results.csv",
+      "bytes": 4390,
+      "sha256": "5ab3a2379580f4107c1ff2c069d1ab7df5019ed081a9fae5d7c086a8b506bd08"
+    },
+    {
+      "file": "charls-module_inventory.csv",
+      "bytes": 1794,
+      "sha256": "e7f31638c5cf1221ab0fd74d0f731a771b8e118166a4c69e8bda1e97b61e78be"
+    },
+    {
+      "file": "charls-module_match.csv",
+      "bytes": 140,
+      "sha256": "473607187b15a2ad82bbe2f53255838b32b62763db7338d563c71752d5cdb101"
+    },
+    {
+      "file": "charls-oral_diet_audit.json",
+      "bytes": 342,
+      "sha256": "f0d042b355cf738564e396abe4a137e2787980acd84e474f3a49e02e0c99bcff"
+    },
+    {
+      "file": "charls-oral_diet_forest.pdf",
+      "bytes": 14512,
+      "sha256": "d9b0ca9cf5ce16cef179cb9610c68d57b09521c897f4bc57cdaea060929560c0"
+    },
+    {
+      "file": "charls-oral_diet_heterogeneity.csv",
+      "bytes": 359,
+      "sha256": "16146e0c62c08a6f7bf1b22237b2f3331cfe427ff8031b6dd2ff6c1e0c36663d"
+    },
+    {
+      "file": "charls-oral_diet_models.csv",
+      "bytes": 2057,
+      "sha256": "bf8b9d604ebe2e1c0d37ec64d29d2f42e19aa9c82f701b974ace99f2475aa717"
+    },
+    {
+      "file": "charls-oral_diet_profiles.csv",
+      "bytes": 479,
+      "sha256": "323cec7fe5e3632fbafb073bab3a74d4ab94bfd0433343b6b2407cf26f153b55"
+    },
+    {
+      "file": "charls-oral_diet_standardized.csv",
+      "bytes": 1829,
+      "sha256": "5ca7aa57fa696dbc5184c41fa78e22aa2be816b82f2a4d2ea00ea871de036e6d"
+    },
+    {
+      "file": "charls-oral_diet_standardized.pdf",
+      "bytes": 19727,
+      "sha256": "aa353ea7b7a4dc756ee78adbc287357c95548ad87a21596eabd36b841f1d06ab"
+    },
+    {
+      "file": "charls-oral_diet_standardized_sensitivity.csv",
+      "bytes": 776,
+      "sha256": "32d67c1dbadea6523fe510f6649e165e6e36918236049ccde4a5f0dbd7cd7bda"
+    },
+    {
+      "file": "charls-oral_household_audit.json",
+      "bytes": 1631,
+      "sha256": "47dccffd6172f152c09d49269cde50247e2d169b5610b1168bda312090484888"
+    },
+    {
+      "file": "charls-oral_household_conditional_or.csv",
+      "bytes": 1251,
+      "sha256": "ef884c298d784835c5928fceb6bba301dfc5e85c461e96a75e28397e12ed081e"
+    },
+    {
+      "file": "charls-oral_household_pr.csv",
+      "bytes": 800,
+      "sha256": "d07bea86c377351b8d647e85b905a07915e2fc06c2a26761e700dd72181c0d9b"
+    },
+    {
+      "file": "charls-proxy_rule_audit.csv",
+      "bytes": 409,
+      "sha256": "94f4cc99a305727ffc997874fd7e224622f6ca25c9db252093ba611d4b1464ef"
+    },
+    {
+      "file": "charls-proxy_weight_forest.pdf",
+      "bytes": 19838,
+      "sha256": "d472193c3e5397195df0ddf7cca11e18d71f88d90a7c1cf3e77b7c7f545cb37e"
+    },
+    {
+      "file": "charls-proxy_weight_sensitivity.csv",
+      "bytes": 1319,
+      "sha256": "83f1dc3d25724f6cf7373bb7ee737bd6def401f1522d5a022ae44f2d09237b4b"
+    },
+    {
+      "file": "charls-sample_flow.csv",
+      "bytes": 241,
+      "sha256": "f90ca8f1243ce299cad1fe710eef87b79f6b70f17410182825522775aabdb590"
+    },
+    {
+      "file": "charls-selection_comparison.csv",
+      "bytes": 299,
+      "sha256": "d2999a19f73ac5eb3d205eeb8deebb4509dcaef6fe12e503ebfbc22ccee5da99"
+    },
+    {
+      "file": "charls-vegetables_fruit_forest.pdf",
+      "bytes": 21620,
+      "sha256": "4545138e05bd3473cf732ec1219387a9da871506c2707cf4abfb910add33d6b3"
+    },
+    {
+      "file": "charls-year_overlap.csv",
+      "bytes": 219,
+      "sha256": "8a1ca42352f972c29136d44b09f8f8e7db5336cf226b25daebff60bfc80e8513"
+    },
+    {
+      "file": "nutrition-README.md",
+      "bytes": 1256,
+      "sha256": "b957f56e814ed75dc87b62959b5d89afee3500edb771f1395b91e66067aca83f"
+    },
+    {
+      "file": "share-first-analysis_summary.json",
+      "bytes": 2828,
+      "sha256": "84c9f0f175c107982624f26b4d872dc38c0cfed111522898be8cb3b5a9279eae"
+    },
+    {
+      "file": "share-first-country_coverage.csv",
+      "bytes": 3137,
+      "sha256": "700c456ed8d9cf031e347980771e8f366471f8b4678e539a46b519f932585c4e"
+    },
+    {
+      "file": "share-first-dbs_biomarker_coverage.csv",
+      "bytes": 2847,
+      "sha256": "3ca781082c0b1ef111f12977732fc0b580a895d8ea85eadd027b77cfe5ded1ea"
+    },
+    {
+      "file": "share-first-dbs_coverage.pdf",
+      "bytes": 17331,
+      "sha256": "d398f4e6c59b849599a522841a4dccf2398000a29ded996f85f10fc4f3314077"
+    },
+    {
+      "file": "share-first-dbs_linkage.csv",
+      "bytes": 257,
+      "sha256": "b3ba995abb5be9888e674a779e88ec2a63f08e8a34c5ae89e5b5a5a123d97eee"
+    },
+    {
+      "file": "share-first-design_diagnostics.csv",
+      "bytes": 428,
+      "sha256": "91596c636a43f16e07f2551b81360ace36427fea0b3937d68d9d6cb9de9e25cb"
+    },
+    {
+      "file": "share-first-food_descriptives.csv",
+      "bytes": 2611,
+      "sha256": "a10151fb92b9f365287d44264c2deea3d6c8218134360948e2ca4e044961e18a"
+    },
+    {
+      "file": "share-first-fruitveg_forest.pdf",
+      "bytes": 18905,
+      "sha256": "f01798697dd0150459039a60badf8162088407b1d214c733fc2c87a831c5b276"
+    },
+    {
+      "file": "share-first-longitudinal_attrition.csv",
+      "bytes": 251,
+      "sha256": "a1156b50e5de2c61133df9c32f712388bd9f70e3929c6eb4d9834e242a9fdf3f"
+    },
+    {
+      "file": "share-first-longitudinal_flow.csv",
+      "bytes": 162,
+      "sha256": "3d556e5f9a7151ebc7b23946553836e31939ee37ff7f71a63e9b2faac0a9d1dd"
+    },
+    {
+      "file": "share-first-missingness.csv",
+      "bytes": 666,
+      "sha256": "2831c1a8b0ea1ab10a336a267392b995825f86515cd047f68cc57c7f18e11c5c"
+    },
+    {
+      "file": "share-first-model_results.csv",
+      "bytes": 4692,
+      "sha256": "0b48a00fb786792b9fb4a793e9471901c587d66d10d734c3d0f202163d472d97"
+    },
+    {
+      "file": "share-first-module_inventory.csv",
+      "bytes": 9818,
+      "sha256": "34acef0f9f9ab07344dee7b09a114ddeb8b4c253aa67a0e9c1896c15cc02db60"
+    },
+    {
+      "file": "share-first-sample_flow.csv",
+      "bytes": 368,
+      "sha256": "9b3be87aab21635e08efe930e59798cbced49fbf6c0aac57faddc397e8142853"
+    },
+    {
+      "file": "share-first-selection.csv",
+      "bytes": 388,
+      "sha256": "f77032a52c0103c3a93526b86a8092e0246d20dfdd6108bfe5d9896bc0fcd2ed"
+    },
+    {
+      "file": "share-first-wave_coverage.csv",
+      "bytes": 146,
+      "sha256": "d8e2db902e016cc58a15c3f4be9fcfc3fcd712b7fd397ec1b12c75f886f74372"
+    },
+    {
+      "file": "share-supplement-age_agreement.csv",
+      "bytes": 62,
+      "sha256": "a8f61e55807dd4df999b4142122df7f26466b17d260277c279f69abd3f68c794"
+    },
+    {
+      "file": "share-supplement-allwaves_attrition_states.csv",
+      "bytes": 328,
+      "sha256": "b3dc42c649acac9465bc57a2978cec2c8df96caa896ce8151271735457dded91"
+    },
+    {
+      "file": "share-supplement-allwaves_participation.csv",
+      "bytes": 6096,
+      "sha256": "791850cb74f216ed84d9d5ffbc511c949c6363c8c3f1e4594390e7e50246a620"
+    },
+    {
+      "file": "share-supplement-allwaves_wavecv_agreement.csv",
+      "bytes": 152,
+      "sha256": "bb51491277c0c455d1e2da722c025cd42782bf76cd6ea3a2e97297a50cd9b633"
+    },
+    {
+      "file": "share-supplement-analysis_plan.md",
+      "bytes": 3804,
+      "sha256": "31567d63add0f0a7c220012d6c978740468973690afc705f6ac352cc1edcd30a"
+    },
+    {
+      "file": "share-supplement-analysis_summary.json",
+      "bytes": 5667,
+      "sha256": "f7e7e3989f698b7a1876025301c85f1c9db0a0dd454f9b89900875d9db6e638e"
+    },
+    {
+      "file": "share-supplement-longitudinal_design_agreement.csv",
+      "bytes": 118,
+      "sha256": "3753a3f1975756cffe4b06aa6c9c8058dae263d82224040e5d88721d151f90ee"
+    },
+    {
+      "file": "share-supplement-longitudinal_model_results.csv",
+      "bytes": 1642,
+      "sha256": "78b45d690a5f89646f6d5008b8a43739f3b1ff09941e3315314c2e6fa6bc77d5"
+    },
+    {
+      "file": "share-supplement-longitudinal_sample_flow.csv",
+      "bytes": 220,
+      "sha256": "f74f983041b1f2d9fed5c6dd99e655636fbbb391fc95d163b51447b868848b88"
+    },
+    {
+      "file": "share-supplement-longitudinal_weight_coverage.csv",
+      "bytes": 945,
+      "sha256": "a251e9851e5b533dc640d53967442c9107adac94694c4aa594f927acb7b1d9ed"
+    },
+    {
+      "file": "share-supplement-longitudinal_weight_diagnostics.csv",
+      "bytes": 411,
+      "sha256": "508141c4b9e7155058a178969e074f5d246115b3eddedf68bbd5bb8a870f22d1"
+    },
+    {
+      "file": "share-supplement-longitudinal_weight_selection.csv",
+      "bytes": 337,
+      "sha256": "9c95232e0c6a2cfa82b46cbbe67d66de77ce2ba5e76404bd9dc56d7ceeae87c8"
+    },
+    {
+      "file": "share-supplement-longitudinal_weights_forest.pdf",
+      "bytes": 18956,
+      "sha256": "7563f50ab52e725065705e414d492ea87b058697b48c568afd121d91a68a8f0a"
+    },
+    {
+      "file": "share-supplement-participation_code_labels.json",
+      "bytes": 1676,
+      "sha256": "63fd4603e9e3a3d85d2317f4801bf351367fa048508776cf5f677fd754787123"
+    },
+    {
+      "file": "share-supplement-questionnaire_routing.csv",
+      "bytes": 226,
+      "sha256": "cd51f54a0dc1343a1c662ae341b4f02c9360b64fb9f80afe3d11ddcb6548f3e1"
+    },
+    {
+      "file": "share-supplement-w6_cap_checks.csv",
+      "bytes": 150,
+      "sha256": "5a0773467e1c8c35c98d4d5305ec6cfe7ac86fc9764bd4f4a9bbb4524a5c4ddd"
+    },
+    {
+      "file": "share-supplement-w6_country_overlap.csv",
+      "bytes": 302,
+      "sha256": "361f73c229a8391493f2aa7ef8d5c7cf0c75040fd7e3c09a606caf7f2f5b4ab6"
+    },
+    {
+      "file": "share-supplement-w6_dbs_descriptives.csv",
+      "bytes": 2452,
+      "sha256": "9ced70ecfac98cf139ea5edb20a87f4c06044dc5bfc5b92bdcf2ac7a2af7c331"
+    },
+    {
+      "file": "share-supplement-w6_marker_overlap.csv",
+      "bytes": 611,
+      "sha256": "60a1c574606af66b6d80ae3a159ff2467a4826d6b484c74c4efa6f50defc70ac"
+    },
+    {
+      "file": "share-supplement-w6_overlap.pdf",
+      "bytes": 15527,
+      "sha256": "4524a308647dc7ee8d327cd9426def70aef70f8c4437f0e31f1e9bcc78f8e554"
+    },
+    {
+      "file": "share-supplement-w6_sample_flow.csv",
+      "bytes": 198,
+      "sha256": "eccdd313b7f04167051498c9a41b9c1325b125b5f339152523c5b8bd558ed2b1"
+    },
+    {
+      "file": "share-supplement-w6_weight_diagnostics.csv",
+      "bytes": 1042,
+      "sha256": "83f6e403cfae319179eff175515ddbde1623180685ded80ade2a7e370e2801c9"
+    }
+  ]
+}

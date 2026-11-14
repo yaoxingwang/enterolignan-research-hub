@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="霍山研究的公开数据延伸、数据清洗与分析结果。">
+<meta name="description" content="霍山研究的公开数据延伸：NHANES 肠木脂素与 DXA、CAP 审计，以及 CHARLS／SHARE 营养心理与功能研究。">
 <title>权重筛选 · 肠木脂素研究专题</title>
 <link rel="stylesheet" href="assets/style.css"><script src="assets/site.js" defer></script></head>
 <body><a class="skip" href="#content">跳到正文</a>
 <header class="header"><div class="wrap head-inner">
-<a class="brand" href="index.html">肠木脂素研究专题</a><nav class="nav" aria-label="专题导航"><a href="index.html">总览</a><a href="roadmap.html">原始思路</a><a href="data.html">数据与变量</a><a href="results.html">分析结果</a><a href="methods.html">清洗流程</a><a href="weights.html" aria-current="page">权重筛选</a><a href="literature.html">文献与投稿</a><a href="next.html">下一步</a></nav>
+<a class="brand" href="index.html">肠木脂素研究专题</a><nav class="nav" aria-label="专题导航"><a href="index.html">总览</a><a href="roadmap.html">原始思路</a><a href="data.html">数据与变量</a><a href="results.html">分析结果</a><a href="nutrition.html">营养健康支线</a><a href="methods.html">清洗流程</a><a href="weights.html" aria-current="page">权重筛选</a><a href="literature.html">文献与投稿</a><a href="next.html">下一步</a></nav>
 </div></header>
-<main class="wrap" id="content"><div class="page-head"><p class="eyebrow">NHANES 抽样设计</p><h1>选权重、合并周期和限定人群</h1><p class="lead">先判断变量按哪个调查组件采集，再看合并了多少年。成年人、非孕和完整病例各有独立的纳入条件。</p></div>
+<main class="wrap" id="content"><div class="page-head"><p class="eyebrow">按数据来源核对</p><h1>选权重、合并周期和限定人群</h1><p class="lead">NHANES、CHARLS 和 SHARE 的权重、目标人群与方差方法分别记录。以下先保留 NHANES 教程，再列新支线实际做法。</p></div>
 <div class="split">
 <section class="panel"><h2>用两份教程核查一次</h2>
 <ol class="steps">
@@ -47,6 +47,12 @@
 <section class="section panel"><h2>实际核查 Domain 和完整病例</h2>
 <p>成人 DXA 在限制年龄及协变量前保存正权重尿检样本的分层和 PSU。拟合用符合条件的人，计算方差时按原设计汇总各 PSU 的贡献，缺少分析成员的 PSU 贡献记零。2003–2006 年各期的主模型和生活方式模型均覆盖 15 个分层、30 个 PSU。</p>
 <p>收入缺失会缩小分析样本。Domain 处理保留设计结构，缺失对代表性的影响通过单独的敏感性分析评估。附件 SAS 在建总库时先删去未满 18 岁和死亡状态缺失者，代码复用时应检查分析域与 PSU 覆盖。</p>
-<p><a href="library/dxa-sensitivity-zh.html">成人 DXA 的收入缺失检查</a> · <a href="library/sas-mortality-code-review-zh.html">SAS 代码逐步拆解</a></p></section></main>
-<footer><div class="wrap"><span>霍山研究的公开数据延伸 · 更新于 <time datetime="2026-11-12">2026 年 11 月 12 日</time></span><a href="index.html">回专题总览</a></div></footer>
+<p><a href="library/dxa-sensitivity-zh.html">成人 DXA 的收入缺失检查</a> · <a href="library/sas-mortality-code-review-zh.html">SAS 代码逐步拆解</a></p></section>
+<section class="section panel" id="nutrition-weights"><h2>CHARLS 与 SHARE：官方权重与近似方差</h2><div class="table-scroll" tabindex="0" role="region" aria-label="新支线权重"><table><thead><tr><th>分析</th><th>权重</th><th>当前处理与限制</th></tr></thead><tbody>
+<tr><td>CHARLS W6</td><td><code>INDV_weight_ad2</code>；同样本比较事后分层权重</td><td>主症状模型按社区 CR1／t 区间，另做县聚类与完成概率加权 bootstrap。功能与口腔按县聚类，未恢复原始 PPS 内隐分层。</td></tr>
+<tr><td>SHARE W8／W9 横断面</td><td><code>cciw_w8_main</code>／<code>cciw_w9</code></td><td>PSU 命名空间含国家、子样本与主分层；缺 PSU 时退回家庭聚类。CR1／t 为近似，未实施完整分层调查方差。</td></tr>
+<tr><td>SHARE W8→W9</td><td>regular 8→9 官方个体纵向权重 <code>cliw_i</code></td><td>保留起始 W8 设计，正权重 25,327 人；与基线权重／不加权固定样本比较。权重目标较当前 55–110 岁基线阴性完整病例人群更广。</td></tr>
+<tr><td>SHARE W6 DBS</td><td><code>cciw_dbs</code></td><td>只做 447 人选中样本描述；Kish n≈26.4。不是指标专用或后期联合权重，不能相乘。家庭纵向权重不能替代个人权重。</td></tr>
+</tbody></table></div><p class="note">官方权重不会自动解决新增的饮食、量表完整病例选择。近似区间不等于完整复杂抽样推断。</p><a href="nutrition.html#share">看五个同样本比较及权重诊断下载</a></section></main>
+<footer><div class="wrap"><span>霍山研究的公开数据延伸 · 更新于 <time datetime="2026-11-14">2026 年 11 月 14 日</time></span><a href="index.html">回专题总览</a></div></footer>
 </body></html>

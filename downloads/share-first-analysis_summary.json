@@ -1,0 +1,106 @@
+{
+  "design": "Exploratory; wave 9 cross-sectional and wave 8 to 9 revisitor analyses",
+  "not_full_survey_inference": true,
+  "missing_longitudinal_weights": true,
+  "main": {
+    "model": "w9_primary",
+    "exposure": "fruitveg",
+    "outcome": "symptoms",
+    "family": "poisson",
+    "weight": "weight",
+    "cluster_type": "cluster",
+    "n": 61463,
+    "events": 16696,
+    "countries": 28,
+    "clusters": 21200,
+    "parameters": 47,
+    "beta": -0.11250231751697615,
+    "se": 0.03713193942525981,
+    "estimate": 0.8935952761838936,
+    "ci_low": 0.8308685023136183,
+    "ci_high": 0.9610576347456289,
+    "p": 0.002450112302115382,
+    "effective_n_kish": 10708.069397946934,
+    "redundant_time_columns_removed": "",
+    "max_score": 1.1018386203431874e-10,
+    "covariance_crosscheck_max_difference": null
+  },
+  "wave_coverage": [
+    {
+      "wave": 8,
+      "coverscreen_n": 106436,
+      "main_interviews": 53695,
+      "end_of_life": 4175,
+      "not_interviewed": 48566,
+      "households_finance_conflict": 5
+    },
+    {
+      "wave": 9,
+      "coverscreen_n": 97365,
+      "main_interviews": 69447,
+      "end_of_life": 3491,
+      "not_interviewed": 24427,
+      "households_finance_conflict": 3
+    }
+  ],
+  "dbs": {
+    "n": 24218,
+    "countries": 12,
+    "markers": 21,
+    "nonmissing_weight_n": 23629,
+    "links": [
+      {
+        "wave": 8,
+        "matched_to": "main interview",
+        "dbs_n": 24218,
+        "matched_n": 13460,
+        "matched_percent": 55.57849533404905
+      },
+      {
+        "wave": 8,
+        "matched_to": "nutrition complete cases",
+        "dbs_n": 24218,
+        "matched_n": 12712,
+        "matched_percent": 52.48988355768437
+      },
+      {
+        "wave": 9,
+        "matched_to": "main interview",
+        "dbs_n": 24218,
+        "matched_n": 14521,
+        "matched_percent": 59.95953423073747
+      },
+      {
+        "wave": 9,
+        "matched_to": "nutrition complete cases",
+        "dbs_n": 24218,
+        "matched_n": 13658,
+        "matched_percent": 56.396069039557354
+      }
+    ]
+  },
+  "followup_n": 26394,
+  "followup_events": 4347,
+  "followup_median_years": 2.0833333333332575,
+  "models": 17,
+  "checks": {
+    "wave8_unique_ids_and_one_to_one": true,
+    "wave8_eurod_score_and_category_match": true,
+    "wave9_unique_ids_and_one_to_one": true,
+    "wave9_eurod_score_and_category_match": true,
+    "followup_matched_invalid_date_n": 0,
+    "followup_requires_valid_original_dates": true,
+    "households_not_split_across_clusters": true,
+    "model_rank_and_score_convergence": true,
+    "unweighted_covariance_matches_statsmodels": true
+  },
+  "versions": {
+    "python": "3.13.11",
+    "numpy": "2.4.2",
+    "pandas": "3.0.1",
+    "scipy": "1.17.1",
+    "statsmodels": "0.15.0",
+    "patsy": "1.0.3",
+    "matplotlib": "3.10.8"
+  }
+}

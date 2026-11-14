@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="霍山研究的公开数据延伸、数据清洗与分析结果。">
+<meta name="description" content="霍山研究的公开数据延伸：NHANES 肠木脂素与 DXA、CAP 审计，以及 CHARLS／SHARE 营养心理与功能研究。">
 <title>清洗流程 · 肠木脂素研究专题</title>
 <link rel="stylesheet" href="assets/style.css"><script src="assets/site.js" defer></script></head>
 <body><a class="skip" href="#content">跳到正文</a>
 <header class="header"><div class="wrap head-inner">
-<a class="brand" href="index.html">肠木脂素研究专题</a><nav class="nav" aria-label="专题导航"><a href="index.html">总览</a><a href="roadmap.html">原始思路</a><a href="data.html">数据与变量</a><a href="results.html">分析结果</a><a href="methods.html" aria-current="page">清洗流程</a><a href="weights.html">权重筛选</a><a href="literature.html">文献与投稿</a><a href="next.html">下一步</a></nav>
+<a class="brand" href="index.html">肠木脂素研究专题</a><nav class="nav" aria-label="专题导航"><a href="index.html">总览</a><a href="roadmap.html">原始思路</a><a href="data.html">数据与变量</a><a href="results.html">分析结果</a><a href="nutrition.html">营养健康支线</a><a href="methods.html" aria-current="page">清洗流程</a><a href="weights.html">权重筛选</a><a href="literature.html">文献与投稿</a><a href="next.html">下一步</a></nav>
 </div></header>
 <main class="wrap" id="content"><div class="page-head"><p class="eyebrow">从原表到分析</p><h1>清洗流程与样本流失</h1><p class="lead">按数据来源分别合并和筛选。回归的完整病例规则与机器学习的训练集填补分开记录。</p></div>
 <div class="split"><section class="panel"><h2>合并与变量构建</h2>
@@ -18,6 +18,7 @@
 <p class="tabular"><strong>4,623</strong> 尿检合格 → <strong>4,570</strong> 五套 DXA 配对 → <strong>4,228</strong> 协变量完整</p>
 <p>调整 BMI 前后使用同一批人。未插补敏感性分析纳入 3,313 人。2003–2006 年的收入缺失另有同样本分析。</p>
 <a href="weights.html">拆开看权重这一步</a></section></div>
+<section class="section panel"><h2>CHARLS／SHARE：分别定义样本</h2><p>CHARLS 按官方应答年度连接，同轮跨年记录不任意覆盖。主症状样本要求 CES-D 十题完整；功能与口腔研究不要求这一条件，三组人数不能互换。代理、跳题与量表未答分别审计。</p><p>SHARE 只用 W8／W9 regular 主访谈，Corona 参与状态另行核对。W6 先核查问卷版本的结构性跳题，再筛同期饮食–DBS 交集。未访、未知死亡状态和明确死亡保持分开。</p><a href="nutrition.html#reports">查看四份完整报告与样本表</a></section>
 <section class="section"><h2>数据清洗与代码复核</h2><div class="docs"><article class="doc"><h3>数据清洗与样本纳入说明</h3><p>逐项记录合并键、纳入人数、缺失值和机器学习预处理。</p><a href="library/med-data-cleaning-zh.html">打开详细报告 <span aria-hidden="true">↗</span></a></article><article class="doc"><h3>尿木脂素与死亡风险的 SAS 代码</h3><p>拆解合并、抽样权重、加权 Cox 和公开死因编码。</p><a href="library/sas-mortality-code-review-zh.html">打开详细报告 <span aria-hidden="true">↗</span></a></article></div></section></main>
-<footer><div class="wrap"><span>霍山研究的公开数据延伸 · 更新于 <time datetime="2026-11-12">2026 年 11 月 12 日</time></span><a href="index.html">回专题总览</a></div></footer>
+<footer><div class="wrap"><span>霍山研究的公开数据延伸 · 更新于 <time datetime="2026-11-14">2026 年 11 月 14 日</time></span><a href="index.html">回专题总览</a></div></footer>
 </body></html>

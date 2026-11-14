@@ -1,0 +1,4 @@
+year,flag_field,age_eligible,cognition_flag_1,flag_1_cesd_complete,flag_1_cesd_complete_dcselect_1_2,flag_1_cesd_complete_dcselect_7,flag_1_health_proxy_not_1_and_cesd_complete,added_dcselect_7,strict_model_n,retain_later_self_eligible_model_n,retain_all_flag_model_n
+2021,dcproxy,9928,822,0,0,0,0,0,8400,8400,8413
+2022,proxy,2666,144,44,5,39,5,5,2317,2322,2366
+2023,proxy,1535,167,25,1,24,4,4,1215,1219,1242

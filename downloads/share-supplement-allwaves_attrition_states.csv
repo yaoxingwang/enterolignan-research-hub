@@ -1,0 +1,7 @@
+followup_group,death_status_code,source_label,n
+main_interview_incomplete_analysis,1,Alive,553
+no_w9_main_interview,0,Unknown,4625
+no_w9_main_interview,1,Alive,1511
+no_w9_main_interview,2,Dead,1114
+no_w9_main_interview,-99,Not applicable (missing by design - country skipped this wave),536
+valid_analytic_followup,1,Alive,26394

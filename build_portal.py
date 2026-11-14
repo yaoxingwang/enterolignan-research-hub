@@ -5,12 +5,14 @@ from html import escape
 from pathlib import Path
 import re
 from shutil import copyfile
+from build_nutrition import OVERVIEW, SUMMARY, nutrition_page
 
 
 ROOT = Path(__file__).resolve().parent
 NAV = {
     "index": "总览", "roadmap": "原始思路", "data": "数据与变量", "results": "分析结果",
-    "methods": "清洗流程", "weights": "权重筛选", "literature": "文献与投稿", "next": "下一步",
+    "nutrition": "营养健康支线", "methods": "清洗流程", "weights": "权重筛选",
+    "literature": "文献与投稿", "next": "下一步",
 }
 LIBRARY = {
     "original-roadmap.html": ("roadmap", "最初发来的 18 条路线图", "保留最初的研究问题、成本分层和备选方向。"),
@@ -56,7 +58,7 @@ def layout(key, body):
     return f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="霍山研究的公开数据延伸、数据清洗与分析结果。">
+<meta name="description" content="霍山研究的公开数据延伸：NHANES 肠木脂素与 DXA、CAP 审计，以及 CHARLS／SHARE 营养心理与功能研究。">
 <title>{NAV[key]} · 肠木脂素研究专题</title>
 <link rel="stylesheet" href="assets/style.css"><script src="assets/site.js" defer></script></head>
 <body><a class="skip" href="#content">跳到正文</a>
@@ -64,7 +66,7 @@ def layout(key, body):
 <a class="brand" href="index.html">肠木脂素研究专题</a><nav class="nav" aria-label="专题导航">{menu}</nav>
 </div></header>
 <main class="wrap" id="content">{body}</main>
-<footer><div class="wrap"><span>霍山研究的公开数据延伸 · 更新于 <time datetime="2026-11-12">2026 年 11 月 12 日</time></span><a href="index.html">回专题总览</a></div></footer>
+<footer><div class="wrap"><span>霍山研究的公开数据延伸 · 更新于 <time datetime="2026-11-14">2026 年 11 月 14 日</time></span><a href="index.html">回专题总览</a></div></footer>
 </body></html>'''
 
 
@@ -73,8 +75,8 @@ HOME = '''
   <div class="hero-intro">
     <p class="eyebrow">霍山研究的公开数据延伸</p>
     <h1>肠木脂素与<br>成人脂肪分布</h1>
-    <p class="lead">从最初的 18 条思路，到 NHANES 的尿检、DXA 和实测 CAP，再到两套粪便菌群队列的交叉验证。</p>
-    <div class="actions"><a class="btn primary" href="results.html#robustness">看最新稳健性分析</a><a class="btn" href="results.html#main-analysis">看主结果</a></div>
+    <p class="lead">保留 NHANES 尿检、DXA、实测 CAP 与菌群验证主线，汇入 CHARLS、SHARE 的营养、心理与功能研究进展。</p>
+    <div class="actions"><a class="btn primary" href="#research-status">看全部研究线当前状态</a><a class="btn" href="nutrition.html">看 CHARLS／SHARE 更新</a></div>
   </div>
   <div class="hero-data">
     <p class="eyebrow">当前主结果 · NHANES 成人 DXA</p>
@@ -83,9 +85,9 @@ HOME = '''
     <div class="forest" aria-hidden="true"><span class="line"></span></div><div class="axis" aria-hidden="true"><span>−0.50</span><span>−0.25</span><span>0</span></div>
     <p class="interval">95% CI −0.343 至 −0.156 · 4,228 人 · 四个周期点估计均为负</p>
   </div>
-</section>
+</section>''' + OVERVIEW + '''
 <section class="section latest-research" aria-labelledby="latest-title">
-  <div><h2 id="latest-title">最新分析 · 肾功能与周期稳健性</h2><p>肾功能完整的 3,904 人中，加入 eGFR 和 UACR 后估计为 −0.241 个百分点。周期内排序和三种周期剔除也已完成。</p></div>
+  <div><h2 id="latest-title">NHANES 主线 · 肾功能与周期稳健性</h2><p>肾功能完整的 3,904 人中，加入 eGFR 和 UACR 后估计为 −0.241 个百分点。周期内排序和三种周期剔除也已完成。</p></div>
   <a href="results.html#robustness">看新结果、森林图与下载 <span aria-hidden="true">↗</span></a>
 </section>
 <section class="section latest-research" id="diet-cap" aria-labelledby="diet-cap-title"><div><h2 id="diet-cap-title">膳食木脂素与 CAP · 可行性审计完成</h2><p>18/4,564 个食品代码有名称候选，加权克数覆盖首日 1.153%、次日 1.414%。两个回顾日均无完整映射，当前资料不足以建立总摄入模型。</p></div><a href="library/cap-lignan-feasibility-zh.html">查看审计报告与聚合下载 <span aria-hidden="true">↗</span></a></section>
@@ -93,7 +95,7 @@ HOME = '''
   <h2 id="overview">研究进度</h2>
   <div class="metrics">
     <article class="metric"><strong>18</strong><p>最初的备选课题</p></article>
-    <article class="metric"><strong>712</strong><p>已拟合的暴露–结局模型</p></article>
+    <article class="metric"><strong>712</strong><p>既有 NHANES／菌群暴露–结局筛查模型</p></article>
     <article class="metric"><strong>54</strong><p>另做的分周期核查</p></article>
   </div>
 </section>
@@ -103,6 +105,7 @@ HOME = '''
     <article class="tile"><h3><a href="roadmap.html">原始思路与方向</a></h3><p>回看初始清单、扩展版路线图和课题取舍。</p></article>
     <article class="tile"><h3><a href="data.html">数据、暴露和结局</a></h3><p>查哪些能同人配对、哪些已分析、哪些仍缺字段。</p></article>
     <article class="tile"><h3><a href="results.html">分析结果与统计</a></h3><p>查看成人 DXA、肥胖模型、CAP 和菌群验证。下载全表。</p></article>
+    <article class="tile"><h3><a href="nutrition.html">营养、心理与功能</a></h3><p>CHARLS 饮食与口腔、SHARE 纵向权重更新和 DBS 可行性。</p></article>
     <article class="tile"><h3><a href="methods.html">清洗和样本纳入</a></h3><p>查看匹配规则、缺失处理和各阶段样本人数。</p></article>
     <article class="tile"><h3><a href="literature.html">文献与投稿</a></h3><p>区分已有研究、同源复核和可扩展的成人 DXA 问题。</p></article>
     <article class="tile"><h3><a href="next.html">下一步研究</a></h3><p>成人 DXA 写作、膳食木脂素映射和菌群外部验证。</p></article>
@@ -117,7 +120,7 @@ ROADMAP = heading("研究起点", "从 18 条思路到实际分析",
 <li>由腰围扩展到成人 DXA，再核查跨周期与跨队列结果。</li>
 <li>对照近年论文，将腰围作为复核，把成人脂肪分布作为主线。</li></ol></section>
 <section class="panel"><h2>当前取舍</h2><p>成人 DXA 有同人尿检与区域体脂。实测 CAP 与尿 ENL 在现有 NHANES 文件里分属不同周期。</p>
-<p>中国人群仍单列为后续路线，霍山和 CHARLS 的个体数据没有纳入这批分析。</p>
+<p>CHARLS 与 SHARE 已形成独立营养健康支线，包含问卷横断面、功能／口腔及 SHARE 随访分析；没有实测 ENL/END 或菌群，不能直接验证原机制。</p>
 <a href="next.html">查看最新研究优先级</a></section></div>
 <section class="section"><h2>保留的路线图</h2>''' + docs("original-roadmap.html", "enterolignan-research-roadmap-18.html") + "</section>"
 
@@ -130,7 +133,10 @@ DATA_ROWS = [
     ("done", "Kim / Sinha", "菌属相对丰度；临床模型用粪便 ENL", "粪便 ENL、结直肠病理；Sinha 另有 BMI", "240 / 131 个配对；双向验证用 102 / 66 名对照。"),
     ("partial", "NHANES 食物明细", "膳食木脂素候选映射、DI-GM", "实测 CAP 或认知", "木脂素可行性审计已完成；覆盖不足，未建立总摄入模型。DI-GM 食物组编码仍待整理。"),
     ("pending", "实测尿 ENL/END 与 CAP", "尿肠木脂素", "同一人的实测 CAP", "当前公开文件分属不同周期，缺同人配对。"),
-    ("pending", "中国人群与纵向结局", "中国人群木脂素暴露", "新发 CVD 或原文对应结局", "现有分析没有纳入霍山或 CHARLS 个体数据。"),
+    ("done", "CHARLS W6", "每日≥2 种蔬果等条目、功能、咀嚼与口腔状态", "CES-D-10 症状；未达蔬果题标准", "主症状模型 11,932 人；功能 12,925 人；口腔 12,913 人。已完成敏感性与家户复核。"),
+    ("done", "SHARE W8／W9 regular", "每日蔬果频率等饮食问卷", "EURO-D 症状；基线阴性者的后期筛查状态", "首轮 17 模型；W9 61,463 人；官方纵向权重更新 25,327 人、五个模型。"),
+    ("done", "SHARE W6 DBS", "2015 年同期饮食问卷及干血斑指标", "CRP、HbA1c、血脂等选中样本描述", "DBS 24,218 人，有效交集 447、Kish n≈26.4。已完成可行性审计，未拟合正式关联模型。"),
+    ("pending", "中国人群木脂素与纵向结局", "同人 ENL/END、菌群或定量木脂素", "原文对应结局或后期健康状态", "当前 CHARLS 问卷下载包缺这些测量；早期轮次连接尚属设计。"),
 ]
 STATUS = {"done": "已分析", "partial": "字段待整理", "pending": "待配对"}
 
@@ -147,7 +153,7 @@ def data_table():
 <button type="button" data-filter-value="done" aria-pressed="false">已分析</button>
 <button type="button" data-filter-value="partial" aria-pressed="false">字段待整理</button>
 <button type="button" data-filter-value="pending" aria-pressed="false">待配对</button>
-<span class="filter-count" data-filter-count aria-live="polite">显示 8 个数据模块</span></div>
+<span class="filter-count" data-filter-count aria-live="polite">显示 ''' + str(len(DATA_ROWS)) + ''' 个数据模块</span></div>
 <div class="table-scroll" tabindex="0" role="region" aria-label="暴露与结局列表">
 <table><thead><tr><th>状态</th><th>数据</th><th>暴露</th><th>结局</th><th>当前范围</th></tr></thead>
 <tbody>''' + rows + "</tbody></table></div>"
@@ -155,18 +161,18 @@ def data_table():
 
 DATA = heading("数据盘点", "数据、暴露和结局",
                "按能否在同一个人或同一个粪便样本中配对组织。状态按当前分析进度更新。") + data_table() + '''
-<section class="section"><h2>新增公开随访数据</h2>''' + docs("urine-mortality-feasibility-zh.html") + '''</section>
+''' + SUMMARY + '''<section class="section"><h2>新增公开随访数据</h2>''' + docs("urine-mortality-feasibility-zh.html") + '''</section>
 <section class="section"><h2>膳食木脂素与 CAP 可行性</h2>''' + docs("cap-lignan-feasibility-zh.html") + '''</section>
-<div class="callout"><p><strong>数据和脚本位置</strong>　4090 的 <code>/data/wyx/med</code>。结果、样本数和效应区间可以从分析页下载。</p></div>
+<div class="callout"><p><strong>公开范围</strong>　只发布报告、汇总表和图表。CHARLS／SHARE 原始数据、参与者标识和个人层衍生数据保留在授权环境。</p></div>
 <div class="actions"><a class="btn" href="results.html#downloads">打开结果与下载</a><a class="btn" href="methods.html">查看变量如何清洗</a></div>'''
 
 RESULTS = heading("已完成的分析", "统计结果与模型",
                   "查看成人 DXA 主结果、跨周期复核和其他结局。表格可下载核对。") + '''
 <nav class="result-jumps" aria-label="结果页目录">
-  <a href="#main-analysis">四期主结果</a><a href="#robustness">最新稳健性分析</a><a href="#dietary-cap">膳食木脂素 CAP 可行性</a><a href="#experiments">补充实验</a>
+  <a href="#main-analysis">四期主结果</a><a href="#robustness">DXA 稳健性</a><a href="nutrition.html">CHARLS／SHARE 更新</a><a href="#dietary-cap">膳食木脂素 CAP 可行性</a><a href="#experiments">补充实验</a>
   <a href="#other-results">其他结局</a><a href="#downloads">下载数据表</a>
 </nav>
-<div class="split" id="main-analysis"><section class="panel"><h2>成人 DXA 四周期复核</h2>
+''' + SUMMARY + '''<div class="split" id="main-analysis"><section class="panel"><h2>成人 DXA 四周期复核</h2>
 <p>1999–2006 年合并 4,228 人。尿 ENL 每翻倍，调整 BMI 后躯干脂肪占比平均低 <strong>0.249 个百分点</strong>（95% CI −0.343 至 −0.156）。</p>
 <p>早期两期和原两期的估计均为负。单列肌酐和仅保留 DXA 未插补者时结果相近。</p><a href="library/dxa-cycle-validation-zh.html">看跨周期、区域脂肪与腰围比较</a></section>
 <figure class="panel"><img src="assets/dxa-cycles.png" alt="成人 DXA 四个调查周期与合并估计。四个周期的点估计均为负。"><figcaption>按调查周期报告估计与 95% CI。</figcaption></figure></div>
@@ -288,11 +294,12 @@ METHODS = heading("从原表到分析", "清洗流程与样本流失",
 <p class="tabular"><strong>4,623</strong> 尿检合格 → <strong>4,570</strong> 五套 DXA 配对 → <strong>4,228</strong> 协变量完整</p>
 <p>调整 BMI 前后使用同一批人。未插补敏感性分析纳入 3,313 人。2003–2006 年的收入缺失另有同样本分析。</p>
 <a href="weights.html">拆开看权重这一步</a></section></div>
+<section class="section panel"><h2>CHARLS／SHARE：分别定义样本</h2><p>CHARLS 按官方应答年度连接，同轮跨年记录不任意覆盖。主症状样本要求 CES-D 十题完整；功能与口腔研究不要求这一条件，三组人数不能互换。代理、跳题与量表未答分别审计。</p><p>SHARE 只用 W8／W9 regular 主访谈，Corona 参与状态另行核对。W6 先核查问卷版本的结构性跳题，再筛同期饮食–DBS 交集。未访、未知死亡状态和明确死亡保持分开。</p><a href="nutrition.html#reports">查看四份完整报告与样本表</a></section>
 <section class="section"><h2>数据清洗与代码复核</h2>''' + docs("med-data-cleaning-zh.html",
     "sas-mortality-code-review-zh.html") + "</section>"
 
-WEIGHTS = heading("NHANES 抽样设计", "选权重、合并周期和限定人群",
-                  "先判断变量按哪个调查组件采集，再看合并了多少年。成年人、非孕和完整病例各有独立的纳入条件。") + '''
+WEIGHTS = heading("按数据来源核对", "选权重、合并周期和限定人群",
+                  "NHANES、CHARLS 和 SHARE 的权重、目标人群与方差方法分别记录。以下先保留 NHANES 教程，再列新支线实际做法。") + '''
 <div class="split">
 <section class="panel"><h2>用两份教程核查一次</h2>
 <ol class="steps">
@@ -331,7 +338,13 @@ WEIGHTS = heading("NHANES 抽样设计", "选权重、合并周期和限定人�
 <section class="section panel"><h2>实际核查 Domain 和完整病例</h2>
 <p>成人 DXA 在限制年龄及协变量前保存正权重尿检样本的分层和 PSU。拟合用符合条件的人，计算方差时按原设计汇总各 PSU 的贡献，缺少分析成员的 PSU 贡献记零。2003–2006 年各期的主模型和生活方式模型均覆盖 15 个分层、30 个 PSU。</p>
 <p>收入缺失会缩小分析样本。Domain 处理保留设计结构，缺失对代表性的影响通过单独的敏感性分析评估。附件 SAS 在建总库时先删去未满 18 岁和死亡状态缺失者，代码复用时应检查分析域与 PSU 覆盖。</p>
-<p><a href="library/dxa-sensitivity-zh.html">成人 DXA 的收入缺失检查</a> · <a href="library/sas-mortality-code-review-zh.html">SAS 代码逐步拆解</a></p></section>'''
+<p><a href="library/dxa-sensitivity-zh.html">成人 DXA 的收入缺失检查</a> · <a href="library/sas-mortality-code-review-zh.html">SAS 代码逐步拆解</a></p></section>
+<section class="section panel" id="nutrition-weights"><h2>CHARLS 与 SHARE：官方权重与近似方差</h2><div class="table-scroll" tabindex="0" role="region" aria-label="新支线权重"><table><thead><tr><th>分析</th><th>权重</th><th>当前处理与限制</th></tr></thead><tbody>
+<tr><td>CHARLS W6</td><td><code>INDV_weight_ad2</code>；同样本比较事后分层权重</td><td>主症状模型按社区 CR1／t 区间，另做县聚类与完成概率加权 bootstrap。功能与口腔按县聚类，未恢复原始 PPS 内隐分层。</td></tr>
+<tr><td>SHARE W8／W9 横断面</td><td><code>cciw_w8_main</code>／<code>cciw_w9</code></td><td>PSU 命名空间含国家、子样本与主分层；缺 PSU 时退回家庭聚类。CR1／t 为近似，未实施完整分层调查方差。</td></tr>
+<tr><td>SHARE W8→W9</td><td>regular 8→9 官方个体纵向权重 <code>cliw_i</code></td><td>保留起始 W8 设计，正权重 25,327 人；与基线权重／不加权固定样本比较。权重目标较当前 55–110 岁基线阴性完整病例人群更广。</td></tr>
+<tr><td>SHARE W6 DBS</td><td><code>cciw_dbs</code></td><td>只做 447 人选中样本描述；Kish n≈26.4。不是指标专用或后期联合权重，不能相乘。家庭纵向权重不能替代个人权重。</td></tr>
+</tbody></table></div><p class="note">官方权重不会自动解决新增的饮食、量表完整病例选择。近似区间不等于完整复杂抽样推断。</p><a href="nutrition.html#share">看五个同样本比较及权重诊断下载</a></section>'''
 
 LITERATURE = heading("和原始论文对照", "相关文献与投稿判断",
                      "区分相同暴露、相同结局和重叠样本。早期的期刊候选保留在对应报告里。") + '''
@@ -346,7 +359,9 @@ LITERATURE = heading("和原始论文对照", "相关文献与投稿判断",
 
 NEXT = heading("研究计划", "下一步做什么",
                "围绕当前结果最清楚、与霍山原文最接近的分析安排下一轮。") + '''
-<section class="panel" id="dxa-next">
+<section class="panel" id="current-priorities"><p class="eyebrow">截至 2026-11-14 · 统一进度</p><h2>先区分已完成与待开展</h2><p>成人 DXA 主分析与稳健性、CAP 可行性审计、CHARLS 主分析和功能／口腔复核、SHARE 首轮与官方权重补充均已完成。当前优先整理与写作；跨轮次设计、完整调查方差和机制外部验证仍需新工作。</p><div class="actions"><a class="btn primary" href="index.html#research-status">全部研究线当前状态</a><a class="btn" href="nutrition.html">查看新增完整成果</a></div></section>
+<section class="section panel" id="nutrition-next"><h2>CHARLS／SHARE：现有结果之后</h2><ol class="steps"><li><strong>CHARLS：</strong>现有分析止于 W6 横断面。W4 早期咀嚼→W6 饮食状态需先取得并统一早期模块、路由和权重；W5 可提供既往功能与症状。尚无跨轮次连接人数或效应。</li><li><strong>SHARE：</strong>五个官方纵向权重模型已完成；当前估计不支持明确保护结论。仍需完整分层方差、完整病例选择与荷兰权重覆盖解释。</li><li><strong>W6 DBS：</strong>结构性交集与权重集中限制正式模型，保持描述结论；后期检测不等于再次采样。须先确认新设计与指标尺度，再考虑其他问题。</li></ol><a href="nutrition.html#next-nutrition">查看设计条件、报告与全部下载</a></section>
+<section class="section panel" id="dxa-next">
   <h2>成人 DXA：三项稳健性分析已完成</h2>
   <p>主结局继续使用躯干脂肪占比。最新结果支持负向横断面关联，并补充了化验口径和周期依赖的检查。</p>
   <ol class="next-experiments">
@@ -387,13 +402,18 @@ def archive(source, target, module):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--reports", type=Path, default=ROOT.parent)
-    parser.add_argument("--original", required=True, type=Path)
-    parser.add_argument("--dxa-figure", required=True, type=Path)
+    parser.add_argument("--original", type=Path)
+    parser.add_argument("--dxa-figure", type=Path)
+    parser.add_argument("--pages-only", action="store_true", help="Rebuild pages using the archived aggregate exports.")
     args = parser.parse_args()
-    pages = dict(index=HOME, roadmap=ROADMAP, data=DATA, results=RESULTS, methods=METHODS,
-                 weights=WEIGHTS, literature=LITERATURE, next=NEXT)
+    if not args.pages_only and (args.original is None or args.dxa_figure is None):
+        parser.error("Full import requires --original and --dxa-figure; use --pages-only for archived assets.")
+    pages = dict(index=HOME, roadmap=ROADMAP, data=DATA, results=RESULTS, nutrition=nutrition_page(),
+                 methods=METHODS, weights=WEIGHTS, literature=LITERATURE, next=NEXT)
     for key, body in pages.items():
         (ROOT / f"{key}.html").write_text(layout(key, body), encoding="utf-8")
+    if args.pages_only:
+        return
     for name, (module, _, _) in LIBRARY.items():
         source = args.original if name == "original-roadmap.html" else args.reports / name
         archive(source, ROOT / "library" / name, module)

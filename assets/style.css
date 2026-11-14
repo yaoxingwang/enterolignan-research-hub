@@ -123,6 +123,16 @@ code { font: .85em var(--mono); overflow-wrap: anywhere; background: var(--wash)
 footer { border-top: 1px solid var(--line); padding: 18px 0 24px; }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 20px; justify-content: space-between; }
 [hidden] { display: none !important; }
+.status-table { min-width: 850px; }
+.status-table td:first-child { width: 19%; }
+.status-table td { min-width: 170px; }
+.status-table .tag { white-space: normal; margin-top: 7px; }
+.evidence-details { margin-top: 18px; }
+.evidence-details summary { cursor: pointer; color: var(--green); font-weight: 700; }
+.evidence-details[open] summary { margin-bottom: 12px; }
+#nutrition-update { margin-bottom: 24px; }
+.link-list a { overflow-wrap: anywhere; }
+section[id] { scroll-margin-top: 18px; }
 @media (max-width: 850px) {
   .head-inner { align-items: flex-start; gap: 5px; flex-direction: column; padding-top: 12px; }
   .wrap { width: min(1180px, calc(100% - 36px)); }

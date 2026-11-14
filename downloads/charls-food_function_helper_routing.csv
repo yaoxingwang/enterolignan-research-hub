@@ -1,0 +1,9 @@
+task,difficulty_code,n,helper_expected,helper_yes,helper_no,helper_missing_or_invalid
+cooking,1,11922,False,0,0,11922
+cooking,2,410,True,176,234,0
+cooking,3,261,True,231,30,0
+cooking,4,332,True,286,46,0
+shopping,1,12079,False,0,0,12079
+shopping,2,263,True,116,147,0
+shopping,3,271,True,251,20,0
+shopping,4,312,True,285,27,0

@@ -1,0 +1,85 @@
+sample,wave,status_field,status_code,source_label,n
+All waves records,6,interview,1,Main interview,68055
+All waves records,6,interview,-91,Not applicable (person was not yet part of sample),62990
+All waves records,6,interview,-92,Not applicable (household did not participate in this wave),30913
+All waves records,6,interview,0,No interview,28593
+All waves records,6,interview,-97,Not applicable (out of sample),26398
+All waves records,6,interview,-99,Not applicable (missing by design - country skipped this wave),13590
+All waves records,6,interview,-94,Not applicable (person has an End-of-Life interview in previous waves),5023
+All waves records,6,interview,2,End-of-Life interview (xt),3365
+All waves records,6,interview,-101,Not applicable (AT special: w6 longitudinal sample batches not active),761
+All waves records,6,interview,-93,Not applicable (person was not listed as household member in this wave),337
+All waves records,6,deadoralive,1,Alive,119718
+All waves records,6,deadoralive,-91,Not applicable (alive - but not yet part of sample),63118
+All waves records,6,deadoralive,0,Unknown,38160
+All waves records,6,deadoralive,2,Dead,13055
+All waves records,6,deadoralive,-99,Not applicable (missing by design - country skipped this wave),5974
+All waves records,8,interview,-97,Not applicable (out of sample),63954
+All waves records,8,interview,1,Main interview,53695
+All waves records,8,interview,0,No interview,49686
+All waves records,8,interview,-92,Not applicable (household did not participate in this wave),37140
+All waves records,8,interview,-91,Not applicable (person was not yet part of sample),19954
+All waves records,8,interview,-94,Not applicable (person has an End-of-Life interview in previous waves),12327
+All waves records,8,interview,2,End-of-Life interview (xt),3055
+All waves records,8,interview,-93,Not applicable (person was not listed as household member in this wave),214
+All waves records,8,deadoralive,1,Alive,108284
+All waves records,8,deadoralive,0,Unknown,85938
+All waves records,8,deadoralive,2,Dead,24008
+All waves records,8,deadoralive,-91,Not applicable (alive - but not yet part of sample),19954
+All waves records,8,deadoralive,-99,Not applicable (missing by design - country skipped this wave),1841
+All waves records,9,interview,-97,Not applicable (out of sample),90154
+All waves records,9,interview,1,Main interview,69447
+All waves records,9,interview,-92,Not applicable (household did not participate in this wave),34470
+All waves records,9,interview,0,No interview,24427
+All waves records,9,interview,-94,Not applicable (person has an End-of-Life interview in previous waves),17714
+All waves records,9,interview,2,End-of-Life interview (xt),3491
+All waves records,9,interview,-93,Not applicable (person was not listed as household member in this wave),322
+All waves records,9,deadoralive,0,Unknown,105589
+All waves records,9,deadoralive,1,Alive,98447
+All waves records,9,deadoralive,2,Dead,29629
+All waves records,9,deadoralive,-99,Not applicable (missing by design - country skipped this wave),6360
+W6 DBS,6,interview,1,Main interview,24218
+W6 DBS,6,deadoralive,1,Alive,24218
+W6 DBS,8,interview,1,Main interview,13460
+W6 DBS,8,interview,0,No interview,5238
+W6 DBS,8,interview,-92,Not applicable (household did not participate in this wave),3587
+W6 DBS,8,interview,2,End-of-Life interview (xt),702
+W6 DBS,8,interview,-94,Not applicable (person has an End-of-Life interview in previous waves),693
+W6 DBS,8,interview,-97,Not applicable (out of sample),507
+W6 DBS,8,interview,-93,Not applicable (person was not listed as household member in this wave),31
+W6 DBS,8,deadoralive,1,Alive,19492
+W6 DBS,8,deadoralive,0,Unknown,2599
+W6 DBS,8,deadoralive,2,Dead,2127
+W6 DBS,9,interview,1,Main interview,14521
+W6 DBS,9,interview,-92,Not applicable (household did not participate in this wave),4052
+W6 DBS,9,interview,-97,Not applicable (out of sample),2522
+W6 DBS,9,interview,-94,Not applicable (person has an End-of-Life interview in previous waves),1976
+W6 DBS,9,interview,2,End-of-Life interview (xt),740
+W6 DBS,9,interview,0,No interview,352
+W6 DBS,9,interview,-93,Not applicable (person was not listed as household member in this wave),55
+W6 DBS,9,deadoralive,1,Alive,15911
+W6 DBS,9,deadoralive,0,Unknown,5078
+W6 DBS,9,deadoralive,2,Dead,3229
+W8 baseline negative,6,interview,1,Main interview,22160
+W8 baseline negative,6,interview,-91,Not applicable (person was not yet part of sample),9037
+W8 baseline negative,6,interview,-99,Not applicable (missing by design - country skipped this wave),1993
+W8 baseline negative,6,interview,-92,Not applicable (household did not participate in this wave),1004
+W8 baseline negative,6,interview,0,No interview,419
+W8 baseline negative,6,interview,-101,Not applicable (AT special: w6 longitudinal sample batches not active),108
+W8 baseline negative,6,interview,-93,Not applicable (person was not listed as household member in this wave),12
+W8 baseline negative,6,deadoralive,1,Alive,25150
+W8 baseline negative,6,deadoralive,-91,Not applicable (alive - but not yet part of sample),9045
+W8 baseline negative,6,deadoralive,-99,Not applicable (missing by design - country skipped this wave),538
+W8 baseline negative,8,interview,1,Main interview,34733
+W8 baseline negative,8,deadoralive,1,Alive,34733
+W8 baseline negative,9,interview,1,Main interview,26947
+W8 baseline negative,9,interview,-92,Not applicable (household did not participate in this wave),4364
+W8 baseline negative,9,interview,-97,Not applicable (out of sample),2143
+W8 baseline negative,9,interview,2,End-of-Life interview (xt),597
+W8 baseline negative,9,interview,0,No interview,331
+W8 baseline negative,9,interview,-94,Not applicable (person has an End-of-Life interview in previous waves),317
+W8 baseline negative,9,interview,-93,Not applicable (person was not listed as household member in this wave),34
+W8 baseline negative,9,deadoralive,1,Alive,28458
+W8 baseline negative,9,deadoralive,0,Unknown,4625
+W8 baseline negative,9,deadoralive,2,Dead,1114
+W8 baseline negative,9,deadoralive,-99,Not applicable (missing by design - country skipped this wave),536

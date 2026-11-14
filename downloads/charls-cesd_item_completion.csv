@@ -1,0 +1,9 @@
+exposure_yes,status,n,weighted_percent_within_exposure,known_positive
+0,complete_ten_items,1735,87.11195974782116,765.0
+0,classifiable_from_partial_items,133,7.062356117207752,70.0
+0,unresolved_with_partial_items,91,4.666718932781726,
+0,no_valid_items,21,1.158965202189378,
+1,complete_ten_items,10197,93.99347256673352,3226.0
+1,classifiable_from_partial_items,418,3.735598503912759,197.0
+1,unresolved_with_partial_items,199,1.7320877282056895,
+1,no_valid_items,46,0.5388412011480339,

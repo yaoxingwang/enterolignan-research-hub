@@ -1,20 +1,20 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="霍山研究的公开数据延伸、数据清洗与分析结果。">
+<meta name="description" content="霍山研究的公开数据延伸：NHANES 肠木脂素与 DXA、CAP 审计，以及 CHARLS／SHARE 营养心理与功能研究。">
 <title>总览 · 肠木脂素研究专题</title>
 <link rel="stylesheet" href="assets/style.css"><script src="assets/site.js" defer></script></head>
 <body><a class="skip" href="#content">跳到正文</a>
 <header class="header"><div class="wrap head-inner">
-<a class="brand" href="index.html">肠木脂素研究专题</a><nav class="nav" aria-label="专题导航"><a href="index.html" aria-current="page">总览</a><a href="roadmap.html">原始思路</a><a href="data.html">数据与变量</a><a href="results.html">分析结果</a><a href="methods.html">清洗流程</a><a href="weights.html">权重筛选</a><a href="literature.html">文献与投稿</a><a href="next.html">下一步</a></nav>
+<a class="brand" href="index.html">肠木脂素研究专题</a><nav class="nav" aria-label="专题导航"><a href="index.html" aria-current="page">总览</a><a href="roadmap.html">原始思路</a><a href="data.html">数据与变量</a><a href="results.html">分析结果</a><a href="nutrition.html">营养健康支线</a><a href="methods.html">清洗流程</a><a href="weights.html">权重筛选</a><a href="literature.html">文献与投稿</a><a href="next.html">下一步</a></nav>
 </div></header>
 <main class="wrap" id="content">
 <section class="hero">
   <div class="hero-intro">
     <p class="eyebrow">霍山研究的公开数据延伸</p>
     <h1>肠木脂素与<br>成人脂肪分布</h1>
-    <p class="lead">从最初的 18 条思路，到 NHANES 的尿检、DXA 和实测 CAP，再到两套粪便菌群队列的交叉验证。</p>
-    <div class="actions"><a class="btn primary" href="results.html#robustness">看最新稳健性分析</a><a class="btn" href="results.html#main-analysis">看主结果</a></div>
+    <p class="lead">保留 NHANES 尿检、DXA、实测 CAP 与菌群验证主线，汇入 CHARLS、SHARE 的营养、心理与功能研究进展。</p>
+    <div class="actions"><a class="btn primary" href="#research-status">看全部研究线当前状态</a><a class="btn" href="nutrition.html">看 CHARLS／SHARE 更新</a></div>
   </div>
   <div class="hero-data">
     <p class="eyebrow">当前主结果 · NHANES 成人 DXA</p>
@@ -24,8 +24,22 @@
     <p class="interval">95% CI −0.343 至 −0.156 · 4,228 人 · 四个周期点估计均为负</p>
   </div>
 </section>
+<section class="section experiment-section" id="research-status" aria-labelledby="status-title">
+  <header class="experiment-heading"><div><p class="eyebrow">全部研究线 · 截至 2026-11-14</p><h2 id="status-title">现在有哪些证据</h2></div><a class="btn" href="nutrition.html">进入营养健康支线</a></header>
+  <p class="lead">NHANES 尿 ENL/END 与成人脂肪分布仍是主线；CHARLS、SHARE 扩展到饮食、心理和功能健康。各数据集分别解释，不合并不同暴露的效应。</p>
+  <div class="table-scroll" tabindex="0" role="region" aria-label="全部研究线当前状态"><table class="status-table"><thead><tr><th>研究线／状态</th><th>实际测量</th><th>当前结果</th><th>解释边界与入口</th></tr></thead><tbody>
+  <tr><td>霍山前作<br><span class="tag">研究起点</span></td><td>305 名社区成人；尿肠木脂素、粪便菌群、体型，随访体成分与 CAP</td><td>为公开数据延伸提供问题和机制线索</td><td>本专题未重跑霍山个体数据。<a href="https://pubmed.ncbi.nlm.nih.gov/38874113/">查看原文</a></td></tr>
+  <tr><td>NHANES 成人 DXA<br><span class="tag">主分析与稳健性完成</span></td><td>1999–2006 年同人尿 ENL/END 与区域脂肪；主模型 4,228 人</td><td>ENL 每翻倍，躯干脂肪占比差 −0.249 个百分点；肾功能调整后 −0.241</td><td>横断面、单次尿样；尚不能解释为因果。<a href="results.html#main-analysis">主结果与图表</a></td></tr>
+  <tr><td>Kim／Sinha 菌群<br><span class="tag">双向验证完成</span></td><td>粪便 ENL 与菌属丰度；验证使用 102／66 名对照</td><td>双向 Spearman ρ 为 0.10／0.17；增量区间跨零</td><td>外部验证较弱，需独立配对队列。<a href="library/dxa-fecal-enl-validation-zh.html">详细报告</a></td></tr>
+  <tr><td>膳食木脂素–CAP<br><span class="tag pending">审计完成 · 暂不建模</span></td><td>2017–2018 年食物回顾与实测 CAP；成分映射尚不完整</td><td>18/4,564 个名称候选；克数覆盖 1.153%／1.414%</td><td>未知食物不能记零；尿 ENL 与 CAP 不同周期。<a href="results.html#dietary-cap">可行性结论</a></td></tr>
+  <tr><td>CHARLS W6<br><span class="tag">横断面 pilot 完成</span></td><td>每日≥2 种蔬果、CES-D-10；功能、咀嚼、失牙与假牙</td><td>症状主 PR 0.766；全食物调整后 0.852。咀嚼与未达蔬果题标准有关，任务关联在功能调整后减弱</td><td>主症状模型 11,932 人；口腔模型 12,913 人。无 ENL/END。<a href="nutrition.html#charls">查看当前成果</a></td></tr>
+  <tr><td>SHARE W8→W9<br><span class="tag">首轮＋官方权重更新完成</span></td><td>每日蔬果频率与 EURO-D；官方纵向权重 25,327 人</td><td>基本模型 0.890（0.751–1.053），n=25,327；扩展模型 0.955（0.824–1.108），n=25,302</td><td>后期筛查阳性比，加权区间包含 1；无起病日期。同样本调整比较见<a href="nutrition.html#share">横断面与纵向结果</a>。</td></tr>
+  <tr><td>SHARE W6 DBS<br><span class="tag pending">可行性完成 · 仅描述</span></td><td>2015 年干血斑；同期有效饮食交集仅 447 人</td><td>Kish n≈26.4；结构性问卷路由和权重集中，不拟合正式关联模型</td><td>无 ENL/END 或菌群；后期化验不是再次采样。<a href="nutrition.html#dbs">审计与描述</a></td></tr>
+  </tbody></table></div>
+  <p class="note">PR 为现患比；随访模型比较基线 EURO-D&lt;4 者的后期筛查状态。CHARLS／SHARE 区间为聚类稳健近似，尚未重建完整分层抽样方差。所有新增分析均为未预注册的探索。</p>
+</section>
 <section class="section latest-research" aria-labelledby="latest-title">
-  <div><h2 id="latest-title">最新分析 · 肾功能与周期稳健性</h2><p>肾功能完整的 3,904 人中，加入 eGFR 和 UACR 后估计为 −0.241 个百分点。周期内排序和三种周期剔除也已完成。</p></div>
+  <div><h2 id="latest-title">NHANES 主线 · 肾功能与周期稳健性</h2><p>肾功能完整的 3,904 人中，加入 eGFR 和 UACR 后估计为 −0.241 个百分点。周期内排序和三种周期剔除也已完成。</p></div>
   <a href="results.html#robustness">看新结果、森林图与下载 <span aria-hidden="true">↗</span></a>
 </section>
 <section class="section latest-research" id="diet-cap" aria-labelledby="diet-cap-title"><div><h2 id="diet-cap-title">膳食木脂素与 CAP · 可行性审计完成</h2><p>18/4,564 个食品代码有名称候选，加权克数覆盖首日 1.153%、次日 1.414%。两个回顾日均无完整映射，当前资料不足以建立总摄入模型。</p></div><a href="library/cap-lignan-feasibility-zh.html">查看审计报告与聚合下载 <span aria-hidden="true">↗</span></a></section>
@@ -33,7 +47,7 @@
   <h2 id="overview">研究进度</h2>
   <div class="metrics">
     <article class="metric"><strong>18</strong><p>最初的备选课题</p></article>
-    <article class="metric"><strong>712</strong><p>已拟合的暴露–结局模型</p></article>
+    <article class="metric"><strong>712</strong><p>既有 NHANES／菌群暴露–结局筛查模型</p></article>
     <article class="metric"><strong>54</strong><p>另做的分周期核查</p></article>
   </div>
 </section>
@@ -43,10 +57,11 @@
     <article class="tile"><h3><a href="roadmap.html">原始思路与方向</a></h3><p>回看初始清单、扩展版路线图和课题取舍。</p></article>
     <article class="tile"><h3><a href="data.html">数据、暴露和结局</a></h3><p>查哪些能同人配对、哪些已分析、哪些仍缺字段。</p></article>
     <article class="tile"><h3><a href="results.html">分析结果与统计</a></h3><p>查看成人 DXA、肥胖模型、CAP 和菌群验证。下载全表。</p></article>
+    <article class="tile"><h3><a href="nutrition.html">营养、心理与功能</a></h3><p>CHARLS 饮食与口腔、SHARE 纵向权重更新和 DBS 可行性。</p></article>
     <article class="tile"><h3><a href="methods.html">清洗和样本纳入</a></h3><p>查看匹配规则、缺失处理和各阶段样本人数。</p></article>
     <article class="tile"><h3><a href="literature.html">文献与投稿</a></h3><p>区分已有研究、同源复核和可扩展的成人 DXA 问题。</p></article>
     <article class="tile"><h3><a href="next.html">下一步研究</a></h3><p>成人 DXA 写作、膳食木脂素映射和菌群外部验证。</p></article>
   </div>
 </section></main>
-<footer><div class="wrap"><span>霍山研究的公开数据延伸 · 更新于 <time datetime="2026-11-12">2026 年 11 月 12 日</time></span><a href="index.html">回专题总览</a></div></footer>
+<footer><div class="wrap"><span>霍山研究的公开数据延伸 · 更新于 <time datetime="2026-11-14">2026 年 11 月 14 日</time></span><a href="index.html">回专题总览</a></div></footer>
 </body></html>

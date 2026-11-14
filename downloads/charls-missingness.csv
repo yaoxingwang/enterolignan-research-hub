@@ -1,0 +1,18 @@
+variable,n_missing,denominator,note
+age,23,16377,
+sex,21,16377,
+education,26,16377,
+marital,26,16377,
+hukou,25,16377,
+health_proxy,15102,16377,"Blank proxy flag is structural, not missing outcome"
+cognition_proxy,15081,16377,"Blank proxy flag is structural, not missing outcome"
+cesd10,2343,16377,
+vegetables_fruit,125,16377,
+dairy,125,16377,
+egg_bean,125,16377,
+meat_fish_poultry,125,16377,
+alcohol,108,16377,
+walking,105,16377,
+chewing,102,16377,
+INDV_weight_ad2,0,16377,
+INDV_weight_post2,869,16377,

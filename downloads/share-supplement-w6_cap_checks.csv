@@ -1,0 +1,3 @@
+marker,cap,all_dbs_above_cap_n,all_dbs_at_cap_n,overlap_above_cap_n,final_equals_capped_x4
+crp_final,10,934,934,16,True
+trg_final,500,599,599,20,True

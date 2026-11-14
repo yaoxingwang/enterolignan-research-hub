@@ -1,0 +1,3 @@
+model,exposure,n,events,estimate,ci_low,ci_high,counties
+two_person_household_subset,chewing_difficulty,9006,1214,1.2964505040006447,1.1197711500196683,1.5010066202312884,150
+two_person_household_subset,food_task_difficulty,9006,1214,0.9184788815106175,0.6784299856225421,1.2434642832110172,150

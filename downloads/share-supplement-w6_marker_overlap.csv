@@ -1,0 +1,8 @@
+marker,label,unit,specification,n,daily_n,less_often_n,countries,kish_n
+crp_final,CRP,mg/L,released_final,415,323,92,12,21.907764224699868
+crp_final,CRP,mg/L,exclude_above_cap_using_x4,399,307,92,12,20.57953807426106
+a1c_final,HbA1c,%,released_final,350,268,82,12,35.708761183071594
+hdl_final,HDL cholesterol,mg/dL,released_final,272,209,63,12,25.42764649172471
+cho_final,Total cholesterol,mg/dL,released_final,419,327,92,12,22.023084978291138
+trg_final,Triglycerides,mg/dL,released_final,418,327,91,12,21.99773343144904
+trg_final,Triglycerides,mg/dL,exclude_above_cap_using_x4,398,316,82,12,20.548626250636932

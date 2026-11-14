@@ -1,0 +1,31 @@
+{
+  "interview": {
+    "-91": "Not applicable (person was not yet part of sample)",
+    "-92": "Not applicable (household did not participate in this wave)",
+    "-93": "Not applicable (person was not listed as household member in this wave)",
+    "-94": "Not applicable (person has an End-of-Life interview in previous waves)",
+    "-97": "Not applicable (out of sample)",
+    "-99": "Not applicable (missing by design - country skipped this wave)",
+    "-101": "Not applicable (AT special: w6 longitudinal sample batches not active)",
+    "-102": "Not applicable (GR special: w7 longitudinal sample batches not active)",
+    "-103": "Not applicable (PT special: w7 delayed sample)",
+    "-104": "Not applicable (SE special: w8ca longitudinal sample batches not active)",
+    "-105": "Not applicable (NL special: w8ca longitudinal sample batches not active)",
+    "0": "No interview",
+    "1": "Main interview",
+    "2": "End-of-Life interview (xt)"
+  },
+  "deadoralive": {
+    "-91": "Not applicable (alive - but not yet part of sample)",
+    "-99": "Not applicable (missing by design - country skipped this wave)",
+    "-101": "Not applicable (AT special: w6 longitudinal sample batches not active)",
+    "-102": "Not applicable (GR special: w7 longitudinal sample batches not active)",
+    "-103": "Not applicable (PT special: w7 delayed sample)",
+    "-104": "Not applicable (SE special: w8ca longitudinal sample batches not active)",
+    "-105": "Not applicable (NL special: w8ca longitudinal sample batches not active)",
+    "-109": "Not applicable (DE special: out of sample & contact information deleted)",
+    "0": "Unknown",
+    "1": "Alive",
+    "2": "Dead"
+  }
+}

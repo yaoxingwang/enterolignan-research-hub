@@ -1,0 +1,2 @@
+model,exposure,outcome,family,weight,n,events,communities,beta,se,estimate,ci_low,ci_high,p,n_parameters,effective_n_kish,cluster_covariance_max_abs_difference
+include_logically_classifiable_partial,vegetables_fruit,symptoms,poisson,INDV_weight_ad2,12483,4258,447,-0.24691354678527502,0.04506375420508887,0.7812082285747535,0.7149967965900088,0.8535510918419579,7.155900661710331e-08,14,6238.560007059487,

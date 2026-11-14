@@ -1,0 +1,6 @@
+step,n
+W8 baseline negative complete cases,34733
+Valid W9 followup (original sample),26394
+Matched official weight file,25327
+panel_resp=1 and positive official individual weight,25327
+Extended complete covariates,25302

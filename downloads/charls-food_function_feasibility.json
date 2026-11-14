@@ -1,0 +1,240 @@
+{
+  "alive_crosssection_sample": 16377,
+  "age_and_weight_eligible": 14129,
+  "after_excluding_dproxy_eq_1": 13013,
+  "da128_in_primary": {
+    "n": 13013,
+    "da128_valid": 12927,
+    "da128_yes": 10928,
+    "da128_no": 1999,
+    "weighted_da128_yes_pct": 85.48733852181505,
+    "weighted_da128_no_pct": 14.512661478184953
+  },
+  "by_exposure": [
+    {
+      "exposure": "hard_food",
+      "raw_code": 1,
+      "n": 9594,
+      "da128_valid": 9579,
+      "da128_yes": 8299,
+      "da128_no": 1280,
+      "weighted_da128_yes_pct": 87.71173916091159,
+      "weighted_da128_no_pct": 12.288260839088409
+    },
+    {
+      "exposure": "hard_food",
+      "raw_code": 2,
+      "n": 3352,
+      "da128_valid": 3348,
+      "da128_yes": 2629,
+      "da128_no": 719,
+      "weighted_da128_yes_pct": 78.80112940970126,
+      "weighted_da128_no_pct": 21.19887059029874
+    },
+    {
+      "exposure": "cooking",
+      "raw_code": 1,
+      "n": 11922,
+      "da128_valid": 11922,
+      "da128_yes": 10182,
+      "da128_no": 1740,
+      "weighted_da128_yes_pct": 86.3004172602282,
+      "weighted_da128_no_pct": 13.699582739771799
+    },
+    {
+      "exposure": "cooking",
+      "raw_code": 2,
+      "n": 410,
+      "da128_valid": 410,
+      "da128_yes": 305,
+      "da128_no": 105,
+      "weighted_da128_yes_pct": 76.20755484579534,
+      "weighted_da128_no_pct": 23.792445154204657
+    },
+    {
+      "exposure": "cooking",
+      "raw_code": 3,
+      "n": 261,
+      "da128_valid": 261,
+      "da128_yes": 197,
+      "da128_no": 64,
+      "weighted_da128_yes_pct": 75.28157118014775,
+      "weighted_da128_no_pct": 24.71842881985225
+    },
+    {
+      "exposure": "cooking",
+      "raw_code": 4,
+      "n": 332,
+      "da128_valid": 332,
+      "da128_yes": 242,
+      "da128_no": 90,
+      "weighted_da128_yes_pct": 74.97825185075376,
+      "weighted_da128_no_pct": 25.021748149246235
+    },
+    {
+      "exposure": "shopping",
+      "raw_code": 1,
+      "n": 12079,
+      "da128_valid": 12079,
+      "da128_yes": 10309,
+      "da128_no": 1770,
+      "weighted_da128_yes_pct": 86.24287376024213,
+      "weighted_da128_no_pct": 13.757126239757866
+    },
+    {
+      "exposure": "shopping",
+      "raw_code": 2,
+      "n": 263,
+      "da128_valid": 263,
+      "da128_yes": 201,
+      "da128_no": 62,
+      "weighted_da128_yes_pct": 80.01267818365123,
+      "weighted_da128_no_pct": 19.987321816348768
+    },
+    {
+      "exposure": "shopping",
+      "raw_code": 3,
+      "n": 271,
+      "da128_valid": 271,
+      "da128_yes": 195,
+      "da128_no": 76,
+      "weighted_da128_yes_pct": 72.13377960558492,
+      "weighted_da128_no_pct": 27.86622039441508
+    },
+    {
+      "exposure": "shopping",
+      "raw_code": 4,
+      "n": 312,
+      "da128_valid": 312,
+      "da128_yes": 221,
+      "da128_no": 91,
+      "weighted_da128_yes_pct": 72.63241502933626,
+      "weighted_da128_no_pct": 27.367584970663742
+    }
+  ],
+  "joint_groups": [
+    {
+      "cannot_eat_hard_food": false,
+      "cooking_or_shopping_difficulty": false,
+      "n": 8862,
+      "da128_valid": 8862,
+      "da128_yes": 7731,
+      "da128_no": 1131,
+      "weighted_da128_yes_pct": 88.26785818313734,
+      "weighted_da128_no_pct": 11.732141816862665
+    },
+    {
+      "cannot_eat_hard_food": false,
+      "cooking_or_shopping_difficulty": true,
+      "n": 716,
+      "da128_valid": 716,
+      "da128_yes": 567,
+      "da128_no": 149,
+      "weighted_da128_yes_pct": 80.47652701736305,
+      "weighted_da128_no_pct": 19.523472982636946
+    },
+    {
+      "cannot_eat_hard_food": true,
+      "cooking_or_shopping_difficulty": false,
+      "n": 2736,
+      "da128_valid": 2736,
+      "da128_yes": 2201,
+      "da128_no": 535,
+      "weighted_da128_yes_pct": 80.53621115821437,
+      "weighted_da128_no_pct": 19.46378884178563
+    },
+    {
+      "cannot_eat_hard_food": true,
+      "cooking_or_shopping_difficulty": true,
+      "n": 611,
+      "da128_valid": 611,
+      "da128_yes": 427,
+      "da128_no": 184,
+      "weighted_da128_yes_pct": 71.27971299136324,
+      "weighted_da128_no_pct": 28.72028700863676
+    }
+  ],
+  "helper_routing": [
+    {
+      "task": "cooking",
+      "difficulty_code": 1,
+      "n": 11922,
+      "helper_expected": false,
+      "helper_yes": 0,
+      "helper_no": 0,
+      "helper_missing_or_invalid": 11922
+    },
+    {
+      "task": "cooking",
+      "difficulty_code": 2,
+      "n": 410,
+      "helper_expected": true,
+      "helper_yes": 176,
+      "helper_no": 234,
+      "helper_missing_or_invalid": 0
+    },
+    {
+      "task": "cooking",
+      "difficulty_code": 3,
+      "n": 261,
+      "helper_expected": true,
+      "helper_yes": 231,
+      "helper_no": 30,
+      "helper_missing_or_invalid": 0
+    },
+    {
+      "task": "cooking",
+      "difficulty_code": 4,
+      "n": 332,
+      "helper_expected": true,
+      "helper_yes": 286,
+      "helper_no": 46,
+      "helper_missing_or_invalid": 0
+    },
+    {
+      "task": "shopping",
+      "difficulty_code": 1,
+      "n": 12079,
+      "helper_expected": false,
+      "helper_yes": 0,
+      "helper_no": 0,
+      "helper_missing_or_invalid": 12079
+    },
+    {
+      "task": "shopping",
+      "difficulty_code": 2,
+      "n": 263,
+      "helper_expected": true,
+      "helper_yes": 116,
+      "helper_no": 147,
+      "helper_missing_or_invalid": 0
+    },
+    {
+      "task": "shopping",
+      "difficulty_code": 3,
+      "n": 271,
+      "helper_expected": true,
+      "helper_yes": 251,
+      "helper_no": 20,
+      "helper_missing_or_invalid": 0
+    },
+    {
+      "task": "shopping",
+      "difficulty_code": 4,
+      "n": 312,
+      "helper_expected": true,
+      "helper_yes": 285,
+      "helper_no": 27,
+      "helper_missing_or_invalid": 0
+    }
+  ],
+  "same_household_response_year_pairs": {
+    "joint_complete_people": 12925,
+    "two_eligible_people_groups": 4503,
+    "da128_discordant": 790,
+    "da068_discordant": 1377,
+    "any_food_task_discordant": 703,
+    "da128_and_da068_discordant": 267,
+    "da128_and_any_food_task_discordant": 149
+  }
+}
